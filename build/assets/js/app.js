@@ -1,1 +1,2 @@
-var hello = 'hey'
+var hello = 'hey';
+var world = 'world';
