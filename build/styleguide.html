@@ -8,56 +8,71 @@
   <link rel="stylesheet" href="assets/sass/app.css">
 </head>
 <body>
-  <!-- Text Styles -->
-  <h1>Typography</h1>
-  <h2>HTML Headings</h2>
-  <p>All HTML heading from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> are available and feature the following text styles.</p>
-  <h1>h1: Uncoil Heading</h1>
-  <h2>h2: Uncoil Heading</h2>
-  <h3>h3: Uncoil Heading</h3>
-  <h4>h4: Uncoil Heading</h4>
-  <h5>h5: Uncoil Heading</h5>
-  <h6>h6: Uncoil Heading</h6>
-  <figure>
-    <pre><span class="tag">&lt;h1&gt;</span>...<span class="tag">&lt;/h1&gt;</span>
+  <div class="wrapper">
+    <!-- Text Styles -->
+    <h1>Typography</h1>
+    <h2>HTML Headings</h2>
+    <p>All HTML heading from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> are available and feature the following text styles.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <h1>h1: Uncoil Heading</h1>
+      <h2>h2: Uncoil Heading</h2>
+      <h3>h3: Uncoil Heading</h3>
+      <h4>h4: Uncoil Heading</h4>
+      <h5>h5: Uncoil Heading</h5>
+      <h6>h6: Uncoil Heading</h6>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;h1&gt;</span>...<span class="tag">&lt;/h1&gt;</span>
 <span class="tag">&lt;h2&gt;</span>...<span class="tag">&lt;/h2&gt;</span>
 <span class="tag">&lt;h3&gt;</span>...<span class="tag">&lt;/h3&gt;</span>
 <span class="tag">&lt;h4&gt;</span>...<span class="tag">&lt;/h4&gt;</span>
 <span class="tag">&lt;h4&gt;</span>...<span class="tag">&lt;/h5&gt;</span>
 <span class="tag">&lt;h6&gt;</span>...<span class="tag">&lt;/h6&gt;</span></pre>
-  </figure>
-  <h2>HTML Paragraph</h2>
-  <p>This is a <code>&lt;p&gt;</code></p>
-  <figure>
-    <pre><span class="tag">&lt;p&gt;</span>...<span class="tag">&lt;/p&gt;</span></pre>
-  </figure>
+      </figure>
+    </div>
 
-  <!-- Muted Text -->
-  <h1>h1: Uncoil Heading <small>with subtext</small></h1>
-  <h2>h2: Uncoil Heading <small>with subtext</small></h2>
-  <h3>h3: Uncoil Heading <small>with subtext</small></h3>
-  <h4>h4: Uncoil Heading <small>with subtext</small></h4>
-  <h5>h5: Uncoil Heading <small>with subtext</small></h5>
-  <h6>h6: Uncoil Heading <small>with subtext</small></h6>
-  <p>p: Uncoil paragraph <small>with subtext</small></p>
-  <figure>
-    <pre><span class="tag">&lt;h1&gt;</span>...<span class="tag">&lt;small&gt;</span>...<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h1&gt;</span>
+    <!-- Muted Text -->
+    <h2>HTML Headings with Subtext</h2>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <h1>h1: Uncoil Heading <small>with subtext</small></h1>
+      <h2>h2: Uncoil Heading <small>with subtext</small></h2>
+      <h3>h3: Uncoil Heading <small>with subtext</small></h3>
+      <h4>h4: Uncoil Heading <small>with subtext</small></h4>
+      <h5>h5: Uncoil Heading <small>with subtext</small></h5>
+      <h6>h6: Uncoil Heading <small>with subtext</small></h6>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;h1&gt;</span>...<span class="tag">&lt;small&gt;</span>...<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h1&gt;</span>
 <span class="tag">&lt;h2&gt;</span>...<span class="tag">&lt;small&gt;</span>...<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h2&gt;</span>
 <span class="tag">&lt;h3&gt;</span>...<span class="tag">&lt;small&gt;</span>...<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h3&gt;</span>
 <span class="tag">&lt;h4&gt;</span>...<span class="tag">&lt;small&gt;</span>...<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h4&gt;</span>
 <span class="tag">&lt;h5&gt;</span>...<span class="tag">&lt;small&gt;</span>...<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h5&gt;</span>
-<span class="tag">&lt;h6&gt;</span>...<span class="tag">&lt;small&gt;</span>...<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h6&gt;</span>
-<span class="tag">&lt;p&gt;</span>...<span class="tag">&lt;small&gt;</span>...<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
-  </figure>
+<span class="tag">&lt;h6&gt;</span>...<span class="tag">&lt;small&gt;</span>...<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h6&gt;</span></pre>
+      </figure>
+    </div>
+
+    <!-- Body Copy -->
+    <h2>HTML Body</h2>
+    <p>This is Uncoil's main body font style. Sizing is relative to a user's browser settings and is set to <code>{ font-size: 1rem }</code> by default with a <code>{ line-height: 1.25 }</code></p>
+    <figure>
+      <pre><span class="tag">&lt;p&gt;</span>...<span class="tag">&lt;/p&gt;</span></pre>
+    </figure>
+    <!-- Intro text styling -->
+    <h3>Intro Body Text</h3>
+    <p>This is a class that can be used as an introduction line of text as a lead line of a body paragraph. Apply this style to any <code>&lt;p&gt;</code> element with by applying the <code>.intro</code> class as shown by the example.</p>
 
 
-  <!-- Inline Text Elements -->
-  <h1>Inline Text Elements</h1>
-  <!-- Intro text styling -->
-  <h3 class="intro">This is an intro text <code>.intro</code></h3>
-  <!--   -->
+
+    <!-- Inline Text Elements -->
+    <h2>Inline Text Elements</h2>
+
+    <!--   -->
 
 
-
+  </div>
 </body>
 </html>

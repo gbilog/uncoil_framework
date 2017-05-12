@@ -8,18 +8,40 @@ h1, h2, h3, h4, h5, h6, p {
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, p small {
     color: gray; }
   h1.intro, h2.intro, h3.intro, h4.intro, h5.intro, h6.intro, p.intro {
-    font-style: italic; }
+    font-style: italic;
+    font-size: 1.85rem; }
 
-pre {
+.wrapper {
+  width: 60%;
+  margin: 0 auto; }
+
+.example-container {
+  border: 1px solid #b4e7cd;
+  padding: 5px 20px 0px 20px;
+  border-radius: 4px 4px 0px 0px;
+  overflow: hidden; }
+  .example-container .example {
+    color: #3FC380;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #daf4e7;
+    padding: 10px;
+    margin: -5px -20px; }
+
+.example-copy figure, .example-copy pre {
+  margin: 0px; }
+.example-copy pre {
   word-break: break-all;
   word-wrap: break-word;
   white-space: pre-wrap;
   background-color: #eeeeee;
   padding: 20px;
-  width: 300px;
-  border: 1px solid #dddddd;
-  border-radius: 4px; }
-  pre .tag {
+  margin-top: -1px;
+  border: 1px solid #bfd5f2;
+  border-radius: 0px 0px 4px 4px;
+  margin-bottom: 50px; }
+  .example-copy pre .tag {
     color: #4183D7; }
 
 /*# sourceMappingURL=app.css.map */
