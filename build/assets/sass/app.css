@@ -1,0 +1,25 @@
+h1, h2, h3, h4, h5, h6, p {
+  color: #333333;
+  line-height: 1.25;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 2rem; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, p small {
+    color: gray; }
+  h1.intro, h2.intro, h3.intro, h4.intro, h5.intro, h6.intro, p.intro {
+    font-style: italic; }
+
+pre {
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  background-color: #eeeeee;
+  padding: 20px;
+  width: 300px;
+  border: 1px solid #dddddd;
+  border-radius: 4px; }
+  pre .tag {
+    color: #4183D7; }
+
+/*# sourceMappingURL=app.css.map */
