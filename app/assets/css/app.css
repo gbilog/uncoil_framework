@@ -4,16 +4,30 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: normal;
   font-style: normal;
   font-family: "Open Sans", sans-serif;
-  margin-bottom: 2rem; }
+  margin-bottom: 1rem; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, p small {
     color: gray; }
   h1.intro, h2.intro, h3.intro, h4.intro, h5.intro, h6.intro, p.intro {
     font-style: italic;
-    font-size: 1.85rem; }
+    font-size: 1.25rem;
+    font-weight: 300; }
+  h1 mark, h2 mark, h3 mark, h4 mark, h5 mark, h6 mark, p mark {
+    background-color: #d4e3f6; }
+  h1.text-left, h2.text-left, h3.text-left, h4.text-left, h5.text-left, h6.text-left, p.text-left {
+    text-align: left; }
+  h1.text-right, h2.text-right, h3.text-right, h4.text-right, h5.text-right, h6.text-right, p.text-right {
+    text-align: right; }
+  h1.text-center, h2.text-center, h3.text-center, h4.text-center, h5.text-center, h6.text-center, p.text-center {
+    text-align: center; }
+  h1.text-justify, h2.text-justify, h3.text-justify, h4.text-justify, h5.text-justify, h6.text-justify, p.text-justify {
+    text-align: justify; }
 
 .wrapper {
   width: 60%;
   margin: 0 auto; }
+
+code {
+  background-color: #ffe8e6; }
 
 .example-container {
   border: 1px solid #b4e7cd;
@@ -31,6 +45,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .example-copy figure, .example-copy pre {
   margin: 0px; }
+
 .example-copy pre {
   word-break: break-all;
   word-wrap: break-word;
@@ -43,5 +58,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 50px; }
   .example-copy pre .tag {
     color: #4183D7; }
-
-/*# sourceMappingURL=app.css.map */
+  .example-copy pre .class {
+    color: #e61900; }
+  .example-copy pre .class-contents {
+    color: #2C3E50; }
