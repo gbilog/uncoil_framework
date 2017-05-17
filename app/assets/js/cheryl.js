@@ -8,7 +8,7 @@
                     event.preventDefault();
                     $("li a").removeClass("selected");
                     $(this).addClass("selected");
-                    $("img:visible").fadeOut(500, "linear", function () {
+                    $("#imageContainer img:visible").fadeOut(500, "linear", function () {
                         $("img").fadeIn(500, "linear");
                     });
                 });
@@ -17,7 +17,7 @@
                     event.preventDefault();
                     $("li a").removeClass("selected");
                     $(this).addClass("selected");
-                    $("img:visible").fadeOut(500, "linear", function () { 
+                    $("#imageContainer img:visible").fadeOut(500, "linear", function () { 
                         $("." + category).fadeIn(500, "linear");
                     });
                 });  
