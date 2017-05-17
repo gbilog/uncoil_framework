@@ -4,9 +4,81 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link href="assets/css/app.css" rel="stylesheet"/>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/cheryl.js"></script>
+    
+    <style>    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        width: 1150px;
+        margin: 50px auto;
+    }
+        
+    img {
+        padding: 15px;
+        width: 350px;
+        height: auto;
+    }
+        
+    nav {
+       text-align: center;
+       margin-bottom: 50px;
+    }
+        
+    li {
+        display: inline-block;
+        float: none;
+        padding: 0 5px;
+    }
+        
+    li a {
+        color: #888;
+        border: 1px solid #888;
+        text-decoration: none;
+        font-family: "helvetica neue", helvetica, arial, sans-serif;
+        font-size: 1em;
+        letter-spacing: .02em;
+        padding: .5em 1em;
+    }
+        
+    li a:hover, li a.active {
+        background-color: #c5a47e;
+        color: white;
+        border: 1px solid #c5a47e;
+    }    
+    </style>
+    
+    <script>
+        $(function () {
+            $("#shuffleDemo").imageShuffle();
+        });
+    </script>
+    
 </head>
 <body>
-<h1>Hello World!</h1>
-<script src="assets/js/cheryl.js"></script>  
+    <div class="container">
+        <nav id="shuffleDemo">
+           <ul>
+              <li><a id="all" href="#">All</a></li>
+              <li><a id="dog" href="#">Dogs</a></li>
+              <li><a id="cat" href="#">Cats</a></li>
+              <li><a id="snake" href="#">Snakes</a></li>  
+           </ul> 
+        </nav>
+        <img class="cat" src="assets/images/cat4.jpg" />
+        <img class="dog" src="assets/images/dog4.jpg" />
+        <img class="cat" src="assets/images/cat3.jpg" />
+        <img class="snake" src="assets/images/snake3.jpg" />
+        <img class="dog" src="assets/images/dog3.jpg" />
+        <img class="dog" src="assets/images/dog2.jpg" />
+        <img class="cat" src="assets/images/cat2.jpg" />
+        <img class="snake" src="assets/images/snake2.jpg" />
+        <img class="snake" src="assets/images/snake1.jpg" />
+        <img class="dog" src="assets/images/dog1.jpg" />  
+    </div>
 </body>
 </html>

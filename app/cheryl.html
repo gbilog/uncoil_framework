@@ -6,8 +6,8 @@
     <link href="assets/css/app.css" rel="stylesheet"/>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="assets/js/cheryl.js"></script>
-    <style>
-        
+    
+    <style>    
     * {
         margin: 0;
         padding: 0;
@@ -49,13 +49,19 @@
         background-color: #c5a47e;
         color: white;
         border: 1px solid #c5a47e;
-    } 
-        
+    }    
     </style>
+    
+    <script>
+        $(function () {
+            $("#shuffleDemo").imageShuffle();
+        });
+    </script>
+    
 </head>
 <body>
     <div class="container">
-        <nav>
+        <nav id="shuffleDemo">
            <ul>
               <li><a id="all" href="#">All</a></li>
               <li><a id="dog" href="#">Dogs</a></li>
