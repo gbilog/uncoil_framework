@@ -1,0 +1,45 @@
+.wrapper
+  width: 60%
+  margin: 0 auto
+
+code
+  background-color: lighten($accent, 45%)
+
+.example-container
+  border: 1px solid lighten($brand-primary, 30%)
+  padding: 5px 20px 0px 20px
+  border-radius: 4px 4px 0px 0px
+  overflow: hidden
+
+  .example
+    color: $brand-primary
+    text-transform: uppercase
+    font-size: $h6-font-size
+    font-weight: $font-bold
+    background-color: lighten($brand-primary, 40%)
+    padding: 10px
+    margin: (-5px) -20px
+
+.example-copy
+  figure, pre
+    margin: 0px
+
+  pre
+    word-break: break-all
+    word-wrap: break-word
+    white-space: pre-wrap
+    background-color: $medium-grey
+    padding: 20px
+    margin-top: -1px
+    border: 1px solid lighten($brand-tertiary, 30%)
+    border-radius: 0px 0px 4px 4px
+    margin-bottom: 50px
+
+    & .tag
+      color: $brand-tertiary
+
+    & .class
+      color: darken($accent, 5%)
+
+    & .class-contents
+      color: $dark-blue

@@ -1,0 +1,16 @@
+{
+  "name": "browser-sync-sass",
+  "version": "0.0.0",
+  "description": "A starter project including sass, autoprefixer, and browser-sync",
+  "main": "gulpfile.js",
+  "author": "Vlad Pasculescu",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.8.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "2.3.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-sass": "^2.1.0"
+  }
+}

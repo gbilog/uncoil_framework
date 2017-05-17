@@ -1,0 +1,39 @@
+h1, h2, h3, h4, h5, h6, p
+  color: $text-color
+  line-height: $default-line-height
+  font-weight: $default-font-weight
+  font-style: $default-font-weight
+  font-family: $default-font-family
+  margin-bottom: $default-bottom-margin
+
+  & small
+    color: $muted-text
+
+  &.intro
+    font-style: $font-italic
+    font-size: $h5-font-size
+    font-weight: 300
+
+  & mark
+    background-color: lighten($brand-tertiary, 35%)
+
+  &.text-left
+    text-align: left
+
+  &.text-right
+    text-align: right
+
+  &.text-center
+    text-align: center
+
+  &.text-justify
+    text-align: justify
+
+  &.text-lowercase
+    text-transform: lowercase
+
+  &.text-uppercase
+    text-transform: uppercase
+
+  &.text-capitalize
+    text-transform: capitalize
