@@ -14,7 +14,7 @@
     }
     
     .container {
-        width: 1200px;
+        width: 1150px;
         margin: 50px auto;
     }
         
@@ -57,21 +57,21 @@
         text-align: center;
         text-decoration: none;
         font-family: "helvetica neue", helvetica, arial, sans-serif;
-    }
-        
-    #imageContainer a:hover {
-        opacity: .5;
+        color: #666;
     }
         
     figcaption {
-        color: #666;
         padding: .5em 0;
     }
+        
     </style>
     
     <script>
         $(function () {
-            $("#shuffleDemo li a").imageShuffle();
+            $("#shuffleDemo li a").imageShuffle({
+                hoverOpacity: .75,
+                shuffleEasing: "swing"
+            });
         });
     </script>
     

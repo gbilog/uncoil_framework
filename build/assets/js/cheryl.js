@@ -1,6 +1,18 @@
 (function ($) {
-    $.fn.imageShuffle = function () {
+    $.fn.imageShuffle = function (options) {
+        var defaults = $.extend({
+            "hoverSpeed"    : "fast",
+            "hoverOpacity"  : .5,
+            "shuffleEasing" : "linear",
+            "shuffleSpeed"  : 500,
+        }, options);
+        
         return this.each(function () {
+            
+            $("#imageContainer a").hover(function () {
+                $(this).fadeTo("fast", .5);}, function () { $(this).fadeTo("fast", 1);   
+            });
+
             var category = $(this).attr("id");
             if (category === "all") {
                 $(this).addClass("selected");
@@ -8,8 +20,8 @@
                     event.preventDefault();
                     $("li a").removeClass("selected");
                     $(this).addClass("selected");
-                    $("#imageContainer img:visible").fadeOut(500, "linear", function () {
-                        $("img").fadeIn(500, "linear");
+                    $("#imageContainer a:visible").fadeOut(500, "linear", function () {
+                        $("#imageContainer a").fadeIn(500, "linear");
                     });
                 });
             } else {
@@ -17,7 +29,7 @@
                     event.preventDefault();
                     $("li a").removeClass("selected");
                     $(this).addClass("selected");
-                    $("#imageContainer img:visible").fadeOut(500, "linear", function () { 
+                    $("#imageContainer a:visible").fadeOut(500, "linear", function () { 
                         $("." + category).fadeIn(500, "linear");
                     });
                 });  
