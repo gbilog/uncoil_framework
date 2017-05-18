@@ -1,0 +1,30 @@
+.container {
+    width : 550px;
+    padding: 1em;
+  
+}
+
+.tabs {
+    width :100%;
+}
+
+.tabs li {
+    display:block;
+    float :left;
+    text-align: center;
+    background: lightgrey;
+    border  : 1px solid red;
+    width   :32.9%;
+}
+
+.tabs li active {
+    background: grey;
+    border-bottom: 1px grey;
+}
+
+#description div {
+    width: 90%;
+    clear: left;
+    height:200px;
+    background: grey;
+}
