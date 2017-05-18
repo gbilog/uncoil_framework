@@ -8,8 +8,8 @@
                     event.preventDefault();
                     $("li a").removeClass("selected");
                     $(this).addClass("selected");
-                    $("#imageContainer img:visible").fadeOut(500, "linear", function () {
-                        $("img").fadeIn(500, "linear");
+                    $("#imageContainer a:visible").fadeOut(500, "linear", function () {
+                        $("#imageContainer a").fadeIn(500, "linear");
                     });
                 });
             } else {
@@ -17,7 +17,7 @@
                     event.preventDefault();
                     $("li a").removeClass("selected");
                     $(this).addClass("selected");
-                    $("#imageContainer img:visible").fadeOut(500, "linear", function () { 
+                    $("#imageContainer a:visible").fadeOut(500, "linear", function () { 
                         $("." + category).fadeIn(500, "linear");
                     });
                 });  
