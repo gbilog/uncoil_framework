@@ -11,30 +11,31 @@
                 $(this).fadeTo(defaults.hoverSpeed, defaults.hoverOpacity);}, function () { $(this).fadeTo(defaults.hoverSpeed, 1);   
         });
         
-        var $links = $(this).find("a");
-        
-        return $links.each(function () {
-            var category = $(this).attr("id");
-            if (category === "all") {
-                $(this).addClass("selected");
-                $(this).on("click", function (event) {
-                    event.preventDefault();
-                    $links.removeClass("selected");
+        return this.each(function () {
+            var $links = $(this).find("a");
+            $links.each(function () {
+                var category = $(this).attr("id");
+                if (category === "all") {
                     $(this).addClass("selected");
-                    $("#imageContainer a:visible").fadeOut(defaults.shuffleSpeed, defaults.shuffleEasing, function () {
-                        $("#imageContainer a").fadeIn(defaults.shuffleSpeed, defaults.shuffleEasing);
+                    $(this).on("click", function (event) {
+                        event.preventDefault();
+                        $links.removeClass("selected");
+                        $(this).addClass("selected");
+                        $("#imageContainer a:visible").fadeOut(defaults.shuffleSpeed, defaults.shuffleEasing, function () {
+                            $("#imageContainer a").fadeIn(defaults.shuffleSpeed, defaults.shuffleEasing);
+                        });
                     });
-                });
-            } else {
-                $(this).on("click", function () {
-                    event.preventDefault();
-                    $links.removeClass("selected");
-                    $(this).addClass("selected");
-                    $("#imageContainer a:visible").fadeOut(defaults.shuffleSpeed, defaults.shuffleEasing, function () { 
-                        $("." + category).fadeIn(defaults.shuffleSpeed, defaults.shuffleEasing);
-                    });
-                });  
-            }
+                } else {
+                    $(this).on("click", function () {
+                        event.preventDefault();
+                        $links.removeClass("selected");
+                        $(this).addClass("selected");
+                        $("#imageContainer a:visible").fadeOut(defaults.shuffleSpeed, defaults.shuffleEasing, function () { 
+                            $("." + category).fadeIn(defaults.shuffleSpeed, defaults.shuffleEasing);
+                        });
+                    });  
+                }
+            });
         });
     }
 })(jQuery);
