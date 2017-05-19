@@ -40,8 +40,9 @@
 
 $(function () {
     // Code for Affix
-    $("#affixDemo li a").on("click", function () {
-        $("#affixDemo li a").removeClass("active");
+    var $affixLinks = $("#affixDemo").find("a");
+    $affixLinks.on("click", function () {
+        $affixLinks.removeClass("active");
         $(this).addClass("active");
     });
     
@@ -55,23 +56,16 @@ $(function () {
             $("#affixDemo").css("position", "fixed")
                            .css("margin-top", 0)
                            .css("left", left)
-                           .css("top", offset);
-                           
+                           .animate({top: offset}, 500);            
         } else if ($(this).scrollTop() < bottom) {
-            $("#affixDemo").css("top", 0)
-                           .css("left", 0)
+            $("#affixDemo").animate(({top: -(offset)}, 500), function () {
+                           $(this).css("left", 0)
                            .css("margin-top", marginTop)
-                           .css("position", "relative");
+                           .css("position", "static");
+            })
         }
-    });
-    
-    // Code for ScrollSpy
-    // Get position info for HTML elements
-    var hashes = $("#affixDemo li a").attr("href");
-    window.console.log(hashes);
-        
-    });
-})
+    });      
+});
 
 
 
