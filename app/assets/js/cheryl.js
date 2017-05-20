@@ -81,22 +81,23 @@
 $(function () {
     // Get Ids of Elements to Spy On
     var $links = $("#affixDemo").find("a");
+    var offset = 20;
     var elements = [];
     
     // Create event listeners for scroll
     $links.each(function () {
         var currentLink = $(this);
         var elementId = $(this).attr("href");
-        var top = $(elementId).offset().top;
+        var top = $(elementId).offset().top - offset;
         var bottom = top + $(elementId).outerHeight(true);
         
         $(document).on("scroll", function () {
             if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom) {
                 $links.removeClass("active");
-                currentLink.addClass("active");
-            } 
-        });
-    }); 
+                currentLink.addClass("active"); 
+            }
+        }); 
+    });
 });
 
 
