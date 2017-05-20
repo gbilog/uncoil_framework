@@ -54,10 +54,10 @@
                 $(this).addClass("active");
             });
 
-            var marginTop = $("#affixDemo").css("margin-top");
-            var top = $("#affixDemo").offset().top;
-            var bottom = top + $("#affixDemo").outerHeight();
-            var left = $("#affixDemo").offset().left;
+            var marginTop = $(this).css("margin-top");
+            var top = $(this).offset().top;
+            var bottom = top + $(this).outerHeight();
+            var left = $(this).offset().left;
             var $this = $(this);
 
             $(document).on("scroll", function () {
@@ -76,6 +76,28 @@
             });
     }
 })(jQuery);
+
+
+$(function () {
+    // Get Ids of Elements to Spy On
+    var $links = $("#affixDemo").find("a");
+    var elements = [];
+    
+    // Create event listeners for scroll
+    $links.each(function () {
+        var currentLink = $(this);
+        var elementId = $(this).attr("href");
+        var top = $(elementId).offset().top;
+        var bottom = top + $(elementId).outerHeight(true);
+        
+        $(document).on("scroll", function () {
+            if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom) {
+                $links.removeClass("active");
+                currentLink.addClass("active");
+            } 
+        });
+    }); 
+});
 
 
 
