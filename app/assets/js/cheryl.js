@@ -51,14 +51,18 @@
             var $affixLinks = $(this).find("a");
             $affixLinks.on("click", function () {
                 $affixLinks.removeClass("active");
+                $(".subItems").hide();
                 $(this).addClass("active");
+                if ($(this).next().attr("class") === "subItems") {
+                    $(this).next().show();
+                }
             });
-
+            
+            var $this = $(this);
             var marginTop = $(this).css("margin-top");
             var top = $(this).offset().top;
             var bottom = top + $(this).outerHeight();
             var left = $(this).offset().left;
-            var $this = $(this);
 
             $(document).on("scroll", function () {
                 if ($(this).scrollTop() >= top) {
@@ -91,12 +95,19 @@ $(function () {
         var bottom = top + $(elementId).outerHeight(true);
         
         $(document).on("scroll", function () {
-            if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.parent().parent().attr("class") === "subItems") {
+            if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.next().attr("class") === "subItems") {
                 $links.removeClass("active");
+                $(".subItems").hide();
+                currentLink.addClass("active");
+                currentLink.next().show();
+            } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.parent().parent().attr("class") === "subItems") {
+                $links.removeClass("active");
+                //$(".subItems").hide();
                 currentLink.addClass("active");
                 currentLink.parent().parent().prev().addClass("active");
             } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom) {
                 $links.removeClass("active");
+                $(".subItems").hide();
                 currentLink.addClass("active");
             }
         }); 

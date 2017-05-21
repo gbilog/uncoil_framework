@@ -44,21 +44,24 @@
 (function ($) {
     $.fn.affix = function (options) {
         var defaults = $.extend({
-            "offset"  : 20
+            "offset"  : 50
         }, options);
     
         return this.each(function () {
             var $affixLinks = $(this).find("a");
             $affixLinks.on("click", function () {
                 $affixLinks.removeClass("active");
+                $(".subItems").hide();
                 $(this).addClass("active");
+                if ($(this).next().attr("class") === "subItems") {
+                    $(this).next().show();
+                }
             });
 
             var marginTop = $(this).css("margin-top");
             var top = $(this).offset().top;
             var bottom = top + $(this).outerHeight();
             var left = $(this).offset().left;
-            var $this = $(this);
 
             $(document).on("scroll", function () {
                 if ($(this).scrollTop() >= top) {
@@ -82,7 +85,6 @@ $(function () {
     // Get Ids of Elements to Spy On
     var $links = $("#affixDemo").find("a");
     var offset = 20;
-    var elements = [];
     
     // Create event listener for scroll
     $links.each(function () {
