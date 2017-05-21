@@ -82,7 +82,6 @@ $(function () {
     // Get Ids of Elements to Spy On
     var $links = $("#affixDemo").find("a");
     var offset = 20;
-    var elements = [];
     
     // Create event listener for scroll
     $links.each(function () {
