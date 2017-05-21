@@ -59,16 +59,38 @@
         font-family: "Open Sans", sans-serif;
         color: #666;
      }
+        
+    figure {
+        position: relative;
+    }
 
      figcaption {
-        padding: .5em 0;
+        padding: .2em 0 .5em;
      }
+        
+    .overlay {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: rgba(0,0,0,.6) url(assets/images/overlayImagePlus.svg) center center no-repeat;
+        background-size: 15%;
+        transition: opacity ease .5s;
+    }
+        
+    .overlay:hover {
+        opacity: 1;
+    }
         
     </style>
     
     <script>
         $(function () {
-            $("#shuffleDemo").imageShuffle();
+            $("#shuffleDemo").imageShuffle({
+                hoverOpacity: 1 // default is .75 when Overlay is not being used; set to 1 when using Overlay
+            });
         });
     </script>
     
@@ -84,16 +106,16 @@
            </ul> 
         </nav>
         <div id="imageContainer">
-            <a class="cat" href="#"><figure><img src="assets/images/cat4.jpg" width="350" height="230" alt="Kuber"><figcaption>Kuber</figcaption></figure></a>
-            <a class="dog" href="#"><figure><img src="assets/images/dog4.jpg" width="350" height="230" alt="Jai"><figcaption>Jai</figcaption></figure></a>
-            <a class="cat" href="#"><figure><img src="assets/images/cat3.jpg" width="350" height="230" alt="Pasha"><figcaption>Pasha</figcaption></figure></a>
-            <a class="snake" href="#"><figure><img src="assets/images/snake3.jpg" width="350" height="230" alt="Kali"><figcaption>Kali</figcaption></figure></a>
-            <a class="dog" href="#"><figure><img src="assets/images/dog3.jpg" width="350" height="230" alt="Jyota"><figcaption>Jyota</figcaption></figure></a>
-            <a class="dog" href="#"><figure><img src="assets/images/dog2.jpg" width="350" height="230" alt="Shanti"><figcaption>Shanti</figcaption></figure></a>
-            <a class="cat" href="#"><figure><img src="assets/images/cat2.jpg" width="350" height="230" alt="Shiva"><figcaption>Shiva</figcaption></figure></a>
-            <a class="snake" href="#"><figure><img src="assets/images/snake2.jpg" width="350" height="230" alt="Kundalini"><figcaption>Kundalini</figcaption></figure></a>
-            <a class="snake" href="#"><figure><img src="assets/images/snake1.jpg" width="350" height="230" alt="Shakti"><figcaption>Shakti</figcaption></figure></a>
-            <a class="dog" href="#"><figure><img src="assets/images/dog1.jpg" width="350" height="230" alt="Chandra"><figcaption>Chandra</figcaption></figure></a>
+            <a class="cat" href="#"><figure><img src="assets/images/cat4.jpg" width="350" height="230" alt="Kuber"><figcaption>Kuber</figcaption><div class="overlay"></div></figure></a>
+            <a class="dog" href="#"><figure><img src="assets/images/dog4.jpg" width="350" height="230" alt="Jai"><figcaption>Jai</figcaption><div class="overlay"></div></figure></a>
+            <a class="cat" href="#"><figure><img src="assets/images/cat3.jpg" width="350" height="230" alt="Pasha"><figcaption>Pasha</figcaption><div class="overlay"></div></figure></a>
+            <a class="snake" href="#"><figure><img src="assets/images/snake3.jpg" width="350" height="230" alt="Kali"><figcaption>Kali</figcaption><div class="overlay"></div></figure></a>
+            <a class="dog" href="#"><figure><img src="assets/images/dog3.jpg" width="350" height="230" alt="Jyota"><figcaption>Jyota</figcaption><div class="overlay"></div></figure></a>
+            <a class="dog" href="#"><figure><img src="assets/images/dog2.jpg" width="350" height="230" alt="Shanti"><figcaption>Shanti</figcaption><div class="overlay"></div></figure></a>
+            <a class="cat" href="#"><figure><img src="assets/images/cat2.jpg" width="350" height="230" alt="Shiva"><figcaption>Shiva</figcaption><div class="overlay"></div></figure></a>
+            <a class="snake" href="#"><figure><img src="assets/images/snake2.jpg" width="350" height="230" alt="Kundalini"><figcaption>Kundalini</figcaption><div class="overlay"></div></figure></a>
+            <a class="snake" href="#"><figure><img src="assets/images/snake1.jpg" width="350" height="230" alt="Shakti"><figcaption>Shakti</figcaption><div class="overlay"></div></figure></a>
+            <a class="dog" href="#"><figure><img src="assets/images/dog1.jpg" width="350" height="230" alt="Chandra"><figcaption>Chandra</figcaption><div class="overlay"></div></figure></a>
         </div>  
     </div>
 </body>

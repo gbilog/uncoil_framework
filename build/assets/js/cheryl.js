@@ -57,7 +57,8 @@
                     $(this).next().show();
                 }
             });
-
+            
+            var $this = $(this);
             var marginTop = $(this).css("margin-top");
             var top = $(this).offset().top;
             var bottom = top + $(this).outerHeight();
@@ -94,12 +95,19 @@ $(function () {
         var bottom = top + $(elementId).outerHeight(true);
         
         $(document).on("scroll", function () {
-            if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.parent().parent().attr("class") === "subItems") {
+            if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.next().attr("class") === "subItems") {
                 $links.removeClass("active");
+                $(".subItems").hide();
+                currentLink.addClass("active");
+                currentLink.next().show();
+            } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.parent().parent().attr("class") === "subItems") {
+                $links.removeClass("active");
+                //$(".subItems").hide();
                 currentLink.addClass("active");
                 currentLink.parent().parent().prev().addClass("active");
             } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom) {
                 $links.removeClass("active");
+                $(".subItems").hide();
                 currentLink.addClass("active");
             }
         }); 
