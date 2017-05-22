@@ -15,16 +15,25 @@
     }
     
     .container {
-        width: 600px;
-        margin: 50px 100px;
-        float: left;
+        display: flex;
+        width: 700px;
+        margin: 50px auto;
+        justify-content: space-around;
+    }
+        
+    #flexItem1 {
+        flex: 6;
+    }
+        
+    #flexItem2 {
+        flex: 1;
+        padding-left: 30px;
     }
         
     nav {
         position: relative;
         width: auto;
         float: left;
-        margin-top: 50px;
     }
         
     figure {
@@ -141,56 +150,60 @@
     </header>
    
     <div class="container">
-        <div id="part1">
-            <h3>Part 1</h3>
-            <p id="part1a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
-            <p id="part1b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
-        </div>
-        <div id="part2">
-            <h3>Part 2</h3>
-            <p id="part2a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
-            <p id="part2b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
-        </div>
-        <div id="part3">
-            <h3>Part 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
-        </div>
-        <div id="part4">
-            <h3>Part 4</h3>
-            <p id="part4a">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
-            <p id="part4b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
-        </div>
-        <div id="part5">
-            <h3>Part 5</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
-        </div>   
+        <div id="flexItem1">
+            <div id="part1">
+                <h2>Part 1</h2>
+                <p id="part1a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
+                <p id="part1b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
+            </div>
+            <div id="part2">
+                <h2>Part 2</h2>
+                <p id="part2a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
+                <p id="part2b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
+            </div>
+            <div id="part3">
+                <h2>Part 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
+            </div>
+            <div id="part4">
+                <h2>Part 4</h2>
+                <p id="part4a">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
+                <p id="part4b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
+            </div>
+            <div id="part5">
+                <h2>Part 5</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id orci malesuada, scelerisque magna sit amet, aliquam metus. Cras dui lectus, fermentum nec venenatis vitae, semper at arcu. Nunc vel augue tempus, molestie odio a, aliquam lacus. Aenean lorem odio, lacinia eu nunc sit amet, dapibus luctus risus. Proin ut laoreet arcu, sagittis ultricies neque. Aenean tincidunt aliquam magna vitae laoreet. Curabitur nec mi a orci auctor finibus nec at elit. Phasellus sit amet ex interdum, fringilla mauris sit amet, maximus dolor. Integer ac eros diam. Suspendisse scelerisque non quam nec pretium. Vestibulum et condimentum ipsum. Maecenas eu auctor lorem. Integer ac lectus ac felis condimentum iaculis in sit amet justo.</p>
+            </div>   
+        </div> <!-- end of Item 1 -->
+        <div id="flexItem2">
+            <nav id="affixScrollSpyDemo">
+               <ul>
+                  <li><a href="#part1">Part 1</a>
+                      <ul class="subItems">
+                          <li><a href="#part1a">Part1a</a></li>
+                          <li><a href="#part1b">Part1b</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#part2">Part 2</a>
+                      <ul class="subItems">
+                          <li><a href="#part2a">Part2a</a></li>
+                          <li><a href="#part2b">Part2b</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#part3">Part 3</a></li>
+                  <li><a href="#part4">Part 4</a>
+                      <ul class="subItems">
+                          <li><a href="#part4a">Part4a</a></li>
+                          <li><a href="#part4b">Part4b</a></li>
+                      </ul>
+                  </li>  
+               </ul> 
+            </nav>
+        </div> <!-- end of Item 2 -->
     </div>
-    <nav id="affixScrollSpyDemo">
-           <ul>
-              <li><a href="#part1">Part 1</a>
-                  <ul class="subItems">
-                      <li><a href="#part1a">Part1a</a></li>
-                      <li><a href="#part1b">Part1b</a></li>
-                  </ul>
-              </li>
-              <li><a href="#part2">Part 2</a>
-                  <ul class="subItems">
-                      <li><a href="#part2a">Part2a</a></li>
-                      <li><a href="#part2b">Part2b</a></li>
-                  </ul>
-              </li>
-              <li><a href="#part3">Part 3</a></li>
-              <li><a href="#part4">Part 4</a>
-                  <ul class="subItems">
-                      <li><a href="#part4a">Part4a</a></li>
-                      <li><a href="#part4b">Part4b</a></li>
-                  </ul>
-              </li>  
-           </ul> 
-    </nav>
 </body>
 </html>

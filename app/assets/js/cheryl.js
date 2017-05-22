@@ -59,10 +59,15 @@
             });
             
             var $this = $(this);
-            var marginTop = $(this).css("margin-top");
-            var top = $(this).offset().top;
-            var bottom = top + $(this).outerHeight();
-            var left = $(this).offset().left;
+            var marginTop = $this.css("margin-top");
+            var top = $this.offset().top;
+            var bottom = top + $this.outerHeight();
+            var left = $this.offset().left;
+            
+            left = $(document).on("resize", function () {
+                left = $this.offset().left;
+                return left;
+            });
 
             $(document).on("scroll", function () {
                 if ($(this).scrollTop() >= top) {
