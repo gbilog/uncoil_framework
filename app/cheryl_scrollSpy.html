@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <link href="assets/css/app.css" rel="stylesheet"/>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="assets/js/cheryl.js"></script>
@@ -16,7 +16,7 @@
     
     .container {
         width: 600px;
-        margin: 200px 100px 20px;
+        margin: 50px 100px;
         float: left;
     }
         
@@ -24,7 +24,7 @@
         position: relative;
         width: auto;
         float: left;
-        margin-top: 200px;
+        margin-top: 50px;
     }
         
     figure {
@@ -71,6 +71,52 @@
         display: none;
     }
         
+    /**** CSS for Parallax Hero Image ****/
+        
+    .heroParallax {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 550px;
+        background-image: url(assets/images/snake2Hero.jpg);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;      
+    }
+    
+    .heroParallax h1 {
+        font-size: 5em;
+        font-weight: 300;
+        color: #fafafa;
+        text-shadow: 0 0 1px #888;
+        letter-spacing: .03em;
+        text-transform: uppercase;
+    }
+        
+    .heroParallax p {
+        font-size: 1em;
+        color: #fafafa;
+        text-shadow: 0 0 1px #888;
+        margin-bottom: 40px;
+    }
+        
+    .heroParallax p a {
+        font-size: .8em;
+        padding: .5em 1em;
+        border: 2px solid #fafafa;
+        border-radius: 5px;
+        background-color: rgba(0,0,0,.2);
+        text-decoration: none;
+        color: #fafafa;
+        transition: all .5s;
+    }
+        
+    .heroParallax p a:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+        
     </style>
     
     <script>
@@ -87,6 +133,13 @@
     
 </head>
 <body>
+
+    <header class="heroParallax">
+        <h1>Uncoil</h1>
+        <p>A Modern Framework Using the Latest Technologies</p>
+        <p><a href="#part1">Learn More</a></p>
+    </header>
+   
     <div class="container">
         <div id="part1">
             <h3>Part 1</h3>
