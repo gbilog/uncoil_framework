@@ -49,7 +49,7 @@ gulp.task('browser-sync', ['sass', 'build', 'rebuild'], function() {
     server: {
       baseDir: 'app/'
     },
-    index: "cheryl.html",
+    index: "cheryl_scrollSpy.html",
     notify: false
   });
 });

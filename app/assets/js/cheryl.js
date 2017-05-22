@@ -81,38 +81,78 @@
     }
 })(jQuery);
 
-
-$(function () {
-    // Get Ids of Elements to Spy On
-    var $links = $("#affixDemo").find("a");
-    var offset = 20;
-    
-    // Create event listener for scroll
-    $links.each(function () {
-        var currentLink = $(this);
-        var elementId = $(this).attr("href");
-        var top = $(elementId).offset().top - offset;
-        var bottom = top + $(elementId).outerHeight(true);
+(function ($) {
+    $.fn.scrollSpy = function (options) {
+        var defaults = $.extend({
+            "offset"  : 20
+        }, options);
         
-        $(document).on("scroll", function () {
-            if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.next().attr("class") === "subItems") {
-                $links.removeClass("active");
-                $(".subItems").hide();
-                currentLink.addClass("active");
-                currentLink.next().show();
-            } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.parent().parent().attr("class") === "subItems") {
-                $links.removeClass("active");
-                //$(".subItems").hide();
-                currentLink.addClass("active");
-                currentLink.parent().parent().prev().addClass("active");
-            } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom) {
-                $links.removeClass("active");
-                $(".subItems").hide();
-                currentLink.addClass("active");
-            }
-        }); 
-    });
-});
+        // Get Ids of Elements to Spy On
+        var $links = $(this).find("a");
+    
+        return this.each(function () {
+    
+        // Create event listener for scroll
+        $links.each(function () {
+            var currentLink = $(this);
+            var elementId = $(this).attr("href");
+            var top = $(elementId).offset().top - defaults.offset;
+            var bottom = top + $(elementId).outerHeight(true);
+
+            $(document).on("scroll", function () {
+                if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.next().attr("class") === "subItems") {
+                    $links.removeClass("active");
+                    $(".subItems").hide();
+                    currentLink.addClass("active");
+                    currentLink.next().show();
+                } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.parent().parent().attr("class") === "subItems") {
+                    $links.removeClass("active");
+                    //$(".subItems").hide();
+                    currentLink.addClass("active");
+                    currentLink.parent().parent().prev().addClass("active");
+                } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom) {
+                    $links.removeClass("active");
+                    $(".subItems").hide();
+                    currentLink.addClass("active");
+                }
+            }); 
+        });
+        });
+    }
+})(jQuery);
+
+
+//$(function () {
+//    // Get Ids of Elements to Spy On
+//    var $links = $("#affixDemo").find("a");
+//    var offset = 20;
+//    
+//    // Create event listener for scroll
+//    $links.each(function () {
+//        var currentLink = $(this);
+//        var elementId = $(this).attr("href");
+//        var top = $(elementId).offset().top - offset;
+//        var bottom = top + $(elementId).outerHeight(true);
+//        
+//        $(document).on("scroll", function () {
+//            if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.next().attr("class") === "subItems") {
+//                $links.removeClass("active");
+//                $(".subItems").hide();
+//                currentLink.addClass("active");
+//                currentLink.next().show();
+//            } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.parent().parent().attr("class") === "subItems") {
+//                $links.removeClass("active");
+//                //$(".subItems").hide();
+//                currentLink.addClass("active");
+//                currentLink.parent().parent().prev().addClass("active");
+//            } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom) {
+//                $links.removeClass("active");
+//                $(".subItems").hide();
+//                currentLink.addClass("active");
+//            }
+//        }); 
+//    });
+//});
 
 
 
