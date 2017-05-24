@@ -3,11 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Tab</title>
-    <link rel="stylesheet" href="assets/css/ambili.css">
+    <!--<link rel="stylesheet" href="assets/css/ambili.css">-->
    
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="assets/js/ambili.js"></script>
+    <style>
+        body {
+            margin-top: 100px;
+            font-family: 'Trebuchet MS', serif;
+            line-height: 1.6em;
+        }
+
+        .tabs {
+        width: 800px;
+        margin: 0 auto;
+        }
+
+        .tabs ul{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        .tabs ul li{
+            background: none;
+            color: #222;
+            display: inline-block;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .tabs ul li.current{
+            background: #ededed;
+            color: #222;
+        }
+
+        .tab-content{
+            display: none;
+            background: #ededed;
+            padding: 15px;
+        }
+
+        .tab-content.current{
+            display: inherit;
+        }
     
+    </style>
     <script>
     (function($){
         $(document).ready(function(){
