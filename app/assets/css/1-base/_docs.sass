@@ -6,9 +6,9 @@ code
   background-color: lighten($accent, 45%)
 
 .example-container
-  border: 1px solid lighten($brand-primary, 30%)
-  padding: 5px 20px 0px 20px
-  border-radius: 4px 4px 0px 0px
+  border: .1em solid lighten($brand-primary, 30%)
+  padding: .5em 2em 0em 2em
+  border-radius: .4em .4em 0em 0em
   overflow: hidden
 
   .example
@@ -17,22 +17,22 @@ code
     font-size: $h6-font-size
     font-weight: $font-bold
     background-color: lighten($brand-primary, 40%)
-    padding: 10px
-    margin: (-5px) -20px
+    padding: 1em
+    margin: (-.5em) -2em
 
 .example-copy
   figure, pre
-    margin: 0px
+    margin: 0em
 
   pre
     word-break: break-all
     word-wrap: break-word
     white-space: pre-wrap
     background-color: $medium-grey
-    padding: 20px
-    margin-top: -1px
-    border: 1px solid lighten($brand-tertiary, 30%)
-    border-radius: 0px 0px 4px 4px
+    padding: 2em
+    margin-top: -.1em
+    border: .1em solid lighten($brand-tertiary, 30%)
+    border-radius: 0em 0em .4em .4em
     margin-bottom: 50px
 
     & .tag
@@ -43,3 +43,11 @@ code
 
     & .class-contents
       color: $dark-blue
+
+#block-example
+  width: 60%
+  margin: 1.5em auto
+  border-radius: .4em
+  padding: 1em
+  background-color: lighten($light-grey, 3%)
+  border: .1em solid lighten($brand-tertiary, 35%)

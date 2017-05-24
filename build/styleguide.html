@@ -210,6 +210,566 @@
 <span class="tag">&lt;p <span class="class">class=</span><span class="class-contents">"text-capitalize"</span>&gt;</span>This is text center.<span class="tag">&lt;/p&gt;</span></pre>
       </figure>
     </div>
+    <!-- Text Abbreviation -->
+    <h2>Abbreviations</h2>
+    <p>Use the <code>&lt;abbr&gt;</code> element to give meaning to abbreviations and acronyms to show expanded versions on hover. Use the <code>title</code> attribute to classes to apply common text transformation properties.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <p>He is the <abbr title="Chief Executive Officer">CEO</abbr></p>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;p&gt;</span>He is the <span class="tag">&lt;abbr <span class="class">title=</span><span class="class-contents">"Chief Executive Officer"</span>&gt;</span>CEO<span class="tag">&lt;/abbr&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Address -->
+    <h2>Addresses</h2>
+    <p>Use the <code>&lt;address&gt;</code> tag to identify relevant address information on your webpage. Use the <code>&lt;br&gt;</code> tag to preserve formatting.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <p><address>
+        <strong>Business Name</strong><br>
+        1234 Main Street<br>
+        City State Zip<br>
+        <abbr title="phone number">P:</abbr> 123-123-1234
+      </address></p>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;p&gt;</span><span class="tag">&lt;address&gt;</span><span class="tag">&lt;strong&gt;</span>Business Name<span class="tag">&lt;/strong&gt;</span><span class="tag">&lt;br&gt;</span>
+1234 Main Street<span class="tag">&lt;br&gt;</span>
+City State Zip<span class="tag">&lt;br&gt;</span>
+<span class="tag">&lt;abbr <span class="class">title=</span><span class="class-contents">"phone number"</span>&gt;</span>P:<span class="tag">&lt;/abbr&gt;</span>123-123-12345<span class="tag">&lt;/address&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Blockquotes -->
+    <h2>Blockquotes</h2>
+    <p>Use the <code>&lt;blockquote&gt;</code> tag to quote blocks of content from another source within your document.</p>
+    <h3>Default Blockquotes</h3>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <blockquote cite="#">
+        <p>This is the default blockquote styling for Uncoil.</p>
+      </blockquote>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;blockquote&gt;</span>
+  <span class="tag">&lt;p&gt;</span>This is the default blockquote styling for Uncoil.<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/blockquote&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Blockquotes With Footer-->
+    <h2>Blockquotes with Options</h2>
+    <p>These are style changes for the <code>&lt;blockquote&gt;</code> tag.</p>
+    <h3>Naming Sources</h3>
+    <p>Add a <code>&lt;footer&gt;</code> to identify your source. Then wrap the source with the <code>&lt;footer&gt;</code> tag to attribute credit to the author.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <blockquote cite="#">
+        <p>This is the default blockquote styling for Uncoil.</p>
+        <footer>The author is <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;blockquote&gt;</span>
+  <span class="tag">&lt;p&gt;</span>This is the default blockquote styling for Uncoil.<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;footer&gt;</span>The author is <span class="tag">&lt;cite <span class="class">title=</span><span class="class-contents">"Source Title"</span>&gt;</span>Source Title<span class="tag">&lt;/cite&gt;</span><span class="tag">&lt;/footer&gt;</span>
+<span class="tag">&lt;/blockquote&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Blockquotes Center-->
+    <h3>Blockquotes with Items Centered</h3>
+    <p>Add a <code>.blockquote-centered</code> to center you blockquote and elements.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <blockquote class="blockquote-centered">
+        <p>This is a blockquote and it's elements that are center-aligned for extra awesomeness</p>
+        <footer>The author is <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;blockquote <span class="class">title=</span><span class="class-contents">"blockquote-centered"</span>&gt;</span>&gt;</span>
+  ...
+<span class="tag">&lt;/blockquote&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Lists -->
+    <h2>Lists</h2>
+    <!-- Unordered List -->
+    <h3>Unordered</h3>
+    <p>A list of items in which the order <em>does not</em> explicitly matter.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <ul>
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+          <ul>
+            <li>Sublist item</li>
+            <li>Sublist item</li>
+            <li>Sublist item</li>
+          </ul>
+      </ul>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;</span>...<span class="tag">&lt;li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Ordered List -->
+    <h3>Ordered</h3>
+    <p>A list of items in which the order <em>does</em> explicitly matter.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <ol>
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+          <ol>
+            <li>Sublist item</li>
+            <li>Sublist item</li>
+            <li>Sublist item</li>
+          </ol>
+      </ol>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;ol&gt;</span>
+  <span class="tag">&lt;li&gt;</span>...<span class="tag">&lt;li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Unstyled List -->
+    <h3>Unstyled</h3>
+    <p>Removes the default list style and left margin on the immediate children with the <code>.list-nostyle</code> class. <strong>This style only affects the immmediate children only so you will have to reapply the styles to any sublists for extra styling</strong></p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <ul class="list-nostyle">
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+          <ul>
+            <li>Sublist item</li>
+            <li>Sublist item</li>
+            <li>Sublist item</li>
+          </ul>
+      </ul>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;ul <span class="class">class=</span><span class="class-contents">"list-nostyle"</span>&gt;</span>
+  <span class="tag">&lt;li&gt;</span>...<span class="tag">&lt;li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Inline List -->
+    <h3>Unstyled</h3>
+    <p>Places all of the list items on a single line with the <code>.list-inline</code> class.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <ul class="list-inline">
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+      </ul>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;ul <span class="class">class=</span><span class="class-contents">"list-inline"</span>&gt;</span>
+  <span class="tag">&lt;li&gt;</span>...<span class="tag">&lt;li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Definition List -->
+    <h3>Definition</h3>
+    <p>Create a list of terms with their corresponding definitions.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <dl>
+        <dt>Term</dt>
+        <dd>This is the term's description.</dd>
+        <dt>Term</dt>
+        <dd>This is the term's description.</dd>
+        <dt>Term</dt>
+        <dd>This is the term's description.</dd>
+      </dl>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;dl&gt;</span>
+  <span class="tag">&lt;dt&gt;</span>...<span class="tag">&lt;/dt&gt;</span>
+  <span class="tag">&lt;dd&gt;</span>...<span class="tag">&lt;/dd&gt;</span>
+<span class="tag">&lt;/dl&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Code -->
+    <h2>Code Styling</h2>
+    <!-- Inline Code Snippets -->
+    <h3>Inline Code Snippets</h3>
+    <p>Wrap inline blocks of code with the <code>&lt;code&gt;</code> tag.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <p>To hide items you can use the <code>.hide</code> class.</p>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;p&gt;</span>To hide items you can use the <span class="tag">&lt;code&gt;</span>.hide<span class="tag">&lt;/code&gt;</span> class.<span class="tag">&lt;/p&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- User Input -->
+    <h3>User Input</h3>
+    <p>Use <code>&lt;kbd&gt;</code> tag to define user keyboard inputs.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <p>This is the <kbd>return</kbd> key.</p>
+      <p>This is <kbd><kbd>crt</kbd> + <kbd>z</kbd></kbd></p>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;p&gt;</span>This is the <span class="tag">&lt;kbd&gt;</span>return<span class="tag">&lt;/kbd&gt;</span> key.<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>This is <span class="tag">&lt;kbd&gt;</span><span class="tag">&lt;kbd&gt;</span>return<span class="tag">&lt;/kbd&gt;</span> + <span class="tag">&lt;kbd&gt;</span>z<span class="tag">&lt;/kbd&gt;</span><span class="tag">&lt;/kbd&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Inline Code Snippets -->
+    <h3>Basic Code Block</h3>
+    <p>Use the <code>&lt;pre&gt;</code> tag for multiple lines of code.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <pre>&lt;p&gt;this is a paragraph&lt;/p&gt;</pre>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre>&lt;pre&gt;...&lt;/pre&gt;</pre>
+      </figure>
+    </div>
+    <!-- Variables -->
+    <h3>Variables</h3>
+    <p>Use the <code>&lt;var&gt;</code> tag to address variables in your code.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;var&gt;</span>y<span class="tag">&lt;/var&gt;</span> = <span class="tag">&lt;var&gt;</span>m<span class="tag">&lt;/var&gt;</span><span class="tag">&lt;var&gt;</span>x<span class="tag">&lt;/var&gt;</span> + <span class="tag">&lt;var&gt;</span>b<span class="tag">&lt;/var&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Sample Output -->
+    <h3>Sample Output</h3>
+    <p>Use the <code>&lt;samp&gt;</code> to indicate a sample output from a program.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <p><samp>This is a sample output</samp></p>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;samp&gt;</span>This is a sample output<span class="tag">&lt;/samp&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Tables -->
+    <h2>Tables</h2>
+    <!-- Basic Table -->
+    <h3>Default Output</h3>
+    <p>This is basic styling for a default table within Uncoil. To preserve these styles, add the <code>.default-table</code> class to the main <code>table</code> tag to prevent any conflicts with other plugins you may choose to add to your website.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <table class="default-table">
+        <caption>This is an optional caption</caption>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Tag Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>John</td>
+            <td>Susan</td>
+            <td>Amy</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Smith</td>
+            <td>Johnson</td>
+            <td>Lee</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>@johnsmith</td>
+            <td>@susanjohnson</td>
+            <td>@amylee</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;table <span class="class">class=</span><span class="class-contents">"default-table"</span>&gt;</span>
+  ...
+<span class="tag">&lt;/table&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Striped Table -->
+    <h3>Striped Table</h3>
+    <p>This borrows the same styling as the default table, however it adds a background color to odd rows for easier reading.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <table class="striped-table">
+        <caption>This is an optional caption</caption>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Tag Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>John</td>
+            <td>Susan</td>
+            <td>Amy</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Smith</td>
+            <td>Johnson</td>
+            <td>Lee</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>@johnsmith</td>
+            <td>@susanjohnson</td>
+            <td>@amylee</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;table <span class="class">class=</span><span class="class-contents">"striped-table"</span>&gt;</span>
+  ...
+<span class="tag">&lt;/table&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Bordered Table -->
+    <h3>Bordered Table</h3>
+    <p>This borrows the same styling as the default table, however it adds a back the table borders.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <table class="bordered-table">
+        <caption>This is an optional caption</caption>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Tag Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>John</td>
+            <td>Susan</td>
+            <td>Amy</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Smith</td>
+            <td>Johnson</td>
+            <td>Lee</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>@johnsmith</td>
+            <td>@susanjohnson</td>
+            <td>@amylee</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;table <span class="class">class=</span><span class="class-contents">"bordered-table"</span>&gt;</span>
+  ...
+<span class="tag">&lt;/table&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Resonsive Table -->
+    <h3>Responsive Table</h3>
+    <p>This borrows the same styling as the default table, however it adds a back the table borders.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <div class="responsive-table">
+        <table class="default-table">
+          <caption>This is an optional caption</caption>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Tag Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>John</td>
+              <td>Susan</td>
+              <td>Amy</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>Smith</td>
+              <td>Johnson</td>
+              <td>Lee</td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>@johnsmith</td>
+              <td>@susanjohnson</td>
+              <td>@amylee</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;table <span class="class">class=</span><span class="class-contents">"responsive-table"</span>&gt;</span>
+  ...
+<span class="tag">&lt;/table&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Button Tags -->
+    <h2>Buttons</h2>
+    <!-- Button Tags -->
+    <h3>Button Tags</h3>
+    <p>Use the button classes on <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;input&gt;</code> tags.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <a class="button button-default" href="#" role="button">Link</a>
+      <button type="submit" class="button button-default">Button</button>
+      <input type="button" class="button button-default" value="Input">
+      <input type="submit" class="button button-default" value="Submit">
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;a <span class="class">class=</span><span class="class-contents">"button button-default"</span> <span class="class">href=</span><span class="class-contents">"#"</span> <span class="class">role=</span><span class="class-contents">"button"</span>&gt;</span>Link<span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"submit"</span> <span class="class">class=</span><span class="class-contents">"button button-default"</span>&gt;</span>Button<span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;input <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default"</span> <span class="class">value=</span><span class="class-contents">"input"</span>&gt;</span>
+<span class="tag">&lt;input <span class="class">type=</span><span class="class-contents">"submit"</span> <span class="class">class=</span><span class="class-contents">"button button-default"</span> <span class="class">value=</span><span class="class-contents">"submit"</span>&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Button Options -->
+    <h3>Button Options</h3>
+    <p>Use the button classes below to quickly style any button.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <button type="button" class="button button-default">Default</button>
+      <button type="button" class="button button-primary">Primary</button>
+      <button type="button" class="button button-success">Success</button>
+      <button type="button" class="button button-warning">Warning</button>
+      <button type="button" class="button button-danger">Danger</button>
+      <button type="button" class="button button-blue">Blue</button>
+      <button type="button" class="button button-accent">Accent</button>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default"</span>&gt;</span>Default<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary"</span>&gt;</span>Primary<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-success"</span>&gt;</span>Success<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-warning"</span>&gt;</span>Warning<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-danger"</span>&gt;</span>Danger<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-blue"</span>&gt;</span>Blue<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-accent"</span>&gt;</span>Accent<span class="tag">&lt;/button&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Button Sizes -->
+    <h3>Button Sizes</h3>
+    <p>Add sizing classes to your buttons to quickly alter button sizes.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <p>
+        <button type="button" class="button button-primary button-large">Large Button</button>
+        <button type="button" class="button button-default button-large">Large Button</button>
+      </p>
+      <p>
+        <button type="button" class="button button-primary">Normal Button</button>
+        <button type="button" class="button button-default">Normal Button</button>
+      </p>
+      <p>
+        <button type="button" class="button button-primary button-small">Small Button</button>
+        <button type="button" class="button button-default button-small">Small Button</button>
+      </p>
+      <p>
+        <button type="button" class="button button-primary button-tiny">Tiny Button</button>
+        <button type="button" class="button button-default button-tiny">Tiny Button</button>
+      </p>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;p&gt;</span>
+  <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary button-large"</span>&gt;</span>Large Button<span class="tag">&lt;/button&gt;</span>
+  <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default button-large"</span>&gt;</span>Large Button<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>
+  <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary"</span>&gt;</span>Normal Button<span class="tag">&lt;/button&gt;</span>
+  <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default"</span>&gt;</span>Normal Button<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>
+  <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary button-small"</span>&gt;</span>Small Button<span class="tag">&lt;/button&gt;</span>
+  <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default button-small"</span>&gt;</span>Small Button<span class="tag">&lt;/button&gt;</span>
+  <span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>
+  <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary button-tiny"</span>&gt;</span>Tiny Button<span class="tag">&lt;/button&gt;</span>
+  <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default button-tiny"</span>&gt;</span>Tiny Button<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/p&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Block Buttons -->
+    <h3>Block Buttons</h3>
+    <p>Use the <code>.button-block</code> class on your buttons to stack them vertically and full-width within their parent element container.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <div id="block-example">
+        <button type="button" class="button button-primary button-block">Block Level Button</button>
+        <button type="button" class="button button-default button-block">Block Level Button</button>
+      </div>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary button-block"</span>&gt;</span>Block Level Button<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default button-block"</span>&gt;</span>Block Level Button<span class="tag">&lt;/button&gt;</span></pre>
+      </figure>
+    </div>
+    <!-- Disabled Buttons -->
+    <h2>Disabled Buttons</h2>
+    <p>Creating disabled buttons and elements decreases <code>opacity</code> and changes the cursor properties to <code>cursor: not-allowed</code.></p>
+    <!-- Disabled Button Element -->
+    <h3>Disabled Button Element</h3>
+    <p>Use the <code>disabled</code> attribute to <code>&lt;button&gt;</code> elements.</p>
+    <div class="example-container">
+      <p class="example">Example:</p>
+      <button type="button" class="button button-primary" disabled="disabled">Disabled Button</button>
+      <button type="button" class="button button-default" disabled="disabled">Disabled Button</button>
+    </div>
+    <div class="example-copy">
+      <figure>
+        <pre><span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary"</span> <span class="class">disabled=</span><span class="class-contents">"disabled"</span>&gt;</span>Disabled Button<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default"</span> <span class="class">disabled=</span><span class="class-contents">"disabled"</span>&gt;</span>Disabled Button<span class="tag">&lt;/button&gt;</span></pre>
+      </figure>
+    </div>
 
     <!-- end -->
   </div>
