@@ -30,12 +30,6 @@
         padding-left: 50px;
     }
         
-    nav {
-        position: relative;
-        width: auto;
-        float: left;
-    }
-        
     figure {
         margin: 15px;
         width: 350px;
@@ -43,11 +37,19 @@
         background-color: #eee;
     }
         
-    ul {
+    /**** CSS for Affix/ScrollSpy Navigation Menu ****/
+        
+    #affixScrollSpyNav {
+        position: relative;
+        width: auto;
+        float: left;
+    }
+        
+    #affixScrollSpyNav ul {
         list-style-type: none; 
     }
         
-    li a {
+    #affixScrollSpyNav li a {
         color: #202020;
         text-decoration: none;
         font-family: "Open Sans", sans-serif;
@@ -57,20 +59,20 @@
         padding-left: 16px;
     }
         
-    li > ul > li a{
+    #affixScrollSpyNav li > ul > li a{
         padding-left: 36px;
         font-size: .9em;
         color: #666;
     }
         
-    li a:hover, li a.active {
+    #affixScrollSpyNav li a:hover, li a.active {
         color: #000;
         font-weight: 700;
         padding-left: 14px;
         border-left: 2px solid #202020;
     }
         
-    li > ul li a:hover, li > ul li a.active {
+    #affixScrollSpyNav li > ul li a:hover, #affixScrollSpyNav li > ul li a.active {
         color: #666;
         padding-left: 34px;
         border-left: 2px solid #666;
@@ -98,6 +100,7 @@
     .heroParallax h1 {
         font-size: 5em;
         font-weight: 300;
+        text-align: center;
         color: #fafafa;
         text-shadow: 0 0 1px #888;
         letter-spacing: .03em;
@@ -107,6 +110,7 @@
     .heroParallax p {
         font-size: 1em;
         color: #fafafa;
+        text-align: center;
         text-shadow: 0 0 1px #888;
         margin-bottom: 40px;
     }

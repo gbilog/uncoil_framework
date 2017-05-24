@@ -59,19 +59,22 @@
             });
             
             var $this = $(this);
-            var marginTop = $(this).css("margin-top");
-            var top = $(this).offset().top;
-            var bottom = top + $(this).outerHeight();
-            var left = $(this).offset().left;
+            var marginTop = $this.css("margin-top");
+            var top = $this.offset().top;
+            var bottom = top + $this.outerHeight();
+            var left = $this.offset().left;
+            
+            left = $(document).on("resize", function () {
+                left = $this.offset().left;
+                return left;
+            });
 
             $(document).on("scroll", function () {
                 if ($(this).scrollTop() >= top) {
                     $this.css("position", "fixed")
                          .css("margin-top", 0)
                          .css("left", left)
-                         .animate({top: defaults.offset}, 400, function () {
-                                $this.prop("top", defaults.offset);
-                    });            
+                         .css("top", defaults.offset);            
                 } else if ($(this).scrollTop() < bottom) {
                     $this.css("margin-top", marginTop)
                          .css("position", "static");
@@ -81,38 +84,45 @@
     }
 })(jQuery);
 
-
-$(function () {
-    // Get Ids of Elements to Spy On
-    var $links = $("#affixDemo").find("a");
-    var offset = 20;
-    
-    // Create event listener for scroll
-    $links.each(function () {
-        var currentLink = $(this);
-        var elementId = $(this).attr("href");
-        var top = $(elementId).offset().top - offset;
-        var bottom = top + $(elementId).outerHeight(true);
+(function ($) {
+    $.fn.scrollSpy = function (options) {
+        var defaults = $.extend({
+            "offset"  : 20
+        }, options);
         
-        $(document).on("scroll", function () {
-            if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.next().attr("class") === "subItems") {
-                $links.removeClass("active");
-                $(".subItems").hide();
-                currentLink.addClass("active");
-                currentLink.next().show();
-            } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.parent().parent().attr("class") === "subItems") {
-                $links.removeClass("active");
-                //$(".subItems").hide();
-                currentLink.addClass("active");
-                currentLink.parent().parent().prev().addClass("active");
-            } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom) {
-                $links.removeClass("active");
-                $(".subItems").hide();
-                currentLink.addClass("active");
-            }
-        }); 
-    });
-});
+        // Get Ids of Elements to Spy On
+        var $links = $(this).find("a");
+    
+        return this.each(function () {
+    
+        // Create event listener for scroll
+        $links.each(function () {
+            var currentLink = $(this);
+            var elementId = $(this).attr("href");
+            var top = $(elementId).offset().top - defaults.offset;
+            var bottom = top + $(elementId).outerHeight(true);
+
+            $(document).on("scroll", function () {
+                if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.next().attr("class") === "subItems") {
+                    $links.removeClass("active");
+                    $(".subItems").hide();
+                    currentLink.addClass("active");
+                    currentLink.next().show();
+                } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom && currentLink.parent().parent().attr("class") === "subItems") {
+                    $links.removeClass("active");
+                    //$(".subItems").hide();
+                    currentLink.addClass("active");
+                    currentLink.parent().parent().prev().addClass("active");
+                } else if ($(this).scrollTop() >= top && $(this).scrollTop() < bottom) {
+                    $links.removeClass("active");
+                    $(".subItems").hide();
+                    currentLink.addClass("active");
+                }
+            }); 
+        });
+        });
+    }
+})(jQuery);
 
 
 
