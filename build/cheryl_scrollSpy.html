@@ -130,13 +130,15 @@
     
     <script>
         $(function () {
-            $("#affixScrollSpyDemo").affix(); 
+            $("#affixScrollSpyNav").affix({
+                offset: 50
+            }); 
         });
     </script>
     
     <script>
         $(function () {
-            $("#affixScrollSpyDemo").scrollSpy(); 
+            $("#affixScrollSpyNav").scrollSpy(); 
         });
     </script>
     
@@ -180,7 +182,7 @@
             </div>   
         </div> <!-- end of Item 1 -->
         <div id="flexItem2">
-            <nav id="affixScrollSpyDemo">
+            <nav id="affixScrollSpyNav">
                <ul>
                   <li><a href="#part1">Part 1</a>
                       <ul class="subItems">

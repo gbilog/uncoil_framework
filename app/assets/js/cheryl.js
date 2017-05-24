@@ -74,9 +74,7 @@
                     $this.css("position", "fixed")
                          .css("margin-top", 0)
                          .css("left", left)
-                         .animate({top: defaults.offset}, 400, function () {
-                                $this.prop("top", defaults.offset);
-                    });            
+                         .css("top", defaults.offset);            
                 } else if ($(this).scrollTop() < bottom) {
                     $this.css("margin-top", marginTop)
                          .css("position", "static");
