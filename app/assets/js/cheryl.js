@@ -1,5 +1,5 @@
 (function ($) {
-    $.fn.imageShuffle = function (options) {
+    $.fn.galleryFilter = function (options) {
         var defaults = $.extend({
             "hoverOpacity"  : .75,
             "hoverSpeed"    : "fast",

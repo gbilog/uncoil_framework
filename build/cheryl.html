@@ -75,6 +75,7 @@
         width: 100%;
         height: 100%;
         color: #fff;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         top: 0;
@@ -82,6 +83,10 @@
         position: absolute;
         background-color: rgba(0,0,0,.6);
         transition: opacity ease .5s;
+    }
+        
+    .overlay p {
+        color: #fff;
     }
         
     .overlay-plus {
@@ -106,7 +111,7 @@
     
     <script>
         $(function () {
-            $("#shuffleNav").imageShuffle({
+            $("#galleryFilterNav").galleryFilter({
                 hoverOpacity: 1 // default is .75 when Overlay is not being used; set to 1 when using Overlay
             });
         });
@@ -115,7 +120,7 @@
 </head>
 <body>
     <div class="container">
-        <nav id="shuffleNav">
+        <nav id="galleryFilterNav">
            <ul>
               <li><a id="all" href="#">All</a></li>
               <li><a id="dog" href="#">Dogs</a></li>
@@ -124,16 +129,70 @@
            </ul> 
         </nav>
         <div id="imageContainer">
-            <a class="cat" href="#"><figure><img src="assets/images/cat4.jpg" width="350" height="230" alt="Kuber"><figcaption>Kuber</figcaption><div class="overlay">Kuber</div></figure></a>
-            <a class="dog" href="#"><figure><img src="assets/images/dog4.jpg" width="350" height="230" alt="Jai"><figcaption>Jai</figcaption><div class="overlay"></div></figure></a>
-            <a class="cat" href="#"><figure><img src="assets/images/cat3.jpg" width="350" height="230" alt="Pasha"><figcaption>Pasha</figcaption><div class="overlay-plus"></div></figure></a>
-            <a class="snake" href="#"><figure><img src="assets/images/snake3.jpg" width="350" height="230" alt="Kali"><figcaption>Kali</figcaption><div class="overlay-plus"></div></figure></a>
-            <a class="dog" href="#"><figure><img src="assets/images/dog3.jpg" width="350" height="230" alt="Jyota"><figcaption>Jyota</figcaption><div class="overlay-plus"></div></figure></a>
-            <a class="dog" href="#"><figure><img src="assets/images/dog2.jpg" width="350" height="230" alt="Shanti"><figcaption>Shanti</figcaption><div class="overlay-plus"></div></figure></a>
-            <a class="cat" href="#"><figure><img src="assets/images/cat2.jpg" width="350" height="230" alt="Shiva"><figcaption>Shiva</figcaption><div class="overlay-plus"></div></figure></a>
-            <a class="snake" href="#"><figure><img src="assets/images/snake2.jpg" width="350" height="230" alt="Kundalini"><figcaption>Kundalini</figcaption><div class="overlay-plus"></div></figure></a>
-            <a class="snake" href="#"><figure><img src="assets/images/snake1.jpg" width="350" height="230" alt="Shakti"><figcaption>Shakti</figcaption><div class="overlay-plus"></div></figure></a>
-            <a class="dog" href="#"><figure><img src="assets/images/dog1.jpg" width="350" height="230" alt="Chandra"><figcaption>Chandra</figcaption><div class="overlay-plus"></div></figure></a>
+            <a class="cat" href="#">
+                <figure>
+                    <img src="assets/images/cat4.jpg" width="350" height="230" alt="Kuber">            <figcaption>Kuber</figcaption>
+                    <div class="overlay">
+                        <p>Kuber</p>
+                        <p>Male</p>
+                        <p>10 years old </p>
+                    </div>
+                </figure>
+            </a>
+            <a class="dog" href="#">
+                <figure>
+                    <img src="assets/images/dog4.jpg" width="350" height="230" alt="Jai"><figcaption>Jai</figcaption>
+                    <div class="overlay"></div>
+                </figure>
+            </a>
+            <a class="cat" href="#">
+                <figure>
+                    <img src="assets/images/cat3.jpg" width="350" height="230" alt="Pasha"><figcaption>Pasha</figcaption>
+                    <div class="overlay-plus"></div>
+                </figure>
+            </a>
+            <a class="snake" href="#">
+                <figure>
+                    <img src="assets/images/snake3.jpg" width="350" height="230" alt="Kali"><figcaption>Kali</figcaption>
+                    <div class="overlay-plus"></div>
+                </figure>
+            </a>
+            <a class="dog" href="#">
+                <figure>   
+                    <img src="assets/images/dog3.jpg" width="350" height="230" alt="Jyota"><figcaption>Jyota</figcaption>
+                    <div class="overlay-plus"></div>
+                </figure>
+            </a>
+            <a class="dog" href="#">
+                <figure>
+                    <img src="assets/images/dog2.jpg" width="350" height="230" alt="Shanti"><figcaption>Shanti</figcaption>
+                    <div class="overlay-plus"></div>
+                </figure>
+            </a>
+            <a class="cat" href="#">
+                <figure>
+                    <img src="assets/images/cat2.jpg" width="350" height="230" alt="Shiva"><figcaption>Shiva</figcaption>
+                    <div class="overlay-plus"></div>
+                </figure>
+            </a>
+            <a class="snake" href="#">
+                <figure>
+                    <img src="assets/images/snake2.jpg" width="350" height="230" alt="Kundalini"><figcaption>Kundalini</figcaption>
+                    <div class="overlay-plus"></div>
+                </figure>
+            </a>
+            <a class="snake" href="#">
+                <figure>
+                    <img src="assets/images/snake1.jpg" width="350" height="230" alt="Shakti"><figcaption>Shakti</figcaption>
+                    <div class="overlay-plus"></div>
+                </figure>
+            </a>
+            <a class="dog" href="#">
+                <figure>
+                    <img src="assets/images/dog1.jpg" width="350" height="230" alt="Chandra"><figcaption>Chandra</figcaption>
+                    <div class="overlay-plus"></div>
+                </figure>
+            </a>
         </div>  
     </div>
 </body>
