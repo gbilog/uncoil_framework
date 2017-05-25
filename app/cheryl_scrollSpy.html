@@ -42,7 +42,7 @@
     #affixScrollSpyNav {
         position: relative;
         width: auto;
-        float: left;
+        float: left;  /* this property is not needed if using flexbox */
     }
         
     #affixScrollSpyNav ul {
@@ -82,8 +82,11 @@
         display: none;
     }
         
+    /**** Custon CSS for parallax hero Image ****/
+        
     header {
         background-image: url(assets/images/snake2Hero.jpg);
+        height: 550px;
     }
         
     /**** CSS for Parallax Hero Image ****/
@@ -93,7 +96,6 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        height: 550px;
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-attachment: fixed;
