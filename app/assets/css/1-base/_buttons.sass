@@ -1,0 +1,83 @@
+a, button, input[type="button"], input[type="submit"], input[type="reset"]
+  display: inline-block
+  color: lighten($dark-blue, 20%)
+  padding: .5em 1em
+  border-radius: .4em
+  border: .1em solid lighten($dark-blue, 60%)
+  background-color: $white
+  font-size: $default-font-size
+  text-decoration: none
+  line-height: $default-line-height
+  margin: 1em auto
+  cursor: pointer
+
+  &:hover
+    background-color: darken($white, 5%)
+
+  &.button-primary
+    background-color: $brand-primary
+    color: $white
+    border: .1em solid darken($brand-primary, 5%)
+
+    &:hover
+      background-color: darken($brand-primary, 5%)
+
+  &.button-success
+    background-color: $success
+    color: $white
+    border: .1em solid darken($success, 5%)
+
+    &:hover
+      background-color: darken($success, 5%)
+
+  &.button-warning
+    background-color: $warning
+    color: $white
+    border: .1em solid darken($warning, 5%)
+
+    &:hover
+      background-color: darken($warning, 5%)
+
+  &.button-danger
+    background-color: $danger
+    color: $white
+    border: .1em solid darken($danger, 5%)
+
+    &:hover
+      background-color: darken($danger, 5%)
+
+  &.button-blue
+    background-color: $dark-blue
+    color: $white
+    border: .1em solid darken($dark-blue, 5%)
+
+    &:hover
+      background-color: darken($dark-blue, 5%)
+
+  &.button-accent
+    background-color: $accent
+    color: $white
+    border: .1em solid darken($accent, 5%)
+
+    &:hover
+      background-color: darken($accent, 5%)
+
+.button-large
+  font-size: $default-font-size * 1.5
+  line-height: $default-line-height * 1.5
+
+.button-small
+  font-size: $default-font-size * .8
+  line-height: $default-line-height * .8
+
+.button-tiny
+  font-size: $default-font-size * .7
+  line-height: $default-line-height * .7
+
+.button-block
+  display: block
+  width: 100%
+
+a[disabled], button[disabled], input[disabled], .disabled
+  opacity: .6
+  cursor: not-allowed
