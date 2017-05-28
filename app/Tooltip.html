@@ -3,73 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Tool tip</title>
-</head>
     <style>
-        .tooltip {
+        .containerStyle {            
             background: green;
             border: 1px solid black;
-            padding: 15px 32px; 
             width: 150px;
             color: white;
-            border-radius:2px 2px;
+            border-radius:4px 4px;
             text-align: center;
             font-size: 1em;
+            padding: 15px 32px; 
+        }
+        
+        .tipContainer{            
             position: relative;
-            
         }
         
-            div {
-                margin: 0 auto;
-                text-align: center;
-            }
+        .tipContainer .tooltip:after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 10px;
+            border-style: solid;
+            border-color:  transparent transparent limegreen;
+        }
         
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 120px;
-            height: 20px;
-            background-color: white;
-            color: black;
-            border: 1px solid black;
+        .tipContainer .tooltip {
+            width: 200px;
+            min-height: 20px;
+            background-color: limegreen;
+            color: white;
             text-align: center;
-            padding: 5px 5px;
-            border-radius: 6px 6px;
-            margin-top: 20px;
-            position:absolute;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            left: 50%;
             z-index: 1;
-            opacity:0;
-            transition: opacity 0;
-            
+            margin-left: -100px;
+            margin-top: 12px;
+            top: 100%;
+            opacity: 0;
+            transition: opacity 1s;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         
-        .tooltiptext {
-            background: white;
-            color: black;
-        }
-        
-        .tooltip .tooltiptext :: after {
-           content: "";
-           position: relative;
-           border-radius: 2px;
-           left: 50%;
-          opacity: 100%;
-         left: 50%;
-         margin-left: -5px;
-         border-width: 5px;
-         border-style: solid;
-         border-color: #555 transparent transparent transparent;        
-        } 
-        
-        .tooltip : hover .tooltiptext {
-            visibility: visible;
-            position: fixed;
+        .tipContainer:hover .tooltip {
+            opacity: 1;
             z-index: 1;
-            }
-            
-    </style>
+        }
 
+    </style>
+</head>
 <body>
-    <div class="tooltip">Hover Over Me
-        <span class="tooltiptext">Hello</span> 
+    <div class="tipContainer containerStyle">
+       Hover over me
+        <div class="tooltip">Hello</div> 
     </div>
 </body>
 </html>
