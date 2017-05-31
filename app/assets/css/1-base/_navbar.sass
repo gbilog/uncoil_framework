@@ -1,0 +1,46 @@
+.topnav
+  width: 100%
+  display: flex
+  justify-content: space-between
+  background-color: $dark-blue
+  overflow: hidden
+
+  img
+    max-height: 5em
+    padding: 1em
+
+  a
+    color: $light-grey
+    text-align: center
+    padding: 1.4em 1.6em
+    text-decoration: none
+    font-size: $default-font-size
+
+    &:hover
+      background-color: $brand-primary
+      color: black
+
+  .icon
+    display: none
+
+@media screen and (max-width: 600px)
+  .topnav a
+    display: none
+  .topnav
+    display: flex
+    justify-content: space-between
+    a.icon
+      display: flex
+
+@media screen and (max-width: 600px)
+  .topnav.responsive
+    position: relative
+  .topnav.responsive a.icon
+    position: absolute
+    right: 0
+    top: 0
+
+  .topnav.responsive a
+    float: none
+    display: flex
+    text-align: left
