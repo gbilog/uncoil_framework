@@ -9,6 +9,60 @@ body {
   padding: 0;
   word-break: break-all; }
 
+.topnav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #2C3E50;
+  overflow: hidden; }
+  .topnav img {
+    max-height: 5em;
+    padding: 1em; }
+  .topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1.4em 1.6em;
+    text-decoration: none;
+    font-size: 1em; }
+    .topnav a:hover {
+      background-color: #3FC380;
+      color: black; }
+  .topnav .icon {
+    display: none; }
+
+@media screen and (max-width: 600px) {
+  .topnav a {
+    display: none; }
+  .topnav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .topnav a.icon {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative; }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .topnav.responsive a {
+    float: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left; } }
+
 body {
   color: #333333;
   font-style: normal;
@@ -221,7 +275,7 @@ table, table .default-table {
     table.bordered-table th, table .bordered-table.default-table th, table.bordered-table td, table .bordered-table.default-table td {
       border: 0.1em solid #cbd7e3; }
 
-a, button, input[type="button"], input[type="submit"], input[type="reset"] {
+a[role="button"], button, input[type="button"], input[type="submit"], input[type="reset"] {
   display: inline-block;
   color: #507192;
   padding: .5em 1em;
@@ -233,43 +287,43 @@ a, button, input[type="button"], input[type="submit"], input[type="reset"] {
   line-height: 1.25;
   margin: 1em auto;
   cursor: pointer; }
-  a:hover, button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+  a[role="button"]:hover, button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
     background-color: #f2f2f2; }
-  a.button-primary, button.button-primary, input[type="button"].button-primary, input[type="submit"].button-primary, input[type="reset"].button-primary {
+  a[role="button"].button-primary, button.button-primary, input[type="button"].button-primary, input[type="submit"].button-primary, input[type="reset"].button-primary {
     background-color: #3FC380;
     color: #ffffff;
     border: 0.1em solid #37b173; }
-    a.button-primary:hover, button.button-primary:hover, input[type="button"].button-primary:hover, input[type="submit"].button-primary:hover, input[type="reset"].button-primary:hover {
+    a[role="button"].button-primary:hover, button.button-primary:hover, input[type="button"].button-primary:hover, input[type="submit"].button-primary:hover, input[type="reset"].button-primary:hover {
       background-color: #37b173; }
-  a.button-success, button.button-success, input[type="button"].button-success, input[type="submit"].button-success, input[type="reset"].button-success {
+  a[role="button"].button-success, button.button-success, input[type="button"].button-success, input[type="submit"].button-success, input[type="reset"].button-success {
     background-color: #25A65B;
     color: #ffffff;
     border: 0.1em solid #209150; }
-    a.button-success:hover, button.button-success:hover, input[type="button"].button-success:hover, input[type="submit"].button-success:hover, input[type="reset"].button-success:hover {
+    a[role="button"].button-success:hover, button.button-success:hover, input[type="button"].button-success:hover, input[type="submit"].button-success:hover, input[type="reset"].button-success:hover {
       background-color: #209150; }
-  a.button-warning, button.button-warning, input[type="button"].button-warning, input[type="submit"].button-warning, input[type="reset"].button-warning {
+  a[role="button"].button-warning, button.button-warning, input[type="button"].button-warning, input[type="submit"].button-warning, input[type="reset"].button-warning {
     background-color: #F5AB35;
     color: #ffffff;
     border: 0.1em solid #f4a11d; }
-    a.button-warning:hover, button.button-warning:hover, input[type="button"].button-warning:hover, input[type="submit"].button-warning:hover, input[type="reset"].button-warning:hover {
+    a[role="button"].button-warning:hover, button.button-warning:hover, input[type="button"].button-warning:hover, input[type="submit"].button-warning:hover, input[type="reset"].button-warning:hover {
       background-color: #f4a11d; }
-  a.button-danger, button.button-danger, input[type="button"].button-danger, input[type="submit"].button-danger, input[type="reset"].button-danger {
+  a[role="button"].button-danger, button.button-danger, input[type="button"].button-danger, input[type="submit"].button-danger, input[type="reset"].button-danger {
     background-color: #CF000F;
     color: #ffffff;
     border: 0.1em solid #b6000d; }
-    a.button-danger:hover, button.button-danger:hover, input[type="button"].button-danger:hover, input[type="submit"].button-danger:hover, input[type="reset"].button-danger:hover {
+    a[role="button"].button-danger:hover, button.button-danger:hover, input[type="button"].button-danger:hover, input[type="submit"].button-danger:hover, input[type="reset"].button-danger:hover {
       background-color: #b6000d; }
-  a.button-blue, button.button-blue, input[type="button"].button-blue, input[type="submit"].button-blue, input[type="reset"].button-blue {
+  a[role="button"].button-blue, button.button-blue, input[type="button"].button-blue, input[type="submit"].button-blue, input[type="reset"].button-blue {
     background-color: #2C3E50;
     color: #ffffff;
     border: 0.1em solid #233140; }
-    a.button-blue:hover, button.button-blue:hover, input[type="button"].button-blue:hover, input[type="submit"].button-blue:hover, input[type="reset"].button-blue:hover {
+    a[role="button"].button-blue:hover, button.button-blue:hover, input[type="button"].button-blue:hover, input[type="submit"].button-blue:hover, input[type="reset"].button-blue:hover {
       background-color: #233140; }
-  a.button-accent, button.button-accent, input[type="button"].button-accent, input[type="submit"].button-accent, input[type="reset"].button-accent {
+  a[role="button"].button-accent, button.button-accent, input[type="button"].button-accent, input[type="submit"].button-accent, input[type="reset"].button-accent {
     background-color: #FF1C00;
     color: #ffffff;
     border: 0.1em solid #e61900; }
-    a.button-accent:hover, button.button-accent:hover, input[type="button"].button-accent:hover, input[type="submit"].button-accent:hover, input[type="reset"].button-accent:hover {
+    a[role="button"].button-accent:hover, button.button-accent:hover, input[type="button"].button-accent:hover, input[type="submit"].button-accent:hover, input[type="reset"].button-accent:hover {
       background-color: #e61900; }
 
 .button-large {
@@ -366,6 +420,225 @@ figure {
         -ms-flex: 1;
             flex: 1; }
 
+.row-centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  box-sizing: border-box;
+  padding: 1em 0em; }
+  .row-centered .docs {
+    background-color: #3FC380;
+    border: 1px solid #319e67; }
+  .row-centered .col-1 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 8.3333333%;
+        flex-basis: 8.3333333%; }
+  .row-centered .col-2 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 16.66667%;
+        flex-basis: 16.66667%; }
+  .row-centered .col-3 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 25.0%;
+        flex-basis: 25.0%; }
+  .row-centered .col-4 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 33.33333%;
+        flex-basis: 33.33333%; }
+  .row-centered .col-5 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 41.66667%;
+        flex-basis: 41.66667%; }
+  .row-centered .col-6 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 50.0%;
+        flex-basis: 50.0%; }
+  .row-centered .col-7 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 58.33333%;
+        flex-basis: 58.33333%; }
+  .row-centered .col-8 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 66.66667%;
+        flex-basis: 66.66667%; }
+  .row-centered .col-9 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 75.0%;
+        flex-basis: 75.0%; }
+  .row-centered .col-10 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 83.33333%;
+        flex-basis: 83.33333%; }
+  .row-centered .col-11 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 91.66667%;
+        flex-basis: 91.66667%; }
+  .row-centered .col-12 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 100.0%;
+        flex-basis: 100.0%; }
+
+.row-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 1em 0em; }
+  .row-left .docs {
+    background-color: #3FC380;
+    border: 1px solid #319e67; }
+  .row-left .col-1 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 8.3333333%;
+        flex-basis: 8.3333333%; }
+  .row-left .col-2 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 16.66667%;
+        flex-basis: 16.66667%; }
+  .row-left .col-3 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 25.0%;
+        flex-basis: 25.0%; }
+  .row-left .col-4 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 33.33333%;
+        flex-basis: 33.33333%; }
+  .row-left .col-5 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 41.66667%;
+        flex-basis: 41.66667%; }
+  .row-left .col-6 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 50.0%;
+        flex-basis: 50.0%; }
+  .row-left .col-7 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 58.33333%;
+        flex-basis: 58.33333%; }
+  .row-left .col-8 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 66.66667%;
+        flex-basis: 66.66667%; }
+  .row-left .col-9 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 75.0%;
+        flex-basis: 75.0%; }
+  .row-left .col-10 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 83.33333%;
+        flex-basis: 83.33333%; }
+  .row-left .col-11 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 91.66667%;
+        flex-basis: 91.66667%; }
+  .row-left .col-12 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 100.0%;
+        flex-basis: 100.0%; }
+
+.row-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 1em 0em; }
+  .row-right .docs {
+    background-color: #3FC380;
+    border: 1px solid #319e67; }
+  .row-right .col-1 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 8.3333333%;
+        flex-basis: 8.3333333%; }
+  .row-right .col-2 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 16.66667%;
+        flex-basis: 16.66667%; }
+  .row-right .col-3 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 25.0%;
+        flex-basis: 25.0%; }
+  .row-right .col-4 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 33.33333%;
+        flex-basis: 33.33333%; }
+  .row-right .col-5 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 41.66667%;
+        flex-basis: 41.66667%; }
+  .row-right .col-6 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 50.0%;
+        flex-basis: 50.0%; }
+  .row-right .col-7 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 58.33333%;
+        flex-basis: 58.33333%; }
+  .row-right .col-8 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 66.66667%;
+        flex-basis: 66.66667%; }
+  .row-right .col-9 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 75.0%;
+        flex-basis: 75.0%; }
+  .row-right .col-10 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 83.33333%;
+        flex-basis: 83.33333%; }
+  .row-right .col-11 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 91.66667%;
+        flex-basis: 91.66667%; }
+  .row-right .col-12 {
+    box-sizing: border-box;
+    padding: 1em;
+    -ms-flex-preferred-size: 100.0%;
+        flex-basis: 100.0%; }
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -375,86 +648,65 @@ figure {
           justify-content: space-between;
   box-sizing: border-box;
   padding: 1em 0em; }
-  .row .col-1 {
+  .row .docs {
     background-color: #3FC380;
-    border: 1px solid #319e67;
+    border: 1px solid #319e67; }
+  .row .col-1 {
     box-sizing: border-box;
     padding: 1em;
     -ms-flex-preferred-size: 8.3333333%;
         flex-basis: 8.3333333%; }
   .row .col-2 {
-    background-color: #3FC380;
-    border: 1px solid #319e67;
     box-sizing: border-box;
     padding: 1em;
     -ms-flex-preferred-size: 16.66667%;
         flex-basis: 16.66667%; }
   .row .col-3 {
-    background-color: #3FC380;
-    border: 1px solid #319e67;
     box-sizing: border-box;
     padding: 1em;
     -ms-flex-preferred-size: 25.0%;
         flex-basis: 25.0%; }
   .row .col-4 {
-    background-color: #3FC380;
-    border: 1px solid #319e67;
     box-sizing: border-box;
     padding: 1em;
     -ms-flex-preferred-size: 33.33333%;
         flex-basis: 33.33333%; }
   .row .col-5 {
-    background-color: #3FC380;
-    border: 1px solid #319e67;
     box-sizing: border-box;
     padding: 1em;
     -ms-flex-preferred-size: 41.66667%;
         flex-basis: 41.66667%; }
   .row .col-6 {
-    background-color: #3FC380;
-    border: 1px solid #319e67;
     box-sizing: border-box;
     padding: 1em;
     -ms-flex-preferred-size: 50.0%;
         flex-basis: 50.0%; }
   .row .col-7 {
-    background-color: #3FC380;
-    border: 1px solid #319e67;
     box-sizing: border-box;
     padding: 1em;
     -ms-flex-preferred-size: 58.33333%;
         flex-basis: 58.33333%; }
   .row .col-8 {
-    background-color: #3FC380;
-    border: 1px solid #319e67;
     box-sizing: border-box;
     padding: 1em;
     -ms-flex-preferred-size: 66.66667%;
         flex-basis: 66.66667%; }
   .row .col-9 {
-    background-color: #3FC380;
-    border: 1px solid #319e67;
     box-sizing: border-box;
     padding: 1em;
     -ms-flex-preferred-size: 75.0%;
         flex-basis: 75.0%; }
   .row .col-10 {
-    background-color: #3FC380;
-    border: 1px solid #319e67;
     box-sizing: border-box;
     padding: 1em;
     -ms-flex-preferred-size: 83.33333%;
         flex-basis: 83.33333%; }
   .row .col-11 {
-    background-color: #3FC380;
-    border: 1px solid #319e67;
     box-sizing: border-box;
     padding: 1em;
     -ms-flex-preferred-size: 91.66667%;
         flex-basis: 91.66667%; }
   .row .col-12 {
-    background-color: #3FC380;
-    border: 1px solid #319e67;
     box-sizing: border-box;
     padding: 1em;
     -ms-flex-preferred-size: 100.0%;
