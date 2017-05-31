@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Only Navigation Menu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+       
+    ul {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        position: absolute;
+    }
+
+
+    li {
+        display:inline-block;
+        float: left;
+        margin-right: 1px;
+    }
+
+
+    li a {
+        display:block;
+        min-width:140px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #fff;
+        background: green;
+        text-decoration: none;
+    }
+
+
+    li:hover a {
+        background: brown;
+    }
+
+
+
+    .display-menu {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-decoration: none;
+        color: #fff;
+        background: red;
+        text-align: center;
+        padding: 10px 0;
+        display: none;
+    }
+
+
+    input[type=checkbox]{
+        display: none;
+    }
+
+
+    input[type=checkbox]:checked ~ #menu{
+        display: block;
+    }
+
+    @media screen and (max-width : 760px){
+
+        ul {
+            position: static;
+            display: none;
+        }
+
+        li {
+            margin-bottom: 1px;
+        }
+
+        ul li, li a {
+            width: 100%;
+        }
+
+        .display-menu {
+            display:block;
+        }
+    }
+    </style>
+</head>
+<body>
+	<label for="display-menu" class="display-menu">Menu</label>
+	<input type="checkbox" id="display-menu" role="button">
+		<ul id="menu">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Products</a></li>
+		<li><a href="#">Solutions</a></li>
+		<li><a href="#">Contact Us</a></li>
+	</ul>
+</body>
+</html>

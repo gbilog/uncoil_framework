@@ -49,7 +49,7 @@ gulp.task('browser-sync', ['sass', 'build', 'rebuild'], function() {
     server: {
       baseDir: 'app/'
     },
-    index: "styleguide.html",
+    index: "Ambili.html",
     notify: false
   });
 });
