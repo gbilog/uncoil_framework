@@ -1208,47 +1208,50 @@
         </div>
       </div>
 
-
       <!-- Images -->
-      <h2>Images</h2>
-      <!-- Responsive Images -->
-      <h3>Responsive Images</h3>
-      <p>Adding the <code>.responsive</code> class to <code>&lt;img&gt;</code> tags will make images responsive-friendly within Uncoil. This class applies <code>max-width: 100%</code>, <code>height: auto</code>, and <code>display: block</code> within their parent containers.</p>
-      <p>To center images, use the <code>.center-block</code> class on <code>&lt;img&gt;</code> tags as opposed to the <code>.text-center</code> class.</p>
-      <div class="example-container">
-        <p class="example">Example:</p>
-        <figure>
-          <img src="http://fillmurray.com/1600/500" alt="Responsive Image" class="responsive">
-        </figure>
-        <figure>
-          <img src="http://fillmurray.com/250/250" alt="Centered Image" class="center-block">
-        </figure>
+      <div class="row">
+        <div class="col-12" id="images">
+          <h2>Images</h2>
+          <h3>Responsive Images</h3>
+          <p>Adding the <code>.responsive</code> class to <code>&lt;img&gt;</code> tags will make images responsive-friendly within Uncoil. This class applies <code>max-width: 100%</code>, <code>height: auto</code>, and <code>display: block</code> within their parent containers.</p>
+          <p>To center images, use the <code>.center-block</code> class on <code>&lt;img&gt;</code> tags as opposed to the <code>.text-center</code> class.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <figure>
+              <img src="http://fillmurray.com/1600/500" alt="Responsive Image" class="responsive">
+            </figure>
+            <figure>
+              <img src="http://fillmurray.com/250/250" alt="Centered Image" class="center-block">
+            </figure>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;figure&gt;</span>
+        <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"responsive"</span>&gt;</span>
+      <span class="tag">&lt;figure&gt;</span>
+        <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"center-block"</span>&gt;</span>
+      <span class="tag">&lt;/figure&gt;</span></pre>
+            </figure>
+          </div>
+          <!-- Image Styles -->
+          <h3>Image Styles</h3>
+          <p>Add the <code>.image-rounded</code>, <code>.image-circle</code>, or <code>.image-shadow</code> classes to quickly change the image styling.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <img src="http://fillmurray.com/150/150" alt="Rounded Image" class="image-rounded">
+            <img src="http://fillmurray.com/150/150" alt="Circle Image" class="image-circle">
+            <img src="http://fillmurray.com/150/150" alt="Shadow Image" class="image-shadow">
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"image-rounded"</span>&gt;</span>
+      <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"image-circle"</span>&gt;</span>
+      <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"image-shadow"</span>&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
       </div>
-      <div class="example-copy">
-        <figure>
-          <pre><span class="tag">&lt;figure&gt;</span>
-    <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"responsive"</span>&gt;</span>
-  <span class="tag">&lt;figure&gt;</span>
-    <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"center-block"</span>&gt;</span>
-  <span class="tag">&lt;/figure&gt;</span></pre>
-        </figure>
-      </div>
-      <!-- Image Styles -->
-      <h3>Image Styles</h3>
-      <p>Add the <code>.image-rounded</code>, <code>.image-circle</code>, or <code>.image-shadow</code> classes to quickly change the image styling.</p>
-      <div class="example-container">
-        <p class="example">Example:</p>
-        <img src="http://fillmurray.com/150/150" alt="Rounded Image" class="image-rounded">
-        <img src="http://fillmurray.com/150/150" alt="Circle Image" class="image-circle">
-        <img src="http://fillmurray.com/150/150" alt="Shadow Image" class="image-shadow">
-      </div>
-      <div class="example-copy">
-        <figure>
-          <pre><span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"image-rounded"</span>&gt;</span>
-  <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"image-circle"</span>&gt;</span>
-  <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"image-shadow"</span>&gt;</span></pre>
-        </figure>
-      </div>
+
       <!-- end -->
     </main>
     <aside class="side-bar-right">
@@ -1309,6 +1312,8 @@
                <li><a href="#disabledButtons">Disabled</a></li>
              </ul>
            </li>
+           <li><a href="#images">Images</a>
+           </li>
         </ul>
       </nav>
     </aside>
@@ -1333,18 +1338,6 @@
   <script>
     $(function () {
       $("#affixScrollSpyNav").scrollSpy();
-    });
-  </script>
-  <script>
-    $(function() {
-      $("#myPageTab").Tabs();
-    });
-  </script>
-  <script>
-    $(function () {
-      $("#galleryFilterNav").galleryFilter({
-          hoverOpacity: 1 // default is .75 when Overlay is not being used; set to 1 when using Overlay
-      });
     });
   </script>
 </body>
