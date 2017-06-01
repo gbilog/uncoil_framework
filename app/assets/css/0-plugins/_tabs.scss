@@ -1,5 +1,5 @@
 .tabs {
-  width: 600px;
+  width: 100%;
   margin: 0 auto;
   /*border: 1px solid black;*/
 }
@@ -11,27 +11,28 @@
 }
 
 .tabs ul li {
-  background: white;
-  color: #222;
+  background: $light-grey;
+  color: $text-color;
   display: inline-block;
   padding: 10px 15px;
   cursor: pointer;
-  border: 1px solid #888;
+  border: 1px solid $grey;
   border-radius: 4px 4px 0 0;
 }
 
 .tabs ul li.current {
   border-bottom-style: none;
-  background: #ededed;
+  background: $brand-primary;
+  color: $white;
 }
 
 .tab-content {
   display: none;
-  background: #ededed;
+  background: $grey;
   padding: 15px;
 }
 
 .tab-content.current {
-  border: 1px solid black;
+  //border: 1px solid $text-color;
   display: inherit;
 }

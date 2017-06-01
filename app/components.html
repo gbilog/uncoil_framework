@@ -29,72 +29,171 @@
     </nav>
 </div>
   <header class="heroParallax">
-      <h1>Uncoil</h1>
+      <h1>Components</h1>
       <p>A Modern Framework Using the Latest Technologies</p>
       <a href="#gettingsStarted" class="button button-primary" role="button" download>Download Production Version 1.0 (Recommended)</a>
       <a href="assets/images/snake2Hero" class="button button-default" role="button" download>Download Dev Framework (Advanced Users)</a>
   </header>
   <div class="flex-layout">
     <main class="content-left">
-  </main>
+      <!-- Uncoil Header -->
+      <div class="row">
+        <div class="col-12" id="#uncoilHeader">
+          <h2>Uncoil Header</h2>
+          <p>something here</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <div class="row">
+              <div class="col-12">
+                <header class="heroParallax">
+                    <h1>Title</h1>
+                    <p>Sub Description</p>
+                    <a href="#" class="button button-primary" role="button">Button</a>
+                </header>
+              </div>
+            </div>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;h1&gt;</span>h1: Uncoil Heading<span class="tag">&lt;/h1&gt;</span>
+      <span class="tag">&lt;h2&gt;</span>h2: Uncoil Heading<span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;h3&gt;</span>h3: Uncoil Heading<span class="tag">&lt;/h3&gt;</span>
+      <span class="tag">&lt;h4&gt;</span>h4: Uncoil Heading<span class="tag">&lt;/h4&gt;</span>
+      <span class="tag">&lt;h4&gt;</span>h5: Uncoil Heading<span class="tag">&lt;/h5&gt;</span>
+      <span class="tag">&lt;h6&gt;</span>h6: Uncoil Heading<span class="tag">&lt;/h6&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <!-- Uncoil Navbar -->
+      <div class="row">
+        <div class="col-12" id="#uncoilNavbar">
+          <h2>Uncoil Navbar &amp; Side Menu</h2>
+          <p>something here</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <div class="row">
+              <div class="col-12">
+                <div class="topnav">
+                  <img src="assets/images/uncoil_logo.svg" alt="">
+                  <nav>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    <a href="#">Link 4</a>
+                    <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
+                  </nav>
+                </div>
+                <div id="sideNav" class="sidenav">
+                  <nav>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <img src="assets/images/uncoil_logo_white.svg" alt="">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    <a href="#">Link 4</a>
+                  </nav>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;h1&gt;</span>h1: Uncoil Heading<span class="tag">&lt;/h1&gt;</span>
+      <span class="tag">&lt;h2&gt;</span>h2: Uncoil Heading<span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;h3&gt;</span>h3: Uncoil Heading<span class="tag">&lt;/h3&gt;</span>
+      <span class="tag">&lt;h4&gt;</span>h4: Uncoil Heading<span class="tag">&lt;/h4&gt;</span>
+      <span class="tag">&lt;h4&gt;</span>h5: Uncoil Heading<span class="tag">&lt;/h5&gt;</span>
+      <span class="tag">&lt;h6&gt;</span>h6: Uncoil Heading<span class="tag">&lt;/h6&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <!-- Tabs -->
+      <div class="row">
+        <div class="col-12" id="#uncoilTabs">
+          <h2>Uncoil Tabs</h2>
+          <p>something here</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <div class="row">
+              <div class="col-12">
+                <div id="myPageTab"><!-- container -->
+                  <ul>
+                    <li data-tab="t1">Tab One</li>
+                    <li data-tab="t2">Tab Two</li>
+                    <li data-tab="t3">Tab Three</li>
+                    <li data-tab="t4">Tab Four</li>
+                    <li data-tab="t5">Tab Five</li>
+                  </ul>
+                  <div id="t1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                  <div id="t2">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                  <div id="t3">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  </div>
+                  <div id="t4">
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                  <div id="t5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;h1&gt;</span>h1: Uncoil Heading<span class="tag">&lt;/h1&gt;</span>
+      <span class="tag">&lt;h2&gt;</span>h2: Uncoil Heading<span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;h3&gt;</span>h3: Uncoil Heading<span class="tag">&lt;/h3&gt;</span>
+      <span class="tag">&lt;h4&gt;</span>h4: Uncoil Heading<span class="tag">&lt;/h4&gt;</span>
+      <span class="tag">&lt;h4&gt;</span>h5: Uncoil Heading<span class="tag">&lt;/h5&gt;</span>
+      <span class="tag">&lt;h6&gt;</span>h6: Uncoil Heading<span class="tag">&lt;/h6&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <!-- Uncoil Tool Tip -->
+      <div class="row">
+        <div class="col-12" id="#uncoilToolTip">
+          <h2>Uncoil Tool Tip</h2>
+          <p>something here</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <div class="row">
+              <div class="col-12">
+                <div class="tipContainer containerStyle">
+                   Hover over me
+                  <div class="tooltip">Hello</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;h1&gt;</span>h1: Uncoil Heading<span class="tag">&lt;/h1&gt;</span>
+      <span class="tag">&lt;h2&gt;</span>h2: Uncoil Heading<span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;h3&gt;</span>h3: Uncoil Heading<span class="tag">&lt;/h3&gt;</span>
+      <span class="tag">&lt;h4&gt;</span>h4: Uncoil Heading<span class="tag">&lt;/h4&gt;</span>
+      <span class="tag">&lt;h4&gt;</span>h5: Uncoil Heading<span class="tag">&lt;/h5&gt;</span>
+      <span class="tag">&lt;h6&gt;</span>h6: Uncoil Heading<span class="tag">&lt;/h6&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </main>
   <aside class="side-bar-right">
     <nav id="affixScrollSpyNav">
       <ul>
-        <li><a href="#gettingStarted">Getting Started</a>
-           <ul class="subItems">
-             <li><a href="#htmlDocument">HTML Document</a></li>
-             <li><a href="#layouts">Layouts</a></li>
-           </ul>
-        </li>
-        <li><a href="#grid">Uncoil Grid</a>
-           <ul class="subItems">
-             <li><a href="#breakPoints">Break Points</a></li>
-             <li><a href="#gridRows">Grid Rows</a></li>
-             <li><a href="#columnClasses">Column Classes</a></li>
-             <li><a href="#basicGridClasses">Basic Grid Classes</a></li>
-           </ul>
-        </li>
-         <li><a href="#typography">Typography</a>
-            <ul class="subItems">
-              <li><a href="#htmlHeadings">HTML Headings</a></li>
-              <li><a href="#htmlHeadingsWithSubtext">HTML Headings With Subtext</a></li>
-              <li><a href="#htmlBody">HTML Body</a></li>
-              <li><a href="#introBodyText">Intro Body Text</a></li>
-              <li><a href="#inlineTextElements">Inline Text Elements</a></li>
-              <li><a href="#textAlignmentClasses">Text Alignment Classes</a></li>
-              <li><a href="#textTransformationClasses">Text Transformation Classes</a></li>
-              <li><a href="#textAbbreviation">Text Abbreviation</a></li>
-              <li><a href="#addresses">Addresses</a></li>
-              <li><a href="#blockquotes">Blockquotes</a></li>
-              <li><a href="#lists">Lists</a></li>
-            </ul>
-         </li>
-         <li><a href="#code">Code</a>
-            <ul class="subItems">
-              <li><a href="#inlineCodeSnippets">Inline Code Snippets</a></li>
-              <li><a href="#userInput">User Input</a></li>
-              <li><a href="#basicCodeBlock">Basic Code Block</a></li>
-              <li><a href="#variables">Variables</a></li>
-              <li><a href="#sampleOutput">Sample Output</a></li>
-            </ul>
-         </li>
-         <li><a href="#tables">Tables</a>
-           <ul class="subItems">
-             <li><a href="#basicTable">Basic Table</a></li>
-             <li><a href="#stripedTable">Striped Table</a></li>
-             <li><a href="#borderedTable">Bordered Table</a></li>
-             <li><a href="#responsiveTable">Responsive Table</a></li>
-           </ul>
-         </li>
-         <li><a href="#buttons">Buttons</a>
-           <ul class="subItems">
-             <li><a href="#buttonTags">Tags</a></li>
-             <li><a href="#buttonOptions">Options</a></li>
-             <li><a href="#buttonSizes">Sizes</a></li>
-             <li><a href="#blockButtons">Block</a></li>
-             <li><a href="#disabledButtons">Disabled</a></li>
-           </ul>
-         </li>
+        <li><a href="#uncoilHeader">Uncoil Header</a></li>
+        <li><a href="#uncoilNavbar">Uncoil Navbar</a></li>
+        <li><a href="#uncoilTabs">Uncoil Tabs</a></li>
+        <li><a href="#uncoilToolTip">Uncoil Tooltip</a></li>
       </ul>
     </nav>
   </aside>
@@ -111,27 +210,27 @@
   <script src="assets/js/app.js"></script>
   <script>
     $(function () {
-        $("#affixScrollSpyNav").affix({
-            offset: 50
-        });
+      $("#affixScrollSpyNav").affix({
+        offset: 50
+      });
     });
   </script>
   <script>
-  $(function () {
-    $("#affixScrollSpyNav").scrollSpy();
-  });
+    $(function () {
+      $("#affixScrollSpyNav").scrollSpy();
+    });
   </script>
   <script>
-  $(function() {
-    $("#myPageTab").Tabs();
-  });
+    $(function() {
+      $("#myPageTab").Tabs();
+    });
   </script>
   <script>
-  $(function () {
-    $("#galleryFilterNav").galleryFilter({
+    $(function () {
+      $("#galleryFilterNav").galleryFilter({
         hoverOpacity: 1 // default is .75 when Overlay is not being used; set to 1 when using Overlay
+      });
     });
-  });
   </script>
 </body>
 </html>

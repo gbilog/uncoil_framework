@@ -38,7 +38,7 @@ li a.active {
   display: none; }
 
 .tabs {
-  width: 600px;
+  width: 100%;
   margin: 0 auto;
   /*border: 1px solid black;*/ }
 
@@ -48,25 +48,25 @@ li a.active {
   list-style: none; }
 
 .tabs ul li {
-  background: white;
-  color: #222;
+  background: #f2f2f2;
+  color: #333333;
   display: inline-block;
   padding: 10px 15px;
   cursor: pointer;
-  border: 1px solid #888;
+  border: 1px solid #dddddd;
   border-radius: 4px 4px 0 0; }
 
 .tabs ul li.current {
   border-bottom-style: none;
-  background: #ededed; }
+  background: #3FC380;
+  color: #ffffff; }
 
 .tab-content {
   display: none;
-  background: #ededed;
+  background: #dddddd;
   padding: 15px; }
 
 .tab-content.current {
-  border: 1px solid black;
   display: inherit; }
 
 /**** Custon CSS for parallax hero Image ****/
@@ -204,6 +204,51 @@ nav #galleryFilterNav {
 .overlay-plus:hover,
 .overlay:hover {
   opacity: 1; }
+
+.containerStyle {
+  background: #319e67;
+  border: 1px solid black;
+  width: 150px;
+  color: #ffffff;
+  border-radius: 4px 4px;
+  text-align: center;
+  font-size: 1em;
+  padding: 15px 32px; }
+
+.tipContainer {
+  position: relative; }
+
+.tipContainer .tooltip:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #3FC380; }
+
+.tipContainer .tooltip {
+  width: 200px;
+  min-height: 20px;
+  background-color: #3FC380;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  margin-left: -100px;
+  margin-top: 12px;
+  top: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.tipContainer:hover .tooltip {
+  opacity: 1;
+  z-index: 1000; }
 
 html {
   box-sizing: border-box; }
