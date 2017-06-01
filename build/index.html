@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Uncoil CSS Documentation</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <div class="topnav">
+    <img src="assets/images/uncoil_logo.svg" alt="">
+    <nav>
+      <a href="http://getuncoil.com">Home</a>
+      <a href="index.html">CSS</a>
+      <a href="components.html">Components</a>
+      <a href="javascript.html">Javascript</a>
+      <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
+    </nav>
+  </div>
+  <div id="sideNav" class="sidenav">
+    <nav>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <img src="assets/images/uncoil_logo_white.svg" alt="">
+      <a href="http://getuncoil.com">Home</a>
+      <a href="styleguide.html">CSS</a>
+      <a href="components.html">Components</a>
+      <a href="javascript.html">Javascript</a>
+    </nav>
+</div>
+  <header class="heroParallax">
+      <h1>CSS</h1>
+      <p>A Modern Framework Using the Latest Technologies</p>
+      <a href="http://getuncoil.com/wp-content/uploads/2017/06/uncoil_framework-prod.zip" class="button button-primary" role="button" download>Download Production Version 1.0 (Recommended)</a>
+      <a href="http://getuncoil.com/wp-content/uploads/2017/06/uncoil_framework-dev.zip" class="button button-default" role="button" download>Download Dev Framework (Advanced Users)</a>
+  </header>
+  <div class="flex-layout">
+    <main class="content-left">
+      <!-- Uncoil Setup -->
+      <div class="row">
+        <div class="col-12" id="gettingStarted">
+          <h2>Getting Started With Uncoil</h2>
+          <p>Uncoil is a very flexible framework that has been creating using Sass, Flexbox and jQuery. It is designed with a mobile-first approach to help create modern and responsive websites that are quick to create and easy to scale for any user and any device.</p>
+          <p>Most users will want to use the Production version of the framework as it is precompiled and flattened to minimize HTTP requests and so that you can just start building.</p>
+          <p>If you are an advanced user, there is a development version of the framework that use the task-runner Gulp in order to compile Sass to CSS, enable a browser-sync workflow with dynamic page refresh, and a build process for creating a production ready website.  We will not get into specifics as most users will not use this feature, however it is available to users after they install npm dependencies and run the <code>gulp</code> command in terminal once positioned in the frameowrk directory.</p>
+        </div>
+        <!-- HTML Document -->
+        <div class="col-12" id="htmlDocument">
+          <h3>HTML Document</h3>
+          <p>This is the standard HTML document necessary to begin using Uncoil immediately for your new and existing projects.</p>
+          <p>Click the button below and view the page source in order to get your started template</p>
+          <a href="http://getuncoil.com/wp-content/uploads/2017/06/index.html" class="button button-primary" role="button" target="_blank">Download Starter Template</a>
+        </div>
+        <!-- Uncoil Layouts -->
+        <div class="col-12" id="layouts">
+          <h3>Uncoil Layouts</h3>
+          <p>To make the process as quick as possible, we can created three templates for you to use to generate the page layouts illustrated below. The markup you will use will depend on your coding style, we have created layouts that use a semantic HTML5 approach for better document parsing by search engines. Because this framework usese Flexbox, you will need to wrap all "flex" elements by a flex container.</p>
+          <p>To begin, you will have to create a wrapper div with the class <code>.flex-layout</code>. From there, you can define a content area by using the <code>.content-only</code>, <code>.content-right</code>, or <code>.content-left</code> classes depending on your layout preference for your page. If you choose a right or left justified content area, don't forget to name a sidebar by using the classes <code>.side-bar-right</code>, and <code>side-bar-right</code> depending on your layout preference.</p>
+          <a href="http://getuncoil.com/wp-content/uploads/2017/06/starter.html" class="button button-primary" role="button" target="_blank">Download Starter Template</a>
+          <a href="http://getuncoil.com/wp-content/uploads/2017/06/content-only.html" class="button button-primary" role="button" target="_blank">Download Content Only Template</a>
+          <a href="http://getuncoil.com/wp-content/uploads/2017/06/content-right.html" class="button button-primary" role="button" target="_blank">Download Content Right Template</a>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <h4>Content Only Layout</h4>
+            <div class="row">
+              <div class="col-12 docs">
+                <p style="font-size: .8em" class="text-center">.content-only</p>
+              </div>
+            </div>
+            <h4>Content Left With Right Side Bar</h4>
+            <div class="row">
+              <div class="col-9 docs">
+                <p style="font-size: .8em" class="text-center">.content-left</p>
+              </div>
+              <div class="col-3 docs">
+                <p style="font-size: .8em" class="text-center">.side-bar-right</p>
+              </div>
+            </div>
+            <h4>Content Right With Left Side Bar</h4>
+            <div class="row">
+              <div class="col-3 docs">
+                <p style="font-size: .8em" class="text-center">.content-right</p>
+              </div>
+              <div class="col-9 docs">
+                <p style="font-size: .8em" class="text-center">.side-bar-left</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="row">
+        <div class="col-12" id="grid">
+          <h2>Uncoil Grid</h2>
+          <p>The Uncoil grid utlizes flexbox and is completely adaptable to all screen sizes. You will see that it is very simple and easy to use.</p>
+          <p>To keep it simple, define a <code>.row</code> class that wraps one or multiple <code>.col-</code> classes.</p>
+          <p>Please note that there are three defined breakpoints that this framework uses to build itself to suit mobile, tablet and desktop designs.  The mobile breakpoint is at 570px, the tablet breakpoint is at 768px and the desktop breakpoint is at 992px.</p>
+          <p>If you wish to modify these breakpoints, download the Developer version of the framework and modify the breakpoints within the _variables.sass partial file, recompile and save.</p>
+        </div>
+        <!-- Grid Rows -->
+        <div class="col-12" id="gridRows">
+          <h2>Grid Rows</h2>
+          <p>As mentioned above, the <code>.row</code> class is a wrapper container for column elements of that same row. To successfully use the framework, you will need to have a <code>.row</code> wrapper class on all of your <code>.col-</code> sub elements.</p>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"row"</span>&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Column Classes -->
+        <div class="col-12" id="columnClasses">
+          <h2>Column Classes</h2>
+          <p>Uncoil uses a 12-column grid system for is rows. Because columns are nested within rows, you will divide 12 by the number of columns you want and that will be your <code>.col-</code> for each of the elements in a row.</p>
+          <p>As an example, if you want to have a two column layout, you would divide 12 by 2 to get 6.  You will then add two elements within the wrapper element, each with the <code>.col-6</code> classes.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <!-- .col-1 -->
+            <div class="row">
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+            </div>
+            <!-- .col-2 -->
+            <div class="row">
+              <div class="col-2 docs">
+                <p style="font-size: .8em">.col-2</p>
+              </div>
+              <div class="col-2 docs">
+                <p style="font-size: .8em">.col-2</p>
+              </div>
+              <div class="col-2 docs">
+                <p style="font-size: .8em">.col-2</p>
+              </div>
+              <div class="col-2 docs">
+                <p style="font-size: .8em">.col-2</p>
+              </div>
+              <div class="col-2 docs">
+                <p style="font-size: .8em">.col-2</p>
+              </div>
+              <div class="col-2 docs">
+                <p style="font-size: .8em">.col-2</p>
+              </div>
+            </div>
+            <!-- .col-3 -->
+            <div class="row">
+              <div class="col-3 docs">
+                <p style="font-size: .8em">.col-3</p>
+              </div>
+              <div class="col-3 docs">
+                <p style="font-size: .8em">.col-3</p>
+              </div>
+              <div class="col-3 docs">
+                <p style="font-size: .8em">.col-3</p>
+              </div>
+              <div class="col-3 docs">
+                <p style="font-size: .8em">.col-3</p>
+              </div>
+            </div>
+            <!-- .col-4 -->
+            <div class="row">
+              <div class="col-4 docs">
+                <p style="font-size: .8em">.col-4</p>
+              </div>
+              <div class="col-4 docs">
+                <p style="font-size: .8em">.col-4</p>
+              </div>
+              <div class="col-4 docs">
+                <p style="font-size: .8em">.col-4</p>
+              </div>
+            </div>
+            <!-- .col-6 -->
+            <div class="row">
+              <div class="col-6 docs">
+                <p style="font-size: .8em">.col-6</p>
+              </div>
+              <div class="col-6 docs">
+                <p style="font-size: .8em">.col-6</p>
+              </div>
+            </div>
+            <!-- .col-12 -->
+            <div class="row">
+              <div class="col-12 docs">
+                <p style="font-size: .8em">.col-12</p>
+              </div>
+            </div>
+            <!-- .col-1 .col-11 -->
+            <div class="row">
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+              <div class="col-11 docs">
+                <p style="font-size: .8em">.col-11</p>
+              </div>
+            </div>
+            <!-- .col-2 .col-10 -->
+            <div class="row">
+              <div class="col-2 docs">
+                <p style="font-size: .8em">.col-2</p>
+              </div>
+              <div class="col-10 docs">
+                <p style="font-size: .8em">.col-10</p>
+              </div>
+            </div>
+            <!-- .col-3 .col-9 -->
+            <div class="row">
+              <div class="col-3 docs">
+                <p style="font-size: .8em">.col-3</p>
+              </div>
+              <div class="col-9 docs">
+                <p style="font-size: .8em">.col-9</p>
+              </div>
+            </div>
+            <!-- .col-4 .col-8 -->
+            <div class="row">
+              <div class="col-4 docs">
+                <p style="font-size: .8em">.col-4</p>
+              </div>
+              <div class="col-8 docs">
+                <p style="font-size: .8em">.col-8</p>
+              </div>
+            </div>
+            <!-- .col-5 .col-7 -->
+            <div class="row">
+              <div class="col-5 docs">
+                <p style="font-size: .8em">.col-5</p>
+              </div>
+              <div class="col-7 docs">
+                <p style="font-size: .8em">.col-7</p>
+              </div>
+            </div>
+            <!-- .col-6 .col-6 -->
+            <div class="row">
+              <div class="col-6 docs">
+                <p style="font-size: .8em">.col-6</p>
+              </div>
+              <div class="col-6 docs">
+                <p style="font-size: .8em">.col-6</p>
+              </div>
+            </div>
+            <!-- .col-7 .col-5 -->
+            <div class="row">
+              <div class="col-7 docs">
+                <p style="font-size: .8em">.col-7</p>
+              </div>
+              <div class="col-5 docs">
+                <p style="font-size: .8em">.col-5</p>
+              </div>
+            </div>
+            <!-- .col-8 .col-4 -->
+            <div class="row">
+              <div class="col-8 docs">
+                <p style="font-size: .8em">.col-8</p>
+              </div>
+              <div class="col-4 docs">
+                <p style="font-size: .8em">.col-4</p>
+              </div>
+            </div>
+            <!-- .col-9 .col-3 -->
+            <div class="row">
+              <div class="col-9 docs">
+                <p style="font-size: .8em">.col-9</p>
+              </div>
+              <div class="col-3 docs">
+                <p style="font-size: .8em">.col-3</p>
+              </div>
+            </div>
+            <!-- .col-10 .col-2 -->
+            <div class="row">
+              <div class="col-10 docs">
+                <p style="font-size: .8em">.col-10</p>
+              </div>
+              <div class="col-2 docs">
+                <p style="font-size: .8em">.col-2</p>
+              </div>
+            </div>
+            <!-- .col-11 .col-1 -->
+            <div class="row">
+              <div class="col-11 docs">
+                <p style="font-size: .8em">.col-11</p>
+              </div>
+              <div class="col-1 docs">
+                <p style="font-size: .8em">.col-1</p>
+              </div>
+            </div>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"row"</span>&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"row"</span>&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-4"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-4"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-4"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Basic Grid Classes -->
+        <div class="col-12" id="basicGridClasses">
+          <h2>Basic Grid Classes</h2>
+          <p></p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <h4>Left Justified Row</h4>
+            <div class="row-left">
+              <div class="col-6 docs">
+                <p style="font-size: .8em">.row-left</p>
+              </div>
+            </div>
+            <h4>Centered Justified Row</h4>
+            <div class="row-centered">
+              <div class="col-6 docs">
+                <p style="font-size: .8em">.row-centered</p>
+              </div>
+            </div>
+            <h4>Right Justified Row</h4>
+            <div class="row-right">
+              <div class="col-6 docs">
+                <p style="font-size: .8em">.row-right</p>
+              </div>
+            </div>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"row"</span>&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"row"</span>&gt;</span>
+<span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+...
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+...
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Styles -->
+      <div class="row">
+        <div class="col-12" id="typography">
+          <h2>Typography</h2>
+        </div>
+        <div class="col-12" id="htmlHeadings">
+          <h3>HTML Headings</h3>
+          <p>All HTML heading from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> are available and feature the following text styles.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <h1>h1: Uncoil Heading</h1>
+            <h2>h2: Uncoil Heading</h2>
+            <h3>h3: Uncoil Heading</h3>
+            <h4>h4: Uncoil Heading</h4>
+            <h5>h5: Uncoil Heading</h5>
+            <h6>h6: Uncoil Heading</h6>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;h1&gt;</span>h1: Uncoil Heading<span class="tag">&lt;/h1&gt;</span>
+      <span class="tag">&lt;h2&gt;</span>h2: Uncoil Heading<span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;h3&gt;</span>h3: Uncoil Heading<span class="tag">&lt;/h3&gt;</span>
+      <span class="tag">&lt;h4&gt;</span>h4: Uncoil Heading<span class="tag">&lt;/h4&gt;</span>
+      <span class="tag">&lt;h4&gt;</span>h5: Uncoil Heading<span class="tag">&lt;/h5&gt;</span>
+      <span class="tag">&lt;h6&gt;</span>h6: Uncoil Heading<span class="tag">&lt;/h6&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Muted Text -->
+        <div class="col-12" id="htmlHeadingsWithSubtext">
+          <h3>HTML Headings with Subtext</h3>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <h1>h1: Uncoil Heading <small>with subtext</small></h1>
+            <h2>h2: Uncoil Heading <small>with subtext</small></h2>
+            <h3>h3: Uncoil Heading <small>with subtext</small></h3>
+            <h4>h4: Uncoil Heading <small>with subtext</small></h4>
+            <h5>h5: Uncoil Heading <small>with subtext</small></h5>
+            <h6>h6: Uncoil Heading <small>with subtext</small></h6>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;h1&gt;</span>h1: Uncoil Heading <span class="tag">&lt;small&gt;</span>with subtext<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h1&gt;</span>
+      <span class="tag">&lt;h2&gt;</span>h2: Uncoil Heading <span class="tag">&lt;small&gt;</span>with subtext<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;h3&gt;</span>h3: Uncoil Heading <span class="tag">&lt;small&gt;</span>with subtext<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h3&gt;</span>
+      <span class="tag">&lt;h4&gt;</span>h4: Uncoil Heading <span class="tag">&lt;small&gt;</span>with subtext<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h4&gt;</span>
+      <span class="tag">&lt;h5&gt;</span>h5: Uncoil Heading <span class="tag">&lt;small&gt;</span>with subtext<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h5&gt;</span>
+      <span class="tag">&lt;h6&gt;</span>h6: Uncoil Heading <span class="tag">&lt;small&gt;</span>with subtext<span class="tag">&lt;/small&gt;</span><span class="tag">&lt;/h6&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Body Copy -->
+        <div class="col-12" id="htmlBody">
+          <h3>HTML Body</h3>
+          <p>This is Uncoil's main body font style. Sizing is relative to a user's browser settings and is set to <code>{ font-size: 1rem }</code> by default with a <code>{ line-height: 1.25 }</code></p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p>Occupy ramps bicycle rights, unicorn chartreuse banh mi migas direct trade biodiesel meggings affogato poke authentic. Organic umami mumblecore, dreamcatcher hot chicken prism vinyl PBR&amp;B small batch iceland. Brooklyn fanny pack pabst brunch kogi, PBR&amp;B kale chips bicycle rights fixie selfies.</p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span>Occupy ramps bicycle rights, unicorn chartreuse banh mi migas direct trade biodiesel meggings affogato poke authentic. Organic umami mumblecore, dreamcatcher hot chicken prism vinyl PBR&amp;B small batch iceland. Brooklyn fanny pack pabst brunch kogi, PBR&amp;B kale chips bicycle rights fixie selfies.<span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Intro text styling -->
+        <div class="col-12" id="introBodyText">
+          <h3>Intro Body Text</h3>
+          <p>This is a class that can be used as an introduction line of text as a lead line of a body paragraph. Apply this style to any <code>&lt;p&gt;</code> element with by applying the <code>.intro</code> class as shown by the example.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p class="intro">Occupy ramps bicycle rights, unicorn chartreuse banh mi migas direct trade biodiesel meggings affogato poke authentic.</p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p <span class="class">class=</span><span class="class-contents">"intro"</span>&gt;</span>Occupy ramps bicycle rights, unicorn chartreuse banh mi migas direct trade biodiesel meggings affogato poke authentic.<span class="tag">&lt;/p&gt;</span></pre>
+              </figure>
+          </div>
+        </div>
+        <!-- Inline Text Elements -->
+        <div class="col-12" id="inlineTextElements">
+          <h2>Inline Text Elements</h2>
+        </div>
+        <!-- Marked Text  -->
+        <div class="col-12">
+          <h3>Marked Text</h3>
+          <p>Use the <code>&lt;mark&gt;</code> tag to highlight a block of text</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p>This is an example of <mark>highlighted</mark> text.</p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span>This is an example of <span class="tag">&lt;mark&gt;</span>highlighted<span class="tag">&lt;/mark&gt;</span> text.<span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Deleted Text  -->
+        <div class="col-12">
+          <h3>Deleted Text</h3>
+          <p>Use the <code>&lt;del&gt;</code> tag to indicate a deleted block of text</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p><del>This is an example of deleted text.</del></p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span><span class="tag">&lt;del&gt;</span>This is an example of deleted text.<span class="tag">&lt;/del&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Strikethrough Text  -->
+        <div class="col-12">
+          <h3>Strikethrough Text</h3>
+          <p>Use the <code>&lt;s&gt;</code> tag to indicate text that's no longer relevant or accurate.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p><s>This is an example of strikethrough text.</s></p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span><span class="tag">&lt;s&gt;</span>This is an example of strikethrough text.<span class="tag">&lt;/s&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Inserted Text  -->
+        <div class="col-12">
+          <h3>Inserted Text</h3>
+          <p>Use the <code>&lt;ins&gt;</code> tag to indicate text that has been inserted into a document/article.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p><ins>This is an example of inserted text.</ins></p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span><span class="tag">&lt;ins&gt;</span>This is an example of inserted text.<span class="tag">&lt;/ins&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Underlined Text  -->
+        <div class="col-12">
+          <h3>Underlined Text</h3>
+          <p>Use the <code>&lt;u&gt;</code> tag to underline text.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p><u>This is an example of underlined text.</u></p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span><span class="tag">&lt;u&gt;</span>This is an example of underlined text.<span class="tag">&lt;/u&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Small Text  -->
+        <div class="col-12">
+          <h3>Small Text</h3>
+          <p>Use the <code>&lt;small&gt;</code> tag to de-emphasize text.  Please note that heading elements have their own styling when paired with the <code>&lt;small&gt;</code> tag.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p><small>This is an example of small text.</small></p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span><span class="tag">&lt;s&gt;</span>This is an example of strikethrough text.<span class="tag">&lt;/s&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Bold Text  -->
+        <div class="col-12">
+          <h3>Bold Text</h3>
+          <p>Use the <code>&lt;strong&gt;</code> tag to empahsize a block of text with a heavier font weight.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p><strong>This is an example of bold text.</strong></p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span><span class="tag">&lt;strong&gt;</span>This is an example of bold text.<span class="tag">&lt;/strong&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Italic Text  -->
+        <div class="col-12">
+          <h3>Italic Text</h3>
+          <p>Use the <code>&lt;em&gt;</code> tag to emphasize a block of text.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p><em>This is an example of emphasized text.</em></p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span><span class="tag">&lt;em&gt;</span>This is an example of emphasized text.<span class="tag">&lt;/em&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Text Alignment Classes -->
+        <div class="col-12" id="textAlignmentClasses">
+          <h2>Text Alignment Classes</h2>
+          <p>Use the <code>.text-left</code>, <code>.text-right</code>, <code>.text-center</code>, <code>.text-justify</code> classes to apply common text alignment properties.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p class="text-left">This is text left</p>
+            <p class="text-right">This is text right</p>
+            <p class="text-center">This is text center</p>
+            <p class="text-justify">This is text justify</p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p <span class="class">class=</span><span class="class-contents">"text-left"</span>&gt;</span>This is text left.<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;p <span class="class">class=</span><span class="class-contents">"text-right"</span>&gt;</span>This is text right.<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;p <span class="class">class=</span><span class="class-contents">"text-center"</span>&gt;</span>This is text center.<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;p <span class="class">class=</span><span class="class-contents">"text-justify"</span>&gt;</span>This is text justify.<span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Text Transformation Classes -->
+        <div class="col-12" id="textTransformationClasses">
+          <h2>Text Transformation Classes</h2>
+          <p>Use the <code>.text-lowercase</code>, <code>.text-uppercase</code>, <code>.text-capitalize</code>, <code>.text-justify</code> classes to apply common text transformation properties.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p class="text-lowercase">lowercase text</p>
+            <p class="text-uppercase">uppercase text</p>
+            <p class="text-capitalize">capitalized text</p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p <span class="class">class=</span><span class="class-contents">"text-lowercase"</span>&gt;</span>Lowercase Text<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;p <span class="class">class=</span><span class="class-contents">"text-uppercase"</span>&gt;</span>Uppercase Text<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;p <span class="class">class=</span><span class="class-contents">"text-capitalize"</span>&gt;</span>capitalized text<span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Text Abbreviation -->
+        <div class="col-12" id="textAbbreviation">
+          <h2>Abbreviations</h2>
+          <p>Use the <code>&lt;abbr&gt;</code> element to give meaning to abbreviations and acronyms to show expanded versions on hover. Use the <code>title</code> attribute to classes to apply common text transformation properties.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p>He is the <abbr title="Chief Executive Officer">CEO</abbr></p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span>He is the <span class="tag">&lt;abbr <span class="class">title=</span><span class="class-contents">"Chief Executive Officer"</span>&gt;</span>CEO<span class="tag">&lt;/abbr&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Address -->
+        <div class="col-12" id="addresses">
+          <h2>Addresses</h2>
+          <p>Use the <code>&lt;address&gt;</code> tag to identify relevant address information on your webpage. Use the <code>&lt;br&gt;</code> tag to preserve formatting.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p><address>
+              <strong>Business Name</strong><br>
+              1234 Main Street<br>
+              City State Zip<br>
+              <abbr title="phone number">P:</abbr> 123-123-1234
+            </address></p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span><span class="tag">&lt;address&gt;</span><span class="tag">&lt;strong&gt;</span>Business Name<span class="tag">&lt;/strong&gt;</span><span class="tag">&lt;br&gt;</span>
+      1234 Main Street<span class="tag">&lt;br&gt;</span>
+      City State Zip<span class="tag">&lt;br&gt;</span>
+      <span class="tag">&lt;abbr <span class="class">title=</span><span class="class-contents">"phone number"</span>&gt;</span>P:<span class="tag">&lt;/abbr&gt;</span>123-123-12345<span class="tag">&lt;/address&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Blockquotes -->
+        <div class="col-12" id="blockquotes">
+          <h2>Blockquotes</h2>
+          <p>Use the <code>&lt;blockquote&gt;</code> tag to quote blocks of content from another source within your document.</p>
+          <h3>Default Blockquotes</h3>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <blockquote cite="#">
+              <p>This is the default blockquote styling for Uncoil.</p>
+            </blockquote>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;blockquote&gt;</span>
+        <span class="tag">&lt;p&gt;</span>This is the default blockquote styling for Uncoil.<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;/blockquote&gt;</span></pre>
+            </figure>
+          </div>
+          <!-- Blockquotes With Footer-->
+          <h2>Blockquotes with Options</h2>
+          <p>These are style changes for the <code>&lt;blockquote&gt;</code> tag.</p>
+          <h3>Naming Sources</h3>
+          <p>Add a <code>&lt;footer&gt;</code> to identify your source. Then wrap the source with the <code>&lt;footer&gt;</code> tag to attribute credit to the author.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <blockquote cite="#">
+              <p>This is the default blockquote styling for Uncoil.</p>
+              <footer>The author is <cite title="Source Title">Source Title</cite></footer>
+            </blockquote>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;blockquote&gt;</span>
+        <span class="tag">&lt;p&gt;</span>This is the default blockquote styling for Uncoil.<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;footer&gt;</span>The author is <span class="tag">&lt;cite <span class="class">title=</span><span class="class-contents">"Source Title"</span>&gt;</span>Source Title<span class="tag">&lt;/cite&gt;</span><span class="tag">&lt;/footer&gt;</span>
+      <span class="tag">&lt;/blockquote&gt;</span></pre>
+            </figure>
+          </div>
+          <!-- Blockquotes Center-->
+          <h3>Blockquotes with Items Centered</h3>
+          <p>Add a <code>.blockquote-centered</code> to center you blockquote and elements.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <blockquote class="blockquote-centered">
+              <p>This is a blockquote and it's elements that are center-aligned for extra awesomeness</p>
+              <footer>The author is <cite title="Source Title">Source Title</cite></footer>
+            </blockquote>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;blockquote <span class="class">title=</span><span class="class-contents">"blockquote-centered"</span>&gt;</span>&gt;</span>
+        ...
+      <span class="tag">&lt;/blockquote&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Lists -->
+        <div class="col-12" id="lists">
+          <h2>Lists</h2>
+          <!-- Unordered List -->
+          <h3>Unordered</h3>
+          <p>A list of items in which the order <em>does not</em> explicitly matter.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <ul>
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+                <ul>
+                  <li>Sublist item</li>
+                  <li>Sublist item</li>
+                  <li>Sublist item</li>
+                </ul>
+            </ul>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;ul&gt;</span>
+        <span class="tag">&lt;li&gt;</span>...<span class="tag">&lt;li&gt;</span>
+      <span class="tag">&lt;/ul&gt;</span></pre>
+            </figure>
+          </div>
+          <!-- Ordered List -->
+          <h3>Ordered</h3>
+          <p>A list of items in which the order <em>does</em> explicitly matter.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <ol>
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+                <ol>
+                  <li>Sublist item</li>
+                  <li>Sublist item</li>
+                  <li>Sublist item</li>
+                </ol>
+            </ol>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;ol&gt;</span>
+        <span class="tag">&lt;li&gt;</span>...<span class="tag">&lt;li&gt;</span>
+      <span class="tag">&lt;/ol&gt;</span></pre>
+            </figure>
+          </div>
+          <!-- Unstyled List -->
+          <h3>Unstyled</h3>
+          <p>Removes the default list style and left margin on the immediate children with the <code>.list-nostyle</code> class. <strong>This style only affects the immmediate children only so you will have to reapply the styles to any sublists for extra styling</strong></p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <ul class="list-nostyle">
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+                <ul>
+                  <li>Sublist item</li>
+                  <li>Sublist item</li>
+                  <li>Sublist item</li>
+                </ul>
+            </ul>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;ul <span class="class">class=</span><span class="class-contents">"list-nostyle"</span>&gt;</span>
+        <span class="tag">&lt;li&gt;</span>...<span class="tag">&lt;li&gt;</span>
+      <span class="tag">&lt;/ul&gt;</span></pre>
+            </figure>
+          </div>
+          <!-- Inline List -->
+          <h3>Unstyled</h3>
+          <p>Places all of the list items on a single line with the <code>.list-inline</code> class.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <ul class="list-inline">
+              <li>List item</li>
+              <li>List item</li>
+              <li>List item</li>
+            </ul>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;ul <span class="class">class=</span><span class="class-contents">"list-inline"</span>&gt;</span>
+        <span class="tag">&lt;li&gt;</span>...<span class="tag">&lt;li&gt;</span>
+      <span class="tag">&lt;/ul&gt;</span></pre>
+            </figure>
+          </div>
+          <!-- Definition List -->
+          <h3>Definition</h3>
+          <p>Create a list of terms with their corresponding definitions.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <dl>
+              <dt>Term</dt>
+              <dd>This is the term's description.</dd>
+              <dt>Term</dt>
+              <dd>This is the term's description.</dd>
+              <dt>Term</dt>
+              <dd>This is the term's description.</dd>
+            </dl>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;dl&gt;</span>
+        <span class="tag">&lt;dt&gt;</span>...<span class="tag">&lt;/dt&gt;</span>
+        <span class="tag">&lt;dd&gt;</span>...<span class="tag">&lt;/dd&gt;</span>
+      <span class="tag">&lt;/dl&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- Code -->
+      <div class="row">
+        <div class="col-12" id="code">
+          <h2>Code Styling</h2>
+        </div>
+        <!-- Inline Code Snippets -->
+        <div class="col-12" id="inlineCodeSnippets">
+          <h3>Inline Code Snippets</h3>
+          <p>Wrap inline blocks of code with the <code>&lt;code&gt;</code> tag.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p>To hide items you can use the <code>.hide</code> class.</p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span>To hide items you can use the <span class="tag">&lt;code&gt;</span>.hide<span class="tag">&lt;/code&gt;</span> class.<span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- User Input -->
+        <div class="col-12" id="userInput">
+          <h3>User Input</h3>
+          <p>Use <code>&lt;kbd&gt;</code> tag to define user keyboard inputs.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p>This is the <kbd>return</kbd> key.</p>
+            <p>This is <kbd><kbd>crt</kbd> + <kbd>z</kbd></kbd></p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span>This is the <span class="tag">&lt;kbd&gt;</span>return<span class="tag">&lt;/kbd&gt;</span> key.<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;p&gt;</span>This is <span class="tag">&lt;kbd&gt;</span><span class="tag">&lt;kbd&gt;</span>return<span class="tag">&lt;/kbd&gt;</span> + <span class="tag">&lt;kbd&gt;</span>z<span class="tag">&lt;/kbd&gt;</span><span class="tag">&lt;/kbd&gt;</span><span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Basic Code Block -->
+        <div class="col-12" id="basicCodeBlock">
+          <h3>Basic Code Block</h3>
+          <p>Use the <code>&lt;pre&gt;</code> tag for multiple lines of code.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <pre>&lt;p&gt;this is a paragraph&lt;/p&gt;</pre>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre>&lt;pre&gt;...&lt;/pre&gt;</pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Variables -->
+        <div class="col-12" id="variables">
+          <h3>Variables</h3>
+          <p>Use the <code>&lt;var&gt;</code> tag to address variables in your code.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p><var>y</var> = <var>m</var><var>x</var> + <var>b</var></p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;var&gt;</span>y<span class="tag">&lt;/var&gt;</span> = <span class="tag">&lt;var&gt;</span>m<span class="tag">&lt;/var&gt;</span><span class="tag">&lt;var&gt;</span>x<span class="tag">&lt;/var&gt;</span> + <span class="tag">&lt;var&gt;</span>b<span class="tag">&lt;/var&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Sample Output -->
+        <div class="col-12" id="sampleOutput">
+          <h3>Sample Output</h3>
+          <p>Use the <code>&lt;samp&gt;</code> to indicate a sample output from a program.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p><samp>This is a sample output</samp></p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;samp&gt;</span>This is a sample output<span class="tag">&lt;/samp&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tables -->
+      <div class="row">
+        <div class="col-12" id="tables">
+          <h2>Tables</h2>
+        </div>
+        <!-- Basic Table -->
+        <div class="col-12" id="basicTable">
+          <h3>Basic Table</h3>
+          <p>This is basic styling for a default table within Uncoil. To preserve these styles, add the <code>.default-table</code> class to the main <code>table</code> tag to prevent any conflicts with other plugins you may choose to add to your website.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <table class="default-table">
+              <caption>This is an optional caption</caption>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Tag Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>John</td>
+                  <td>Susan</td>
+                  <td>Amy</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Smith</td>
+                  <td>Johnson</td>
+                  <td>Lee</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>@johnsmith</td>
+                  <td>@susanjohnson</td>
+                  <td>@amylee</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;table <span class="class">class=</span><span class="class-contents">"default-table"</span>&gt;</span>
+        ...
+      <span class="tag">&lt;/table&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Striped Table -->
+        <div class="col-12" id="stripedTable">
+          <h3>Striped Table</h3>
+          <p>This borrows the same styling as the default table, however it adds a background color to odd rows for easier reading.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <table class="striped-table">
+              <caption>This is an optional caption</caption>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Tag Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>John</td>
+                  <td>Susan</td>
+                  <td>Amy</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Smith</td>
+                  <td>Johnson</td>
+                  <td>Lee</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>@johnsmith</td>
+                  <td>@susanjohnson</td>
+                  <td>@amylee</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;table <span class="class">class=</span><span class="class-contents">"striped-table"</span>&gt;</span>
+        ...
+      <span class="tag">&lt;/table&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Bordered Table -->
+        <div class="col-12" id="borderedTable">
+          <h3>Bordered Table</h3>
+          <p>This borrows the same styling as the default table, however it adds back the table borders.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <table class="bordered-table">
+              <caption>This is an optional caption</caption>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Tag Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>John</td>
+                  <td>Susan</td>
+                  <td>Amy</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Smith</td>
+                  <td>Johnson</td>
+                  <td>Lee</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>@johnsmith</td>
+                  <td>@susanjohnson</td>
+                  <td>@amylee</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;table <span class="class">class=</span><span class="class-contents">"bordered-table"</span>&gt;</span>
+        ...
+      <span class="tag">&lt;/table&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Resonsive Table -->
+        <div class="col-12" id="responsiveTable">
+          <h3>Responsive Table</h3>
+          <p>This borrows the same styling as the default table, however it adds a back the table borders.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+              <table class="responsive-table">
+                <caption>This is an optional caption</caption>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Tag Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>John</td>
+                    <td>Susan</td>
+                    <td>Amy</td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>Smith</td>
+                    <td>Johnson</td>
+                    <td>Lee</td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>@johnsmith</td>
+                    <td>@susanjohnson</td>
+                    <td>@amylee</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;table <span class="class">class=</span><span class="class-contents">"responsive-table"</span>&gt;</span>
+        ...
+      <span class="tag">&lt;/table&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button Tags -->
+      <div class="row">
+        <div class="col-12" id="buttons">
+          <h2>Buttons</h2>
+        </div>
+        <!-- Button Tags -->
+        <div class="col-12" id="buttonTags">
+          <h3>Button Tags</h3>
+          <p>Use the button classes on <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;input&gt;</code> tags.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <a class="button button-default" href="#" role="button">Link</a>
+            <button type="submit" class="button button-default">Button</button>
+            <input type="button" class="button button-default" value="Input">
+            <input type="submit" class="button button-default" value="Submit">
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;a <span class="class">class=</span><span class="class-contents">"button button-default"</span> <span class="class">href=</span><span class="class-contents">"#"</span> <span class="class">role=</span><span class="class-contents">"button"</span>&gt;</span>Link<span class="tag">&lt;/a&gt;</span>
+      <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"submit"</span> <span class="class">class=</span><span class="class-contents">"button button-default"</span>&gt;</span>Button<span class="tag">&lt;/a&gt;</span>
+      <span class="tag">&lt;input <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default"</span> <span class="class">value=</span><span class="class-contents">"input"</span>&gt;</span>
+      <span class="tag">&lt;input <span class="class">type=</span><span class="class-contents">"submit"</span> <span class="class">class=</span><span class="class-contents">"button button-default"</span> <span class="class">value=</span><span class="class-contents">"submit"</span>&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Button Options -->
+        <div class="col-12" id="buttonOptions">
+          <h3>Button Options</h3>
+          <p>Use the button classes below to quickly style any button.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <button type="button" class="button button-default">Default</button>
+            <button type="button" class="button button-primary">Primary</button>
+            <button type="button" class="button button-success">Success</button>
+            <button type="button" class="button button-warning">Warning</button>
+            <button type="button" class="button button-danger">Danger</button>
+            <button type="button" class="button button-blue">Blue</button>
+            <button type="button" class="button button-accent">Accent</button>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default"</span>&gt;</span>Default<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary"</span>&gt;</span>Primary<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-success"</span>&gt;</span>Success<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-warning"</span>&gt;</span>Warning<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-danger"</span>&gt;</span>Danger<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-blue"</span>&gt;</span>Blue<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-accent"</span>&gt;</span>Accent<span class="tag">&lt;/button&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Button Sizes -->
+        <div class="col-12" id="buttonSizes">
+          <h3>Button Sizes</h3>
+          <p>Add sizing classes to your buttons to quickly alter button sizes.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <p>
+              <button type="button" class="button button-primary button-large">Large Button</button>
+              <button type="button" class="button button-default button-large">Large Button</button>
+            </p>
+            <p>
+              <button type="button" class="button button-primary">Normal Button</button>
+              <button type="button" class="button button-default">Normal Button</button>
+            </p>
+            <p>
+              <button type="button" class="button button-primary button-small">Small Button</button>
+              <button type="button" class="button button-default button-small">Small Button</button>
+            </p>
+            <p>
+              <button type="button" class="button button-primary button-tiny">Tiny Button</button>
+              <button type="button" class="button button-default button-tiny">Tiny Button</button>
+            </p>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;p&gt;</span>
+        <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary button-large"</span>&gt;</span>Large Button<span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default button-large"</span>&gt;</span>Large Button<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;p&gt;</span>
+        <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary"</span>&gt;</span>Normal Button<span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default"</span>&gt;</span>Normal Button<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;p&gt;</span>
+        <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary button-small"</span>&gt;</span>Small Button<span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default button-small"</span>&gt;</span>Small Button<span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;p&gt;</span>
+        <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary button-tiny"</span>&gt;</span>Tiny Button<span class="tag">&lt;/button&gt;</span>
+        <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default button-tiny"</span>&gt;</span>Tiny Button<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;/p&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Block Buttons -->
+        <div class="col-12" id="blockButtons">
+          <h3>Block Buttons</h3>
+          <p>Use the <code>.button-block</code> class on your buttons to stack them vertically and full-width within their parent element container.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <div id="block-example">
+              <button type="button" class="button button-primary button-block">Block Level Button</button>
+              <button type="button" class="button button-default button-block">Block Level Button</button>
+            </div>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary button-block"</span>&gt;</span>Block Level Button<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default button-block"</span>&gt;</span>Block Level Button<span class="tag">&lt;/button&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+        <!-- Disabled Buttons -->
+        <div class="col-12" id="disabledButtons">
+          <h2>Disabled Buttons</h2>
+          <p>Creating disabled buttons and elements decreases <code>opacity</code> and changes the cursor properties to <code>cursor: not-allowed</code></p>
+          <!-- Disabled Button Element -->
+          <h3>Disabled Button Element</h3>
+          <p>Use the <code>disabled</code> attribute to <code>&lt;button&gt;</code> elements.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <button type="button" class="button button-primary" disabled="disabled">Disabled Button</button>
+            <button type="button" class="button button-default" disabled="disabled">Disabled Button</button>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-primary"</span> <span class="class">disabled=</span><span class="class-contents">"disabled"</span>&gt;</span>Disabled Button<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button <span class="class">type=</span><span class="class-contents">"button"</span> <span class="class">class=</span><span class="class-contents">"button button-default"</span> <span class="class">disabled=</span><span class="class-contents">"disabled"</span>&gt;</span>Disabled Button<span class="tag">&lt;/button&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images -->
+      <div class="row">
+        <div class="col-12" id="images">
+          <h2>Images</h2>
+          <h3>Responsive Images</h3>
+          <p>Adding the <code>.responsive</code> class to <code>&lt;img&gt;</code> tags will make images responsive-friendly within Uncoil. This class applies <code>max-width: 100%</code>, <code>height: auto</code>, and <code>display: block</code> within their parent containers.</p>
+          <p>To center images, use the <code>.center-block</code> class on <code>&lt;img&gt;</code> tags as opposed to the <code>.text-center</code> class.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <figure>
+              <img src="http://fillmurray.com/1600/500" alt="Responsive Image" class="responsive">
+            </figure>
+            <figure>
+              <img src="http://fillmurray.com/250/250" alt="Centered Image" class="center-block">
+            </figure>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;figure&gt;</span>
+        <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"responsive"</span>&gt;</span>
+      <span class="tag">&lt;figure&gt;</span>
+        <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"center-block"</span>&gt;</span>
+      <span class="tag">&lt;/figure&gt;</span></pre>
+            </figure>
+          </div>
+          <!-- Image Styles -->
+          <h3>Image Styles</h3>
+          <p>Add the <code>.image-rounded</code>, <code>.image-circle</code>, or <code>.image-shadow</code> classes to quickly change the image styling.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <img src="http://fillmurray.com/150/150" alt="Rounded Image" class="image-rounded">
+            <img src="http://fillmurray.com/150/150" alt="Circle Image" class="image-circle">
+            <img src="http://fillmurray.com/150/150" alt="Shadow Image" class="image-shadow">
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"image-rounded"</span>&gt;</span>
+      <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"image-circle"</span>&gt;</span>
+      <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"#"</span> <span class="class">alt=</span><span class="class-contents">"..."</span> <span class="class">class=</span><span class="class-contents">"image-shadow"</span>&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- end -->
+    </main>
+    <aside class="side-bar-right">
+      <nav id="affixScrollSpyNav">
+        <ul>
+          <li><a href="#gettingStarted">Getting Started</a>
+             <ul class="subItems">
+               <li><a href="#htmlDocument">HTML Document</a></li>
+               <li><a href="#layouts">Layouts</a></li>
+             </ul>
+          </li>
+          <li><a href="#grid">Uncoil Grid</a>
+             <ul class="subItems">
+               <li><a href="#gridRows">Grid Rows</a></li>
+               <li><a href="#columnClasses">Column Classes</a></li>
+               <li><a href="#basicGridClasses">Basic Grid Classes</a></li>
+             </ul>
+          </li>
+           <li><a href="#typography">Typography</a>
+              <ul class="subItems">
+                <li><a href="#htmlHeadings">HTML Headings</a></li>
+                <li><a href="#htmlHeadingsWithSubtext">HTML Headings With Subtext</a></li>
+                <li><a href="#htmlBody">HTML Body</a></li>
+                <li><a href="#introBodyText">Intro Body Text</a></li>
+                <li><a href="#inlineTextElements">Inline Text Elements</a></li>
+                <li><a href="#textAlignmentClasses">Text Alignment Classes</a></li>
+                <li><a href="#textTransformationClasses">Text Transformation Classes</a></li>
+                <li><a href="#textAbbreviation">Text Abbreviation</a></li>
+                <li><a href="#addresses">Addresses</a></li>
+                <li><a href="#blockquotes">Blockquotes</a></li>
+                <li><a href="#lists">Lists</a></li>
+              </ul>
+           </li>
+           <li><a href="#code">Code</a>
+              <ul class="subItems">
+                <li><a href="#inlineCodeSnippets">Inline Code Snippets</a></li>
+                <li><a href="#userInput">User Input</a></li>
+                <li><a href="#basicCodeBlock">Basic Code Block</a></li>
+                <li><a href="#variables">Variables</a></li>
+                <li><a href="#sampleOutput">Sample Output</a></li>
+              </ul>
+           </li>
+           <li><a href="#tables">Tables</a>
+             <ul class="subItems">
+               <li><a href="#basicTable">Basic Table</a></li>
+               <li><a href="#stripedTable">Striped Table</a></li>
+               <li><a href="#borderedTable">Bordered Table</a></li>
+               <li><a href="#responsiveTable">Responsive Table</a></li>
+             </ul>
+           </li>
+           <li><a href="#buttons">Buttons</a>
+             <ul class="subItems">
+               <li><a href="#buttonTags">Tags</a></li>
+               <li><a href="#buttonOptions">Options</a></li>
+               <li><a href="#buttonSizes">Sizes</a></li>
+               <li><a href="#blockButtons">Block</a></li>
+               <li><a href="#disabledButtons">Disabled</a></li>
+             </ul>
+           </li>
+           <li><a href="#images">Images</a>
+           </li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- <aside class="side-bar-left">
+      <h1>hello bro</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </aside> -->
+  </div>
+  <footer>Copyright &copy; 2017. Uncoil Framework. All Rights Reserved.</footer>
+
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Uncoil Js -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    $(function () {
+      $("#affixScrollSpyNav").affix({
+          offset: 50
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#affixScrollSpyNav").scrollSpy();
+    });
+  </script>
+</body>
+</html>

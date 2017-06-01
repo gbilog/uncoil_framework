@@ -12,7 +12,7 @@
     <img src="assets/images/uncoil_logo.svg" alt="">
     <nav>
       <a href="http://getuncoil.com">Home</a>
-      <a href="styleguide.html">CSS</a>
+      <a href="index.html">CSS</a>
       <a href="components.html">Components</a>
       <a href="javascript.html">Javascript</a>
       <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
@@ -31,8 +31,8 @@
   <header class="heroParallax">
       <h1>CSS</h1>
       <p>A Modern Framework Using the Latest Technologies</p>
-      <a href="#gettingsStarted" class="button button-primary" role="button" download>Download Production Version 1.0 (Recommended)</a>
-      <a href="assets/images/snake2Hero" class="button button-default" role="button" download>Download Dev Framework (Advanced Users)</a>
+      <a href="http://getuncoil.com/wp-content/uploads/2017/06/uncoil_framework-prod.zip" class="button button-primary" role="button" download>Download Production Version 1.0 (Recommended)</a>
+      <a href="http://getuncoil.com/wp-content/uploads/2017/06/uncoil_framework-dev.zip" class="button button-default" role="button" download>Download Dev Framework (Advanced Users)</a>
   </header>
   <div class="flex-layout">
     <main class="content-left">
@@ -40,17 +40,25 @@
       <div class="row">
         <div class="col-12" id="gettingStarted">
           <h2>Getting Started With Uncoil</h2>
-          <p>Some Shit</p>
+          <p>Uncoil is a very flexible framework that has been creating using Sass, Flexbox and jQuery. It is designed with a mobile-first approach to help create modern and responsive websites that are quick to create and easy to scale for any user and any device.</p>
+          <p>Most users will want to use the Production version of the framework as it is precompiled and flattened to minimize HTTP requests and so that you can just start building.</p>
+          <p>If you are an advanced user, there is a development version of the framework that use the task-runner Gulp in order to compile Sass to CSS, enable a browser-sync workflow with dynamic page refresh, and a build process for creating a production ready website.  We will not get into specifics as most users will not use this feature, however it is available to users after they install npm dependencies and run the <code>gulp</code> command in terminal once positioned in the frameowrk directory.</p>
         </div>
         <!-- HTML Document -->
         <div class="col-12" id="htmlDocument">
           <h3>HTML Document</h3>
-          <p>Some Shit</p>
+          <p>This is the standard HTML document necessary to begin using Uncoil immediately for your new and existing projects.</p>
+          <p>Click the button below and view the page source in order to get your started template</p>
+          <a href="http://getuncoil.com/wp-content/uploads/2017/06/index.html" class="button button-primary" role="button" target="_blank">Download Starter Template</a>
         </div>
         <!-- Uncoil Layouts -->
         <div class="col-12" id="layouts">
           <h3>Uncoil Layouts</h3>
-          <p>Some Shit</p>
+          <p>To make the process as quick as possible, we can created three templates for you to use to generate the page layouts illustrated below. The markup you will use will depend on your coding style, we have created layouts that use a semantic HTML5 approach for better document parsing by search engines. Because this framework usese Flexbox, you will need to wrap all "flex" elements by a flex container.</p>
+          <p>To begin, you will have to create a wrapper div with the class <code>.flex-layout</code>. From there, you can define a content area by using the <code>.content-only</code>, <code>.content-right</code>, or <code>.content-left</code> classes depending on your layout preference for your page. If you choose a right or left justified content area, don't forget to name a sidebar by using the classes <code>.side-bar-right</code>, and <code>side-bar-right</code> depending on your layout preference.</p>
+          <a href="http://getuncoil.com/wp-content/uploads/2017/06/starter.html" class="button button-primary" role="button" target="_blank">Download Starter Template</a>
+          <a href="http://getuncoil.com/wp-content/uploads/2017/06/content-only.html" class="button button-primary" role="button" target="_blank">Download Content Only Template</a>
+          <a href="http://getuncoil.com/wp-content/uploads/2017/06/content-right.html" class="button button-primary" role="button" target="_blank">Download Content Right Template</a>
           <div class="example-container">
             <p class="example">Example:</p>
             <h4>Content Only Layout</h4>
@@ -78,16 +86,6 @@
               </div>
             </div>
           </div>
-          <div class="example-copy">
-            <figure>
-              <pre><span class="tag">&lt;h1&gt;</span>h1: Uncoil Heading<span class="tag">&lt;/h1&gt;</span>
-      <span class="tag">&lt;h2&gt;</span>h2: Uncoil Heading<span class="tag">&lt;/h2&gt;</span>
-      <span class="tag">&lt;h3&gt;</span>h3: Uncoil Heading<span class="tag">&lt;/h3&gt;</span>
-      <span class="tag">&lt;h4&gt;</span>h4: Uncoil Heading<span class="tag">&lt;/h4&gt;</span>
-      <span class="tag">&lt;h4&gt;</span>h5: Uncoil Heading<span class="tag">&lt;/h5&gt;</span>
-      <span class="tag">&lt;h6&gt;</span>h6: Uncoil Heading<span class="tag">&lt;/h6&gt;</span></pre>
-            </figure>
-          </div>
         </div>
       </div>
 
@@ -95,22 +93,33 @@
       <div class="row">
         <div class="col-12" id="grid">
           <h2>Uncoil Grid</h2>
-          <p>Some Shit</p>
-        </div>
-        <!-- Grid Breakpoints -->
-        <div class="col-12" id="breakPoints">
-          <h2>Grid Break Points</h2>
-          <p>Some Shit</p>
+          <p>The Uncoil grid utlizes flexbox and is completely adaptable to all screen sizes. You will see that it is very simple and easy to use.</p>
+          <p>To keep it simple, define a <code>.row</code> class that wraps one or multiple <code>.col-</code> classes.</p>
+          <p>Please note that there are three defined breakpoints that this framework uses to build itself to suit mobile, tablet and desktop designs.  The mobile breakpoint is at 570px, the tablet breakpoint is at 768px and the desktop breakpoint is at 992px.</p>
+          <p>If you wish to modify these breakpoints, download the Developer version of the framework and modify the breakpoints within the _variables.sass partial file, recompile and save.</p>
         </div>
         <!-- Grid Rows -->
         <div class="col-12" id="gridRows">
           <h2>Grid Rows</h2>
-          <p>Some Shit</p>
+          <p>As mentioned above, the <code>.row</code> class is a wrapper container for column elements of that same row. To successfully use the framework, you will need to have a <code>.row</code> wrapper class on all of your <code>.col-</code> sub elements.</p>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"row"</span>&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre>
+            </figure>
+          </div>
         </div>
         <!-- Column Classes -->
         <div class="col-12" id="columnClasses">
           <h2>Column Classes</h2>
-          <p>Some Shit</p>
+          <p>Uncoil uses a 12-column grid system for is rows. Because columns are nested within rows, you will divide 12 by the number of columns you want and that will be your <code>.col-</code> for each of the elements in a row.</p>
+          <p>As an example, if you want to have a two column layout, you would divide 12 by 2 to get 6.  You will then add two elements within the wrapper element, each with the <code>.col-6</code> classes.</p>
           <div class="example-container">
             <p class="example">Example:</p>
             <!-- .col-1 -->
@@ -317,12 +326,25 @@
           </div>
           <div class="example-copy">
             <figure>
-              <pre><span class="tag">&lt;h1&gt;</span>h1: Uncoil Heading<span class="tag">&lt;/h1&gt;</span>
-      <span class="tag">&lt;h2&gt;</span>h2: Uncoil Heading<span class="tag">&lt;/h2&gt;</span>
-      <span class="tag">&lt;h3&gt;</span>h3: Uncoil Heading<span class="tag">&lt;/h3&gt;</span>
-      <span class="tag">&lt;h4&gt;</span>h4: Uncoil Heading<span class="tag">&lt;/h4&gt;</span>
-      <span class="tag">&lt;h4&gt;</span>h5: Uncoil Heading<span class="tag">&lt;/h5&gt;</span>
-      <span class="tag">&lt;h6&gt;</span>h6: Uncoil Heading<span class="tag">&lt;/h6&gt;</span></pre>
+              <pre><span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"row"</span>&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"row"</span>&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-4"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-4"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-4"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre>
             </figure>
           </div>
         </div>
@@ -353,12 +375,22 @@
           </div>
           <div class="example-copy">
             <figure>
-              <pre><span class="tag">&lt;h1&gt;</span>h1: Uncoil Heading<span class="tag">&lt;/h1&gt;</span>
-      <span class="tag">&lt;h2&gt;</span>h2: Uncoil Heading<span class="tag">&lt;/h2&gt;</span>
-      <span class="tag">&lt;h3&gt;</span>h3: Uncoil Heading<span class="tag">&lt;/h3&gt;</span>
-      <span class="tag">&lt;h4&gt;</span>h4: Uncoil Heading<span class="tag">&lt;/h4&gt;</span>
-      <span class="tag">&lt;h4&gt;</span>h5: Uncoil Heading<span class="tag">&lt;/h5&gt;</span>
-      <span class="tag">&lt;h6&gt;</span>h6: Uncoil Heading<span class="tag">&lt;/h6&gt;</span></pre>
+              <pre><span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"row"</span>&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"row"</span>&gt;</span>
+<span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+...
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"col-6"</span>&gt;</span>
+...
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre>
             </figure>
           </div>
         </div>
@@ -1265,7 +1297,6 @@
           </li>
           <li><a href="#grid">Uncoil Grid</a>
              <ul class="subItems">
-               <li><a href="#breakPoints">Break Points</a></li>
                <li><a href="#gridRows">Grid Rows</a></li>
                <li><a href="#columnClasses">Column Classes</a></li>
                <li><a href="#basicGridClasses">Basic Grid Classes</a></li>
