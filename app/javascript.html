@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Uncoil Javascript</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <div class="topnav">
+    <img src="assets/images/uncoil_logo.svg" alt="">
+    <nav>
+      <a href="http://getuncoil.com">Home</a>
+      <a href="styleguide.html">CSS</a>
+      <a href="components.html">Components</a>
+      <a href="javascript.html">Javascript</a>
+      <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
+    </nav>
+  </div>
+  <div id="sideNav" class="sidenav">
+    <nav>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <img src="assets/images/uncoil_logo_white.svg" alt="">
+      <a href="http://getuncoil.com">Home</a>
+      <a href="styleguide.html">CSS</a>
+      <a href="components.html">Components</a>
+      <a href="javascript.html">Javascript</a>
+    </nav>
+</div>
+  <header class="heroParallax">
+      <h1>Javascript</h1>
+      <p>A Modern Framework Using the Latest Technologies</p>
+      <a href="#gettingsStarted" class="button button-primary" role="button" download>Download Production Version 1.0 (Recommended)</a>
+      <a href="assets/images/snake2Hero" class="button button-default" role="button" download>Download Dev Framework (Advanced Users)</a>
+  </header>
+  <div class="flex-layout">
+    <main class="content-left">
+      <!-- Gallery -->
+      <div class="row">
+        <div class="col-12" id="uncoilGallery">
+          <h3>Uncoil Gallery</h3>
+          <p>This is a simple light-weight jQuery plugin to easily filter a group of links/images. To use, call the plugin.</p>
+          <p>The default values for the options of this plugin are listed in the code above. If you are using the Overlay Component for the images for the hover effect as we are doing in this example, then you will want to change the <code>hoverOpacity</code> from .75 to 1 to disable the image hover feature built into the plugin.</p>
+          <p>Below is the HTML code for this demo. Please note that the gallery of links/images must have an id of <code>#imageContainer</code> in order for this plug in to work. Also required in the HTML is the <code>id</code> attribute of the link to match the <code>class</code> attribute of the corresponding links/images as highlighted below.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <div class="row">
+              <div class="col-12">
+                <nav id="galleryFilterNav">
+                   <ul>
+                      <li><a id="all" href="#">All</a></li>
+                      <li><a id="dog" href="#">Dogs</a></li>
+                      <li><a id="cat" href="#">Cats</a></li>
+                      <li><a id="snake" href="#">Snakes</a></li>
+                   </ul>
+                </nav>
+                <div id="imageContainer">
+                    <a class="cat" href="#">
+                        <figure>
+                            <img src="assets/images/cat4.jpg" width="350" height="230" alt="Kuber"><figcaption>Kuber</figcaption>
+                            <div class="overlay">
+                                <p>Kuber</p>
+                                <p>Male</p>
+                                <p>10 years old </p>
+                            </div>
+                        </figure>
+                    </a>
+                    <a class="dog" href="#">
+                        <figure>
+                            <img src="assets/images/dog4.jpg" width="350" height="230" alt="Jai"><figcaption>Jai</figcaption>
+                            <div class="overlay"></div>
+                        </figure>
+                    </a>
+                    <a class="cat" href="#">
+                        <figure>
+                            <img src="assets/images/cat3.jpg" width="350" height="230" alt="Pasha"><figcaption>Pasha</figcaption>
+                            <div class="overlay-plus"></div>
+                        </figure>
+                    </a>
+                    <a class="snake" href="#">
+                        <figure>
+                            <img src="assets/images/snake3.jpg" width="350" height="230" alt="Kali"><figcaption>Kali</figcaption>
+                            <div class="overlay-plus"></div>
+                        </figure>
+                    </a>
+                    <a class="dog" href="#">
+                        <figure>
+                            <img src="assets/images/dog3.jpg" width="350" height="230" alt="Jyota"><figcaption>Jyota</figcaption>
+                            <div class="overlay-plus"></div>
+                        </figure>
+                    </a>
+                    <a class="dog" href="#">
+                        <figure>
+                            <img src="assets/images/dog2.jpg" width="350" height="230" alt="Shanti"><figcaption>Shanti</figcaption>
+                            <div class="overlay-plus"></div>
+                        </figure>
+                    </a>
+                    <a class="cat" href="#">
+                        <figure>
+                            <img src="assets/images/cat2.jpg" width="350" height="230" alt="Shiva"><figcaption>Shiva</figcaption>
+                            <div class="overlay-plus"></div>
+                        </figure>
+                    </a>
+                    <a class="snake" href="#">
+                        <figure>
+                            <img src="assets/images/snake2.jpg" width="350" height="230" alt="Kundalini"><figcaption>Kundalini</figcaption>
+                            <div class="overlay-plus"></div>
+                        </figure>
+                    </a>
+                    <a class="snake" href="#">
+                        <figure>
+                            <img src="assets/images/snake1.jpg" width="350" height="230" alt="Shakti"><figcaption>Shakti</figcaption>
+                            <div class="overlay-plus"></div>
+                        </figure>
+                    </a>
+                    <a class="dog" href="#">
+                        <figure>
+                            <img src="assets/images/dog1.jpg" width="350" height="230" alt="Chandra"><figcaption>Chandra</figcaption>
+                            <div class="overlay-plus"></div>
+                        </figure>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;script&gt;</span>
+  $(function () {
+    $("#galleryFilterNav").galleryFilter({
+      hoverOpacity: .75,
+      hoverSpeed: "fast",
+      shuffleEasing: "swing",
+      shuffleSpeed: 500
+    });
+  });
+<span class="tag">&lt;script&gt;</span>
+
+<span class="tag">&lt;nav <span class="class">id=</span><span class="class-contents">"galleryFilterNav"</span>&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a <span class="class">id=</span><span class="class-contents">"all"</span> <span class="class">href=</span><span class="class-contents">"#"</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a <span class="class">id=</span><span class="class-contents">"dog"</span> <span class="class">href=</span><span class="class-contents">"#"</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a <span class="class">id=</span><span class="class-contents">"cat"</span> <span class="class">href=</span><span class="class-contents">"#"</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a <span class="class">id=</span><span class="class-contents">"snake"</span> <span class="class">href=</span><span class="class-contents">"#"</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+<span class="tag">&lt;div <span class="class">id=</span><span class="class-contents">"imageContainer"</span>&gt;</span>
+  <span class="tag">&lt;a <span class="class">class=</span><span class="class-contents">"cat"</span> <span class="class">href=</span><span class="class-contents">"#"</span>&gt;</span>
+    <span class="tag">&lt;figure&gt;</span>
+      <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"..."</span> <span class="class">width=</span><span class="class-contents">"..."</span> <span class="class">height=</span><span class="class-contents">"..."</span> <span class="class">alt=</span><span class="class-contents">"..."</span>/&gt;</span><span class="tag">&lt;figcaption&gt;</span>...<span class="tag">&lt;figcaption&gt;</span>
+      <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"overlay"</span>&gt;</span>
+        <span class="tag">&lt;p&gt;</span>...<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;p&gt;</span>...<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;p&gt;</span>...<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/figure&gt;</span>
+  <span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;a <span class="class">class=</span><span class="class-contents">"cat"</span> <span class="class">href=</span><span class="class-contents">"#"</span>&gt;</span>
+    <span class="tag">&lt;figure&gt;</span>
+      <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"..."</span> <span class="class">width=</span><span class="class-contents">"..."</span> <span class="class">height=</span><span class="class-contents">"..."</span> <span class="class">alt=</span><span class="class-contents">"..."</span>/&gt;</span><span class="tag">&lt;figcaption&gt;</span>...<span class="tag">&lt;figcaption&gt;</span>
+      <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"overlay"</span>&gt;</span><span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/figure&gt;</span>
+  <span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;a <span class="class">class=</span><span class="class-contents">"cat"</span> <span class="class">href=</span><span class="class-contents">"#"</span>&gt;</span>
+    <span class="tag">&lt;figure&gt;</span>
+      <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"..."</span> <span class="class">width=</span><span class="class-contents">"..."</span> <span class="class">height=</span><span class="class-contents">"..."</span> <span class="class">alt=</span><span class="class-contents">"..."</span>/&gt;</span><span class="tag">&lt;figcaption&gt;</span>...<span class="tag">&lt;figcaption&gt;</span>
+      <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"overlay-plus"</span>&gt;</span><span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/figure&gt;</span>
+  <span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+    <!-- Scroll Spy -->
+    <div class="row">
+      <div class="col-12" id="scrollSpyPlugin">
+        <h3>Scroll Spy Plugin</h3>
+        <p>The ScrollSpy plugin automatically updates navigation targets as active based on the scroll position. If you scroll down this page you can see a live demo of the ScrollSpy plugin in the sub navigation on the right. Notice that the dropdown sub items are highlighted as well.</p>
+        <p>ScrollSpy requires the use of <code>position: relative;</code> on the element you're spying on. In this case, we have added <code>position: relative;</code> to the <code>body</code> element.</p>
+        <p>After adding <code>position: relative;</code> in your CSS, you can call Scroll Spy.</p>
+        <div class="example-copy">
+          <figure>
+            <pre><span class="tag">&lt;script&gt;</span>
+  $(function () {
+    $(“#affixScrollSpyNav").scrollSpy();
+  });
+<span class="tag">&lt;script&gt;</span></pre>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!-- Affix -->
+    <div class="row">
+      <div class="col-12" id="affixMenuPlugin">
+        <h3>Affix Menu</h3>
+        <p>The affix plugin toggles <code> position: fixed;</code> on the selected navigation element as you scroll up and down the page so the element is visible at all times. The subnavigation on the right side of this page is a live demo of the affix plugin.</p>
+        <p>To use the affix plugin, you will need to call it.</p>
+        <div class="example-copy">
+          <figure>
+            <pre><span class="tag">&lt;script&gt;</span>
+  $(function () {
+    $(“#affixScrollSpyNav").affix({
+      offset: 50
+    });
+  });
+<span class="tag">&lt;script&gt;</span>
+<span class="tag">&lt;nav <span class="class">id=</span><span class="class-contents">"affixScrollSpyNav"</span>&gt;</span>
+  <span class="tag">&lt;ul&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"#..."</span>&gt;</span><span class="tag">&lt;/a&gt;</span>
+      <span class="tag">&lt;ul <span class="class">class=</span><span class="class-contents">"subItems"</span>&gt;</span>
+        <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"#..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"#..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"#..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;/ul&gt;</span>
+    <span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"#..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"#..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;/nav&gt;</span></pre>
+          </figure>
+        </div>
+      </div>
+      <!-- Tabs Js -->
+
+      <div class="row">
+        <div class="col-12" id="tabsPlugin">
+          <h3>Tab Component Js</h3>
+          <p>To successfully work with the tabs component, you must call the plugin. Please copy and paste the code snippet below to use tabs.</p>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;script&gt;</span>
+  $(function() {
+    $("#myPageTab").Tabs();
+  });
+  <span class="tag">&lt;script&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+    </div>
+    </main>
+    <aside class="side-bar-right">
+      <nav id="affixScrollSpyNav">
+        <ul>
+          <li><a href="#uncoilGallery">Uncoil Gallery</a>
+          </li>
+          <li><a href="#scrollSpyPlugin">Scroll Spy Plugin</a>
+          </li>
+          <li><a href="#affixMenuPlugin">Affix Menu</a>
+          </li>
+          <li><a href="#tabsPlugin">Tab Component</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- <aside class="side-bar-left">
+      <h1>hello bro</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </aside> -->
+  </div>
+  <footer>Copyright &copy; 2017. Uncoil Framework. All Rights Reserved.</footer>
+
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Uncoil Js -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    $(function () {
+      $("#affixScrollSpyNav").affix({
+          offset: 50
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#affixScrollSpyNav").scrollSpy();
+    });
+  </script>
+  <script>
+    $(function() {
+      $("#myPageTab").Tabs();
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#galleryFilterNav").galleryFilter({
+          hoverOpacity: 1 // default is .75 when Overlay is not being used; set to 1 when using Overlay
+      });
+    });
+  </script>
+</body>
+</html>
