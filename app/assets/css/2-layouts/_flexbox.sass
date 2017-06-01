@@ -1,370 +1,1458 @@
-.flex-layout
-  max-width: 1200px
-  margin: 0px auto
-  display: flex
-  justify-content: space-between
-  //box-sizing: border-box
+@media screen and (max-width: $xsmall)
+  .flex-layout
+    //max-width: 100%
+    margin: 0px auto
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    //box-sizing: border-box
 
-  .content-only
+    .side-bar-right
+      display: none
+      box-sizing: border-box
+      padding: 0em 1em
+      order: 2
+      flex: 1
+
+    .side-bar-left
+      box-sizing: border-box
+      padding: 0em 1em
+      order: 1
+      flex: 1
+
+  .row-centered
+    display: flex
+    justify-content: center
     box-sizing: border-box
+    padding: 1em 0em
+    flex-wrap: wrap
+
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-1
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+  .row-left
+    display: flex
+    justify-content: flex-start
+    box-sizing: border-box
+    padding: 1em 0em
+    flex-wrap: wrap
+
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-1
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+  .row-right
+    display: flex
+    justify-content: flex-end
+    box-sizing: border-box
+    padding: 1em 0em
+    flex-wrap: wrap
+
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-1
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+  .row
+    display: flex
+    justify-content: space-between
+    box-sizing: border-box
+    padding: 1em 0em
+    flex-wrap: wrap
+    //margin: 2em 0em
+
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-1
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .element-fixed
+      background-color: $brand-primary
+      border: 1px solid darken(pink, 10%)
+      box-sizing: border-box
+      padding: 0px .5em
+      flex: 1
+
+@media screen and (min-width: $mobile)
+  .flex-layout
+    //max-width: 100%
+    margin: 0px auto
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    //box-sizing: border-box
+
+    .side-bar-right
+      display: none
+      box-sizing: border-box
+      padding: 0em 1em
+      order: 2
+      flex: 1
+
+    .side-bar-left
+      box-sizing: border-box
+      padding: 0em 1em
+      order: 1
+      flex: 1
+
+  .row-centered
+    display: flex
+    justify-content: center
+    box-sizing: border-box
+    padding: 1em 0em
+    flex-wrap: wrap
+
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-1
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+  .row-left
+    display: flex
+    justify-content: flex-start
+    box-sizing: border-box
+    padding: 1em 0em
+    flex-wrap: wrap
+
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-1
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+  .row-right
+    display: flex
+    justify-content: flex-end
+    box-sizing: border-box
+    padding: 1em 0em
+    flex-wrap: wrap
+
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-1
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+  .row
+    display: flex
+    justify-content: space-between
+    box-sizing: border-box
+    padding: 1em 0em
+    flex-wrap: wrap
+    //margin: 2em 0em
+
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-1
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .element-fixed
+      background-color: $brand-primary
+      border: 1px solid darken(pink, 10%)
+      box-sizing: border-box
+      padding: 0px .5em
+      flex: 1
+
+@media screen and (min-width: $tablet)
+  .flex-layout
+    //max-width: 100%
+    margin: 0px auto
+    display: flex
+    justify-content: space-between
+    //box-sizing: border-box
+
+    .side-bar-right
+      display: block
+      box-sizing: border-box
+      padding: 0em 1em
+      order: 2
+      flex: 1
+
+    .side-bar-left
+      box-sizing: border-box
+      padding: 0em 1em
+      order: 1
+      flex: 1
+
+  .flex-layout
     max-width: 1200px
+    margin: 0px auto
+    display: flex
+    justify-content: space-between
+    //box-sizing: border-box
 
-  .content-right
+    .content-only
+      box-sizing: border-box
+      max-width: 1200px
+
+    .content-right
+      box-sizing: border-box
+      padding: 0em 1em
+      order: 1
+      flex: 3
+
+    .content-left
+      box-sizing: border-box
+      padding: 0px 1em
+      order: 2
+      flex: 3
+
+    .side-bar-right
+      display: none
+
+    .side-bar-left
+      display: none
+
+  .row-centered
+    display: flex
+    justify-content: center
     box-sizing: border-box
-    padding: 0em 1em
-    order: 1
-    flex: 3
+    padding: 1em 0em
 
-  .content-left
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*2
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*3
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*4
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*5
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+  .row-left
+    display: flex
+    justify-content: flex-start
     box-sizing: border-box
-    padding: 0px 1em
-    order: 2
-    flex: 3
+    padding: 1em 0em
 
-  .side-bar-right
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*2
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*3
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*4
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*5
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+  .row-right
+    display: flex
+    justify-content: flex-end
     box-sizing: border-box
-    padding: 0em 1em
-    order: 2
-    flex: 1
+    padding: 1em 0em
 
-  .side-bar-left
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*2
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*3
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*4
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*5
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+  .row
+    display: flex
+    justify-content: space-between
     box-sizing: border-box
-    padding: 0em 1em
-    order: 1
-    flex: 1
+    padding: 1em 0em
+    //margin: 2em 0em
 
-.row-centered
-  display: flex
-  justify-content: center
-  box-sizing: border-box
-  padding: 1em 0em
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
 
-  .docs
-    background-color: $brand-primary
-    border: 1px solid darken($brand-primary, 10%)
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*2
 
-  .col-1
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*3
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*4
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*5
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+    .element-fixed
+      background-color: $brand-primary
+      border: 1px solid darken(pink, 10%)
+      box-sizing: border-box
+      padding: 0px .5em
+      flex: 1
+
+@media screen and (min-width: $desktop)
+  .flex-layout
+    max-width: 1200px
+    margin: 0px auto
+    display: flex
+    justify-content: space-between
+    //box-sizing: border-box
+
+    .content-only
+      box-sizing: border-box
+      max-width: 1200px
+
+    .content-right
+      box-sizing: border-box
+      padding: 0em 1em
+      order: 1
+      flex: 3
+
+    .content-left
+      box-sizing: border-box
+      padding: 0px 1em
+      order: 2
+      flex: 3
+
+    .side-bar-right
+      display: block
+      box-sizing: border-box
+      padding: 0em 1em
+      order: 2
+      flex: 1
+
+    .side-bar-left
+      box-sizing: border-box
+      padding: 0em 1em
+      order: 1
+      flex: 1
+
+  .row-centered
+    display: flex
+    justify-content: center
     box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%
+    padding: 1em 0em
 
-  .col-2
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-1
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*2
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*3
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*4
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*5
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+  .row-left
+    display: flex
+    justify-content: flex-start
     box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*2
+    padding: 1em 0em
 
-  .col-3
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-1
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*2
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*3
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*4
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*5
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+  .row-right
+    display: flex
+    justify-content: flex-end
     box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*3
+    padding: 1em 0em
 
-  .col-4
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
+
+    .col-1
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%
+
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*2
+
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*3
+
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*4
+
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*5
+
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
+
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
+
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
+
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
+
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
+
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
+
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
+
+  .row
+    display: flex
+    justify-content: space-between
     box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*4
+    padding: 1em 0em
+    //margin: 2em 0em
 
-  .col-5
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*5
+    .docs
+      background-color: $brand-primary
+      border: 1px solid darken($brand-primary, 10%)
 
-  .col-6
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*6
+    .col-1
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%
 
-  .col-7
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*7
+    .col-2
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*2
 
-  .col-8
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*8
+    .col-3
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*3
 
-  .col-9
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*9
+    .col-4
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*4
 
-  .col-10
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*10
+    .col-5
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*5
 
-  .col-11
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*11
+    .col-6
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*6
 
-  .col-12
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*12
+    .col-7
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*7
 
-.row-left
-  display: flex
-  justify-content: flex-start
-  box-sizing: border-box
-  padding: 1em 0em
+    .col-8
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*8
 
-  .docs
-    background-color: $brand-primary
-    border: 1px solid darken($brand-primary, 10%)
+    .col-9
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*9
 
-  .col-1
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%
+    .col-10
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*10
 
-  .col-2
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*2
+    .col-11
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*11
 
-  .col-3
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*3
+    .col-12
+      box-sizing: border-box
+      padding: 1em
+      //margin: .5em
+      flex-basis: 8.3333333%*12
 
-  .col-4
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*4
-
-  .col-5
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*5
-
-  .col-6
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*6
-
-  .col-7
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*7
-
-  .col-8
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*8
-
-  .col-9
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*9
-
-  .col-10
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*10
-
-  .col-11
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*11
-
-  .col-12
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*12
-
-.row-right
-  display: flex
-  justify-content: flex-end
-  box-sizing: border-box
-  padding: 1em 0em
-
-  .docs
-    background-color: $brand-primary
-    border: 1px solid darken($brand-primary, 10%)
-
-  .col-1
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%
-
-  .col-2
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*2
-
-  .col-3
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*3
-
-  .col-4
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*4
-
-  .col-5
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*5
-
-  .col-6
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*6
-
-  .col-7
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*7
-
-  .col-8
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*8
-
-  .col-9
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*9
-
-  .col-10
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*10
-
-  .col-11
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*11
-
-  .col-12
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*12
-
-.row
-  display: flex
-  justify-content: space-between
-  box-sizing: border-box
-  padding: 1em 0em
-  //margin: 2em 0em
-
-  .docs
-    background-color: $brand-primary
-    border: 1px solid darken($brand-primary, 10%)
-
-  .col-1
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%
-
-  .col-2
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*2
-
-  .col-3
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*3
-
-  .col-4
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*4
-
-  .col-5
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*5
-
-  .col-6
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*6
-
-  .col-7
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*7
-
-  .col-8
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*8
-
-  .col-9
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*9
-
-  .col-10
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*10
-
-  .col-11
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*11
-
-  .col-12
-    box-sizing: border-box
-    padding: 1em
-    //margin: .5em
-    flex-basis: 8.3333333%*12
-
-  .element-fixed
-    background-color: $brand-primary
-    border: 1px solid darken(pink, 10%)
-    box-sizing: border-box
-    padding: 0px .5em
-    flex: 1
+    .element-fixed
+      background-color: $brand-primary
+      border: 1px solid darken(pink, 10%)
+      box-sizing: border-box
+      padding: 0px .5em
+      flex: 1

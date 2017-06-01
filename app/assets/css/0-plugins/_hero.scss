@@ -1,0 +1,64 @@
+/**** Custon CSS for parallax hero Image ****/
+header {
+  background-image: url("../images/snake2Hero.jpg");
+  height: 550px;
+}
+@media only screen and (max-width: 768px) {
+  header {
+    background-image: url("../images/snake2Hero-small.jpg");
+    height: 400px;
+  }
+
+  .heroParallax h1 {
+    font-size: 4em;
+  }
+
+  .heroParallax,
+  .heroParallax p {
+    font-size: 0.9em;
+  }
+}
+/**** CSS for Parallax Hero Image ****/
+.heroParallax {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.heroParallax h1 {
+  font-size: 5em;
+  font-weight: 300;
+  text-align: center;
+  color: #fafafa;
+  text-shadow: 0 0 1px #888;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.heroParallax p {
+  font-size: 1em;
+  color: #fafafa;
+  text-align: center;
+  text-shadow: 0 0 1px #888;
+  margin-bottom: 40px;
+}
+
+.heroParallax p a {
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  border: 2px solid #fafafa;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,.2);
+  text-decoration: none;
+  color: #fafafa;
+  transition: all 0.5s;
+}
+
+.heroParallax p a:hover {
+  background-color: rgba(0, 0, 0, .4);
+}
