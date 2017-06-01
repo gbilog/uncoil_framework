@@ -6,49 +6,33 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Uncoil StyleSheet</title>
   <link rel="stylesheet" href="assets/css/app.css">
-  <script src="assets/js/nav.js" charset="utf-8"></script>
-  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="assets/js/cheryl.js"></script>
-  <script>
-      $(function () {
-          $("#affixScrollSpyNav").affix({
-              offset: 50
-          });
-      });
-  </script>
-  <script>
-    $(function () {
-      $("#affixScrollSpyNav").scrollSpy();
-    });
-  </script>
-  <script>
-    $(function() {
-        $("#myPageTab").Tabs();
-    });
-  </script>
 </head>
 <body>
-  <div class="topnav" id="myTopnav">
+  <div class="topnav">
     <img src="assets/images/uncoil_logo.svg" alt="">
     <nav>
-      <a href="#home">CSS</a>
-      <a href="#news">Components</a>
+      <a href="http://getuncoil.com">Home</a>
+      <a href="styleguide.html">CSS</a>
+      <a href="components.html">Components</a>
       <a href="#contact">Javascript</a>
       <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
     </nav>
   </div>
-  <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <div id="sideNav" class="sidenav">
+    <nav>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <img src="assets/images/uncoil_logo_white.svg" alt="">
+      <a href="http://getuncoil.com">Home</a>
+      <a href="styleguide.html">CSS</a>
+      <a href="components.html">Components</a>
+      <a href="#contact">Javascript</a>
+    </nav>
 </div>
   <header class="heroParallax">
       <h1>Uncoil</h1>
       <p>A Modern Framework Using the Latest Technologies</p>
-      <p><a href="#gettingsStarted">Download Production Version 1.0</a></p>
-      <p><a href="#gettingsStarted">Download Dev</a></p>
+      <a href="#gettingsStarted" class="button button-primary" role="button" download>Download Production Version 1.0 (Recommended)</a>
+      <a href="assets/images/snake2Hero" class="button button-default" role="button" download>Download Dev Framework (Advanced Users)</a>
   </header>
   <div class="flex-layout">
     <main class="content-left">
@@ -1333,5 +1317,35 @@
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     </aside> -->
   </div>
+  <footer>Copyright &copy; 2017. Uncoil Framework. All Rights Reserved.</footer>
+
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Uncoil Js -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    $(function () {
+      $("#affixScrollSpyNav").affix({
+          offset: 50
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#affixScrollSpyNav").scrollSpy();
+    });
+  </script>
+  <script>
+    $(function() {
+      $("#myPageTab").Tabs();
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#galleryFilterNav").galleryFilter({
+          hoverOpacity: 1 // default is .75 when Overlay is not being used; set to 1 when using Overlay
+      });
+    });
+  </script>
 </body>
 </html>

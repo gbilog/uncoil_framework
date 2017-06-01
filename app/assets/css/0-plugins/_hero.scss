@@ -45,20 +45,5 @@ header {
   color: #fafafa;
   text-align: center;
   text-shadow: 0 0 1px #888;
-  margin-bottom: 40px;
-}
-
-.heroParallax p a {
-  font-size: 0.8em;
-  padding: 0.5em 1em;
-  border: 2px solid #fafafa;
-  border-radius: 5px;
-  background-color: rgba(0,0,0,.5);
-  text-decoration: none;
-  color: #fafafa;
-  transition: all 0.5s;
-}
-
-.heroParallax p a:hover {
-  background-color: rgba(0, 0, 0, .8);
+  margin-bottom: 2em;
 }
