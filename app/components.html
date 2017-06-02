@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Uncoil Components</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Open Sans Web Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+  <!-- Uncoil CSS -->
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <div class="topnav">
+    <img src="assets/images/uncoil_logo.svg" alt="">
+    <nav>
+      <a href="http://getuncoil.com">Home</a>
+      <a href="index.html">CSS</a>
+      <a href="components.html">Components</a>
+      <a href="javascript.html">Javascript</a>
+      <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
+    </nav>
+  </div>
+  <div id="sideNav" class="sidenav">
+    <nav>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <img src="assets/images/uncoil_logo_white.svg" alt="">
+      <a href="http://getuncoil.com">Home</a>
+      <a href="styleguide.html">CSS</a>
+      <a href="components.html">Components</a>
+      <a href="javascript.html">Javascript</a>
+    </nav>
+</div>
+  <header class="heroParallax">
+      <h1>Components</h1>
+      <p>A Modern Framework Using the Latest Technologies</p>
+      <a href="http://getuncoil.com/wp-content/uploads/2017/06/uncoil_framework-prod.zip" class="button button-primary" role="button" download>Download Production Version 1.0 (Recommended)</a>
+      <a href="http://getuncoil.com/wp-content/uploads/2017/06/uncoil_framework-dev.zip" class="button button-default" role="button" download>Download Dev Framework (Advanced Users)</a>
+  </header>
+  <div class="flex-layout">
+    <main class="content-left">
+      <!-- Uncoil Hero -->
+      <div class="row">
+        <div class="col-12" id="uncoilHeader">
+          <h2>Uncoil Hero</h2>
+          <p>Like our grid, this CSS component takes advantage of the new CSS3 Flexbox property. All you need to do is apply the class <code>.heroParallax</code> to the <code>div</code> that contains your image plus add the image of your choosing to the background of the <code>div</code> by using the background image property in your custom CSS stylesheet and specify a height.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <div class="row">
+              <div class="col-12">
+                <header class="heroParallax">
+                    <h1>Title</h1>
+                    <p>Sub Description</p>
+                    <a href="#" class="button button-primary" role="button">Button</a>
+                </header>
+              </div>
+            </div>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;header <span class="class">class=</span><span class="class-contents">"heroParallax"</span>&gt;</span>
+  <span class="tag">&lt;h1&gt;</span>...<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;p&gt;</span>...<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;button...&gt;</span>...<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/header&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <!-- Uncoil Navbar -->
+      <div class="row">
+        <div class="col-12" id="uncoilNavbar">
+          <h2>Uncoil Navbar &amp; Side Menu</h2>
+          <p>Uncoil's top bar and side menu navigation are made to be responsive and offer a distraction-free approach to a website's traditional navigation.</p>
+          <p>To have access to both, you must define which is the top nav and which is the side nav by adding the proper code classes.</p>
+          <p>Please note that the breakpoint for the side menu is 768px or the tablet breakpoint.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <div class="row">
+              <div class="col-12">
+                <div class="topnav">
+                  <img src="assets/images/uncoil_logo.svg" alt="">
+                  <nav>
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    <a href="#">Link 4</a>
+                    <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
+                  </nav>
+                </div>
+                <div id="sideNav" class="sidenav">
+                  <nav>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <img src="assets/images/uncoil_logo_white.svg" alt="">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    <a href="#">Link 4</a>
+                  </nav>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"topNav"</span>&gt;</span>
+  <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"..."</span> <span class="class">alt=</span><span class="class-contents">"..."</span>/&gt;</span>
+  <span class="tag">&lt;nav&gt;</span>
+    <span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"javascript:void(0);"</span> <span class="class">class=</span><span class="class-contents">"icon"</span> <span class="class">onclick=</span><span class="class-contents">"openNav()"</span>&gt;</span>&#9776;<span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;/nav&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div <span class="class">id=</span><span class="class-contents">"sideNav"</span> <span class="class">class=</span><span class="class-contents">"sideNav"</span>&gt;</span>
+  <span class="tag">&lt;nav&gt;</span>
+    <span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"javascript:void(0);"</span> <span class="class">class=</span><span class="class-contents">"closebtn"</span> <span class="class">onclick=</span><span class="class-contents">"closeNav()"</span>&gt;</span>&times;<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;img <span class="class">src=</span><span class="class-contents">"..."</span> <span class="class">alt=</span><span class="class-contents">"..."</span>/&gt;</span>
+    <span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;a <span class="class">href=</span><span class="class-contents">"..."</span>&gt;</span>...<span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;/nav&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <!-- Tabs -->
+      <div class="row">
+        <div class="col-12" id="uncoilTabs">
+          <h2>Uncoil Tabs</h2>
+          <p>Use Uncoil's tab menu to quickly and efficiently organize data into a tabular menu.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <div class="row">
+              <div class="col-12">
+                <div id="myPageTab"><!-- container -->
+                  <ul>
+                    <li data-tab="t1">Tab One</li>
+                    <li data-tab="t2">Tab Two</li>
+                    <li data-tab="t3">Tab Three</li>
+                    <li data-tab="t4">Tab Four</li>
+                    <li data-tab="t5">Tab Five</li>
+                  </ul>
+                  <div id="t1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                  <div id="t2">
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                  <div id="t3">
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  </div>
+                  <div id="t4">
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                  <div id="t5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;div <span class="class">id=</span><span class="class-contents">"myPageTab"</span>&gt;</span>
+  <span class="tag">&lt;ul&gt;</span>
+    <span class="tag">&lt;li <span class="class">data-tab=</span><span class="class-contents">"t1"</span>&gt;</span>...<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li <span class="class">data-tab=</span><span class="class-contents">"t2"</span>&gt;</span>...<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li <span class="class">data-tab=</span><span class="class-contents">"t3"</span>&gt;</span>...<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li <span class="class">data-tab=</span><span class="class-contents">"t4"</span>&gt;</span>...<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;/ul&gt;</span>
+  <span class="tag">&lt;div <span class="class">id=</span><span class="class-contents">"t1"</span>&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">id=</span><span class="class-contents">"t2"</span>&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">id=</span><span class="class-contents">"t3"</span>&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div <span class="class">id=</span><span class="class-contents">"t4"</span>&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <!-- Uncoil Tool Tip -->
+      <div class="row">
+        <div class="col-12" id="uncoilToolTip">
+          <h2>Uncoil Tool Tip</h2>
+          <p>Tool tips are very helpful components to use to describe certain features on your website. They come especially in handy when you want to decrease the amount of text a user is shown when he/she gets to the website, but offers an alternative to giving more information in a concealed form.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <div class="row">
+              <div class="col-12">
+                <div class="tipContainer containerStyle">
+                   Hover over me
+                  <div class="tooltip">Hello</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"tipContainer containerStyle"</span>&gt;</span>
+  ...
+  <span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"tooltip"</span>&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <!-- Pop Box -->
+      <div class="row">
+        <div class="col-12" id="popBox">
+          <h2>Pop Box</h2>
+          <p>A Pop Box is a great way to add dimension to a flat webpage while still maintains a flat design. Use the Pop Box to promote offers or just simple add some depth to your design.</p>
+          <div class="example-container">
+            <p class="example">Example:</p>
+            <div class="row">
+              <div class="col-12">
+                <div class="popBox">
+                  <h3>Pop Box</h3>
+                  <p>Some information here</p>
+                  <button type="button" name="button" class="button button-primary">Click Me!</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="example-copy">
+            <figure>
+              <pre><span class="tag">&lt;div <span class="class">class=</span><span class="class-contents">"popBox"</span>&gt;</span>
+...
+<span class="tag">&lt;/div&gt;</span></pre>
+            </figure>
+          </div>
+        </div>
+      </div>
+        <!-- Overlay -->
+        <div class="row">
+          <div class="col-12" id="uncoilOverlay">
+            <h2>Uncoil Image Overlay</h2>
+            <p>By applying class <code>.overlay</code> or class <code>.overlay-plus</code> to a <code>div</code> element associated with your images, you can create an overlay effect when hovering over them. The <code>.overlay</code> class darkens the image and if you include HTML/text within the <code>div</code> that the class is applied to it will appear as a part of the overlay. If you use the <code>.overlay-plus</code> class, a plus sign will appear and you will want to leave the <code>div</code> empty.</p>
+            <p>Check it out in action on the Javascript Page</p>
+          </div>
+      </div>
+      <!-- End -->
+    </main>
+
+  <aside class="side-bar-right">
+    <nav id="affixScrollSpyNav">
+      <ul>
+        <li><a href="#uncoilHeader">Uncoil Header</a></li>
+        <li><a href="#uncoilNavbar">Uncoil Navbar</a></li>
+        <li><a href="#uncoilTabs">Uncoil Tabs</a></li>
+        <li><a href="#uncoilToolTip">Uncoil Tooltip</a></li>
+        <li><a href="#popBox">Uncoil Overlay</a></li>
+        <li><a href="#uncoilOverlay">Uncoil Overlay</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  </div>
+  <footer>Copyright &copy; 2017. Uncoil Framework. All Rights Reserved.</footer>
+
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Uncoil Js -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    $(function () {
+      $("#affixScrollSpyNav").affix({
+        offset: 50
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#affixScrollSpyNav").scrollSpy();
+    });
+  </script>
+  <script>
+    $(function() {
+      $("#myPageTab").Tabs();
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#galleryFilterNav").galleryFilter({
+        hoverOpacity: 1 // default is .75 when Overlay is not being used; set to 1 when using Overlay
+      });
+    });
+  </script>
+</body>
+</html>

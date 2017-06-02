@@ -1,0 +1,38 @@
+.tabs {
+  width: 100%;
+  margin: 0 auto;
+  /*border: 1px solid black;*/
+}
+
+.tabs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs ul li {
+  background: $light-grey;
+  color: $text-color;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1px solid $grey;
+  border-radius: 4px 4px 0 0;
+}
+
+.tabs ul li.current {
+  border-bottom-style: none;
+  background: $brand-primary;
+  color: $white;
+}
+
+.tab-content {
+  display: none;
+  background: $grey;
+  padding: 15px;
+}
+
+.tab-content.current {
+  //border: 1px solid $text-color;
+  display: inherit;
+}
