@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Uncoil CSS Documentation</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Open Sans Web Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+  <!-- Uncoil CSS -->
   <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
@@ -49,16 +54,16 @@
           <h3>HTML Document</h3>
           <p>This is the standard HTML document necessary to begin using Uncoil immediately for your new and existing projects.</p>
           <p>Click the button below and view the page source in order to get your started template</p>
-          <a href="http://getuncoil.com/wp-content/uploads/2017/06/index.html" class="button button-primary" role="button" target="_blank">Download Starter Template</a>
+          <a href="http://getuncoil.com/wp-content/uploads/2017/06/starter.html.zip" class="button button-primary" role="button" target="_blank">Download Starter Template</a>
         </div>
         <!-- Uncoil Layouts -->
         <div class="col-12" id="layouts">
           <h3>Uncoil Layouts</h3>
           <p>To make the process as quick as possible, we can created three templates for you to use to generate the page layouts illustrated below. The markup you will use will depend on your coding style, we have created layouts that use a semantic HTML5 approach for better document parsing by search engines. Because this framework usese Flexbox, you will need to wrap all "flex" elements by a flex container.</p>
           <p>To begin, you will have to create a wrapper div with the class <code>.flex-layout</code>. From there, you can define a content area by using the <code>.content-only</code>, <code>.content-right</code>, or <code>.content-left</code> classes depending on your layout preference for your page. If you choose a right or left justified content area, don't forget to name a sidebar by using the classes <code>.side-bar-right</code>, and <code>side-bar-right</code> depending on your layout preference.</p>
-          <a href="http://getuncoil.com/wp-content/uploads/2017/06/starter.html" class="button button-primary" role="button" target="_blank">Download Starter Template</a>
-          <a href="http://getuncoil.com/wp-content/uploads/2017/06/content-only.html" class="button button-primary" role="button" target="_blank">Download Content Only Template</a>
-          <a href="http://getuncoil.com/wp-content/uploads/2017/06/content-right.html" class="button button-primary" role="button" target="_blank">Download Content Right Template</a>
+          <a href="http://getuncoil.com/wp-content/uploads/2017/06/starter.html.zip" class="button button-primary" role="button" target="_blank">Download Starter Template</a>
+          <a href="http://getuncoil.com/wp-content/uploads/2017/06/content-only.html.zip" class="button button-primary" role="button" target="_blank">Download Content Only Template</a>
+          <a href="http://getuncoil.com/wp-content/uploads/2017/06/content-right.html.zip" class="button button-primary" role="button" target="_blank">Download Content Right Template</a>
           <div class="example-container">
             <p class="example">Example:</p>
             <h4>Content Only Layout</h4>
@@ -86,6 +91,14 @@
               </div>
             </div>
           </div>
+        </div>
+        <!-- Tools -->
+        <div class="col-12" id="tools">
+          <h2>Tools</h2>
+          <h3>FontAwesome Icons</h3>
+          <p>Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.</p>
+          <h3>Normalize.css</h3>
+          <p>Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.</p>
         </div>
       </div>
 
@@ -120,6 +133,9 @@
           <h2>Column Classes</h2>
           <p>Uncoil uses a 12-column grid system for is rows. Because columns are nested within rows, you will divide 12 by the number of columns you want and that will be your <code>.col-</code> for each of the elements in a row.</p>
           <p>As an example, if you want to have a two column layout, you would divide 12 by 2 to get 6.  You will then add two elements within the wrapper element, each with the <code>.col-6</code> classes.</p>
+          <p><strong>Mobile Breakpoint</strong>: <code>.col-6</code> and higher hold true size <code>.col-1</code> to <code>.col-5</code> wrap and become full-width.</p>
+          <p><strong>Tablet Breakpoint</strong>: <code>.col-2</code> and higher hold true size <code>.col-1</code> wraps and becomes full-width.</p>
+          <p><strong>Desktop Breakpoint</strong>: all <code>.col-</code> hold true size.</p>
           <div class="example-container">
             <p class="example">Example:</p>
             <!-- .col-1 -->
@@ -1325,6 +1341,7 @@ City State Zip<span class="tag">&lt;br&gt;</span>
              <ul class="subItems">
                <li><a href="#htmlDocument">HTML Document</a></li>
                <li><a href="#layouts">Layouts</a></li>
+               <li><a href="#tools">Tools</a></li>
              </ul>
           </li>
           <li><a href="#grid">Uncoil Grid</a>
